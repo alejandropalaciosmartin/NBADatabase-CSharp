@@ -9,7 +9,8 @@
 .top-row {
     height: 3.5rem;
     width: calc(211vh - 3.5rem);
-    background-color: #0D47A1;
+    /*background-color: #0D47A1;*/
+    background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);
 }
 
 /*.navbar-brand {
