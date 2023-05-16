@@ -8,13 +8,14 @@
 
 .top-row {
     height: 3.5rem;
+    width: calc(211vh - 3.5rem);
     background-color: #0D47A1;
 }
 
-.navbar-brand {
+/*.navbar-brand {
     font-size: 1.1rem;
 }
-
+*/
 .oi {
     width: 2rem;
     font-size: 1.1rem;
@@ -46,32 +47,40 @@
 }
 
     .nav-item ::deep a.active {
-        /*background-color: white;*/
         color: white;
-        box-shadow: 10px 5px 5px red;
-        /*border: solid black 1px;*/
+        box-shadow: 10px 5px 5px black;
     }
 
     .nav-item ::deep a:hover {
-        /*background-color: white;*/
         box-shadow: 10px 5px 5px yellow;
         color: white;
-        /*border: solid black 1px;*/
     }
 
-@media (min-width: 641px) {
-    .navbar-toggler {
-        display: none;
+/*Para pantalla grande*/
+/*@media (min-width: 1541px) {
+    .top-row {
+        width: calc(211vh - 7.9rem);
     }
+}*/
+  /*  .navbar-toggler {
+        display: visible;
+    }*/
 
-    .collapse {
+    /*.collapse {*/
         /* Never collapse the sidebar for wide screens */
-        display: block;
-    }
-    
+        /*display: inline;
+    }*/
+
     .nav-scrollable {
         /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
+        height: calc(100vh - 3.5rem); /*Navbar vertical*/
+        /*width: calc(211vh - 3.5rem);*/ /*Navbar horizontal*/
+        /*overflow-y: auto;*/
     }
-}
+
+    /*Botón activado*/
+    .nav-item ::deep a.active {
+        color: white;
+        box-shadow: 10px 5px 5px red;
+    }
+/*}*/
