@@ -1,10 +1,14 @@
+*{
+    font-weight: bold;
+}
+
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .top-row {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #0D47A1;
 }
 
 .navbar-brand {
@@ -21,34 +25,39 @@
 .nav-item {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
+    width: 20vh;
 }
 
-    .nav-item:first-of-type {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item ::deep a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
-
-.nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
+.nav-item:first-of-type {
+    padding-top: 1rem;
 }
 
-.nav-item ::deep a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+.nav-item:last-of-type {
+    padding-bottom: 1rem;
 }
+
+.nav-item ::deep a {
+    color: #d7d7d7;
+    border-radius: 4px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+}
+
+    .nav-item ::deep a.active {
+        /*background-color: white;*/
+        color: white;
+        box-shadow: 10px 5px 5px red;
+        /*border: solid black 1px;*/
+    }
+
+    .nav-item ::deep a:hover {
+        /*background-color: white;*/
+        box-shadow: 10px 5px 5px yellow;
+        color: white;
+        /*border: solid black 1px;*/
+    }
 
 @media (min-width: 641px) {
     .navbar-toggler {
