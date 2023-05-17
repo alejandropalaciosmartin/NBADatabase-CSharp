@@ -7,10 +7,14 @@
 }
 
 .top-row {
-    height: 4.5rem;
-    width: calc(211vh - 3.5rem);
+    height: 5.5rem;
+    width: calc(637% - 3.5rem);
+    /*width: 615%;*/
     /*background-color: #0D47A1;*/
     background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 /*.navbar-brand {
@@ -57,12 +61,7 @@
         color: white;
     }
 
-/*Para pantalla grande*/
-/*@media (min-width: 1541px) {
-    .top-row {
-        width: calc(211vh - 7.9rem);
-    }
-}*/
+
   /*  .navbar-toggler {
         display: visible;
     }*/
@@ -89,15 +88,35 @@
 #imagenNBA {
     width: 10vh;
     height: 8vh;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
-    margin-top: -10vh;
-    margin-left: 190vh;
+}
+
+#positionImage {
+    margin-top: -6vh;
 }
 
 #nbaDatabase {
     color: white;
     margin-top: -4vh;
-    margin-left: 80vh;
+    margin-left: 20%;
+}
+
+/*Para pantalla pequeña*/
+@media (max-width: 641px) {
+    .top-row {
+        width: 100%;
+        background-image: red;
+    }
+
+    #positionImage {
+        margin-top: -5vh;
+    }
+
+    #nbaDatabase {
+        margin-left: 25%;
+    }
+
+    .nav-scrollable {
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(30vh - 3.5rem); /*Navbar vertical*/
+    }
 }
