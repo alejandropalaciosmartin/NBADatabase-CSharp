@@ -10,6 +10,7 @@
     height: 5.5rem;
     width: calc(637% - 3.5rem);
     background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);
+    box-shadow: 10px 5px 5px black;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -47,7 +48,8 @@
 
 .nav-scrollable {
     height: calc(89.3vh - 1.5rem); /*Navbar vertical*/
-    background-image: linear-gradient(to bottom, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);
+    background-image: linear-gradient(to bottom, #1565C0, #1976D2, #1976D2, #F44336, #F44336);
+    /*background-image: linear-gradient(to bottom, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);*/
 }
 
     /*Botón activado*/
@@ -74,8 +76,7 @@
     color: white;
     margin-top: -4vh;
     margin-left: 20%;
-    /*text-shadow: 5px 5px 5px red;*/
-    text-shadow: 5px 5px 5px red, 10px 10px 10px black;
+    text-shadow: 5px 5px 5px red, 5px 5px 5px black;
 }
 
 /*Para pantalla pequeña*/
