@@ -9,24 +9,27 @@
 .top-row {
     height: 5.5rem;
     width: calc(637% - 3.5rem);
-    background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);
-    box-shadow: 10px 5px 5px black;
+    background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #1565C0, #1565C0, #F44336);
+    box-shadow: 10px 5px 5px black; /*Sombra*/
+    border-radius: 0px 5px 5px 5px;
+    /*Centrar*/
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.oi {
+/*.oi {
     width: 2rem;
     font-size: 1.1rem;
     vertical-align: text-top;
     top: -2px;
-}
+}*/
 
+/*Botones*/
 .nav-item {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
-    width: 30vh;
+    width: 25vh;
 }
 
 .nav-item:first-of-type {
@@ -46,37 +49,51 @@
     line-height: 3rem;
 }
 
+/*Navbar vertical*/
 .nav-scrollable {
-    height: calc(89.3vh - 1.5rem); /*Navbar vertical*/
-    background-image: linear-gradient(to bottom, #1565C0, #1976D2, #1976D2, #F44336, #F44336);
-    /*background-image: linear-gradient(to bottom, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);*/
+    height: calc(89.3vh - 1.5rem); 
+    background-image: linear-gradient(to bottom, #0D47A1, #0D47A1, #1565C0, #1565C0, #1565C0, #F44336);
+    box-shadow: 3px 3px black; 
+    border-radius: 0px 0px 5px 5px;
 }
 
-    /*Botón activado*/
-    .nav-item ::deep a.active {
-        color: white;
-        box-shadow: 10px 5px 5px red;
-    }
+/*Botón activado*/
+.nav-item ::deep a.active {
+    color: white;
+    box-shadow: 10px 5px 5px red;
+}
 
+/*Se ilumine los botones al pasar por encima*/
 .nav-item ::deep a:hover {
     box-shadow: 10px 5px 5px yellow;
     color: white;
 }
 
+/*Imágenes*/
 #imagenNBA {
     width: 10vh;
     height: 8vh;
 }
 
-#positionImage {
+#imagenBall {
+    width: 10vh;
+    height: 10vh;
+}
+
+#positionImage, #positionBall {
     margin-top: -6vh;
 }
 
+#positionBall {
+    margin-left: auto;
+}
+
+/*Título*/
 #nbaDatabase {
     color: white;
     margin-top: -4vh;
-    margin-left: 20%;
-    text-shadow: 5px 5px 5px red, 5px 5px 5px black;
+    margin-left: 23%;
+    text-shadow: 5px 5px 5px red, 5px 5px 5px black; /*Sombra*/
 }
 
 /*Para pantalla pequeña*/
@@ -93,11 +110,14 @@
         margin-left: 25%;
     }
 
+    /*Navbar vertical*/
     .nav-scrollable {
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(30vh - 3.5rem); /*Navbar vertical*/
-        background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #F44336, #F44336);
+        height: calc(30vh - 3.5rem); 
+        background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #1565C0, #1565C0, #F44336);
         background-color: black;
     }
-
+    /*Desaparece pelota al disminuir pantalla*/
+    #positionBall {
+        display: none;
+    }
 }
