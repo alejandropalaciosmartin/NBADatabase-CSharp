@@ -1,0 +1,23 @@
+﻿@page "/documentacion"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Documentation</PageTitle>
+
+
+<p>Este trabajo está realizado por <a href="https://github.com/usuario1">Alejandro</a> y <a href="https://github.com/usuario2">Adrian</a>.</p>
+
+<p>El tema escogido para este trabajo, o más bien la finalidad de este trabajo, es la consulta de datos específica de los jugadores de la NBA desde 
+    el año 1996 hasta el año 2021.</p>
+
+<p>Todos los datos de esta página web están sacados del siguiente <a href="https://www.kaggle.com/datasets/justinas/nba-players-data">enlace</a>, 
+    en el que puedes descargar un archivo CSV totalmente gratuito y público. Si haces clic <a @onclick="DescargarArchivo">AQUÍ</a>, se 
+    descargará el archivo automáticamente.</p>
+
+@code {
+    protected async Task DescargarArchivo()
+    {
+        var archivoPath = "ruta/al/archivo.csv";
+        var archivoNombre = "nombre_archivo.csv";
+        await JSRuntime.InvokeVoidAsync("saveAsFile", archivoNombre, Convert.ToBase64String(File.ReadAllBytes(archivoPath)));
+    }
+}
