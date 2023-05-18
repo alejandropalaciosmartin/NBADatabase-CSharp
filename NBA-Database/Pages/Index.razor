@@ -5,12 +5,12 @@
 
 <h1 class="verTexto">Hello, world!</h1>
 
-@*@if (forecasts == null)
+@if (players == null)
 {
     <p><em>Loading...</em></p>
 }
 else
-{*@
+{
     <table class="table">
         <thead>
             <tr>
@@ -21,16 +21,16 @@ else
             </tr>
         </thead>
         <tbody>
-            @*@foreach (var forecast in forecasts)
+            @foreach (var forecast in players)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@forecast.PlayerName</td>
+                    <td>@forecast.TeamAbbreviation</td>
+                    <td>@forecast.Age</td>
+                    <td>@forecast.PlayerHeight</td>
                 </tr>
-            }*@
+            }
         </tbody>
     </table>
-@*}*@
+}
 
