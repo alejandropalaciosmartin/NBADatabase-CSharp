@@ -96,6 +96,11 @@
     text-shadow: 5px 5px 5px red, 5px 5px 5px black; /*Sombra*/
 }
 
+.textoNav {
+    margin-left: 1vh;
+    margin-top: 2.5vh;
+}
+
 /*Para pantalla pequeña*/
 @media (max-width: 641px) {
     .top-row {
@@ -121,3 +126,4 @@
         display: none;
     }
 }
+
