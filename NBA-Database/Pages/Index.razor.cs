@@ -7,9 +7,31 @@ namespace NBA_Database.Pages
 {
     public partial class Index
     {
+        /*private async Task FileUpload(string file)
+        {
+            try
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    var rutaArchivo = "assets/data/data.csv";
+                    var response = await httpClient.GetAsync(rutaArchivo);
+                    var csvR = await response.Content.ReadAsStringAsync();
+
+                    using (var reader = new StringReader(csvR))
+                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                    {
+                        players = csv.GetRecords<PlayersName>().ToList();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }*/
         protected override void OnInitialized()
         {
-            FileUpload("assets/data/data.csv");
+            FileUpload(@"assets/data/data.csv");
         }
 
         private void FileUpload(string file)
