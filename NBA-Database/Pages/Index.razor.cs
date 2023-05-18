@@ -1,7 +1,5 @@
-using CsvHelper;
-using CsvHelper.Configuration.Attributes;
-using System.Globalization;
-
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
 
 namespace NBA_Database.Pages
 {
@@ -29,7 +27,7 @@ namespace NBA_Database.Pages
                 Console.WriteLine(ex.Message);
             }
         }*/
-        protected override void OnInitialized()
+        /*protected override void OnInitialized()
         {
             FileUpload(@"assets/data/data.csv");
         }
@@ -48,40 +46,46 @@ namespace NBA_Database.Pages
             {
                 Console.WriteLine(ex.Message);
             }
-        }
+        }*/
 
-        private List<PlayersName> players;
+        //private List<PlayersName> players;
+        private PlayersName[]? players;
+
+        protected override async Task OnInitializedAsync()
+        {
+            players = await Http.GetFromJsonAsync<PlayersName[]>("assets/data/data.json");
+        }
         public class PlayersName
         {
             //player_name,team_abbreviation,age,player_height,player_weight,college,country,draft_year,
             //gp,pts,reb,ast,season
-            [Name("player_name")]
+            [JsonPropertyName("player_name")]
             public string PlayerName { get; set; } //jugador
-            [Name("team_abbreviation")]
+            [JsonPropertyName("team_abbreviation")]
             public string TeamAbbreviation { get; set; } //abreviatura de equipo
-            [Name("age")]
+            [JsonPropertyName("age")]
             public int Age { get; set; } //edad jugador
 
-            [Name("player_height")]
+            [JsonPropertyName("player_height")]
             public double PlayerHeight { get; set; } //altura
-            [Name("player_weight")]
+            [JsonPropertyName("player_weight")]
             public double PlayerWeight { get; set; } //peso
-            [Name("college")]
+            [JsonPropertyName("college")]
             public string College { get; set; } //universidad en la que jugo
 
-            [Name("country")]
+            [JsonPropertyName("country")]
             public string Country { get; set; } //pais de procedencia
-            [Name("draft_year")]
+            [JsonPropertyName("draft_year")]
             public int DraftYear { get; set; } //año que entro en la nba
-            [Name("gp")]
+            [JsonPropertyName("gp")]
             public int Gp { get; set; } //partidos jugados
-            [Name("pts")]
+            [JsonPropertyName("pts")]
             public int Pts { get; set; } //media de puntos esa temporada
-            [Name("reb")]
+            [JsonPropertyName("reb")]
             public int Reb { get; set; } //media de rebotes esa temporada
-            [Name("ast")]
+            [JsonPropertyName("ast")]
             public int Ast { get; set; } //media de asistencias esa temporada
-            [Name("season")]
+            [JsonPropertyName("season")]
             public int Season { get; set; }  //temporada a la que hace referencia todas las estadísticas anteriores
         }
 
