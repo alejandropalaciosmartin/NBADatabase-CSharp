@@ -1,23 +1,73 @@
 ﻿@page "/documentacion"
-@inject IJSRuntime JSRuntime
 
-<PageTitle>Documentation</PageTitle>
+<div style="position: relative; display: inline-block;">
+    <img src="/assets/image/pizarra-basket.jpg" style="width: 800px; height: 600px;" />
 
-
-<p>Este trabajo está realizado por <a href="https://github.com/usuario1">Alejandro</a> y <a href="https://github.com/usuario2">Adrian</a>.</p>
-
-<p>El tema escogido para este trabajo, o más bien la finalidad de este trabajo, es la consulta de datos específica de los jugadores de la NBA desde 
-    el año 1996 hasta el año 2021.</p>
-
-<p>Todos los datos de esta página web están sacados del siguiente <a href="https://www.kaggle.com/datasets/justinas/nba-players-data">enlace</a>, 
-    en el que puedes descargar un archivo CSV totalmente gratuito y público. Si haces clic <a @onclick="DescargarArchivo">AQUÍ</a>, se 
-    descargará el archivo automáticamente.</p>
+    @foreach (var circle in Circles)
+    {
+        <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
+            <div class="circle" @onclick="() => ShowText(circle.Text)"></div>
+            @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
+            {
+                <div style="position: absolute; top: 30px; left: 30px; background-color: white; padding: 5px; width:250px; height:100px; align-content:center;">
+                    <p>@(new MarkupString(circle.Text))</p>
+                </div>
+            }
+        </div>
+    }
+</div>
 
 @code {
-    protected async Task DescargarArchivo()
+    class Circle
     {
-        var archivoPath = "ruta/al/archivo.csv";
-        var archivoNombre = "nombre_archivo.csv";
-        await JSRuntime.InvokeVoidAsync("saveAsFile", archivoNombre, Convert.ToBase64String(File.ReadAllBytes(archivoPath)));
+        public int Top { get; set; }
+        public int Left { get; set; }
+        public string Text { get; set; }
+    }
+
+    List<Circle> Circles = new List<Circle>();
+    string currentText = "";
+
+    protected override void OnInitialized()
+    {
+        // Agregar cuatro círculos en posiciones aleatorias
+
+        var circle1 = new Circle
+        {
+            Top = 50,
+            Left = 250,
+                Text = "<p>Este trabajo está realizado por <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://github.com/alejandropalaciosmartin\" target=\"_blank\"><span class=\"name\"><b>Alejandro</b></span></a> y <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"https://github.com/AdrianLozanoMartinez\" target=\"_blank\"><span class=\"name\"><b>Adrian</b></span></a></p>"
+        };
+        Circles.Add(circle1);
+
+        var circle2 = new Circle
+            {
+                Top = 300,
+                Left = 250,
+                Text = "Texto2"
+            };
+        Circles.Add(circle2);
+
+        var circle3 = new Circle
+            {
+                Top = 50,
+                Left = 620,
+                Text = "Texto3"
+            };
+        Circles.Add(circle3);
+
+        var circle4 = new Circle
+            {
+                Top = 300,
+                Left = 620,
+                Text = "Texto4"
+            };
+        Circles.Add(circle4);
+        
+    }
+
+    void ShowText(string text)
+    {
+        currentText = text;
     }
 }
