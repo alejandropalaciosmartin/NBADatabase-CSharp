@@ -5,62 +5,28 @@ namespace NBA_Database.Pages
 {
     public partial class Index
     {
-        /*private async Task FileUpload(string file)
-        {
-            try
-            {
-                using (var httpClient = new HttpClient())
-                {
-                    var rutaArchivo = "assets/data/data.csv";
-                    var response = await httpClient.GetAsync(rutaArchivo);
-                    var csvR = await response.Content.ReadAsStringAsync();
-
-                    using (var reader = new StringReader(csvR))
-                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-                    {
-                        players = csv.GetRecords<PlayersName>().ToList();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }*/
-        /*protected override void OnInitialized()
-        {
-            FileUpload(@"assets/data/data.csv");
-        }
-
-        private void FileUpload(string file)
-        {
-            try
-            {
-                using StreamReader sr = new StreamReader(file);
-                using (CsvReader csvR = new CsvReader(sr, CultureInfo.InvariantCulture))
-                {
-                    players = csvR.GetRecords<PlayersName>().ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }*/
-
-        //private List<PlayersName> players;
-        private PlayersName[]? players;
+        private PlayersName[]? forecasts;
 
         protected override async Task OnInitializedAsync()
         {
-            players = await Http.GetFromJsonAsync<PlayersName[]>("assets/data/data.json");
+            forecasts = await Http.GetFromJsonAsync<PlayersName[]>("assets/data/data.json");
         }
+
         public class PlayersName
         {
             //player_name,team_abbreviation,age,player_height,player_weight,college,country,draft_year,
             //gp,pts,reb,ast,season
-            [JsonPropertyName("player_name")]
-            public string PlayerName { get; set; } //jugador
+
+            public string Player_name { get; set; } //jugador
+
+            public int TemperatureC { get; set; }
+
+            public string? Summary { get; set; }
+
+            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        }
+        /*
+            
             [JsonPropertyName("team_abbreviation")]
             public string TeamAbbreviation { get; set; } //abreviatura de equipo
             [JsonPropertyName("age")]
@@ -87,7 +53,7 @@ namespace NBA_Database.Pages
             public int Ast { get; set; } //media de asistencias esa temporada
             [JsonPropertyName("season")]
             public int Season { get; set; }  //temporada a la que hace referencia todas las estadísticas anteriores
-        }
+        */
 
     }
 }

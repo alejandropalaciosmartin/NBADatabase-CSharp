@@ -5,7 +5,7 @@
 
 <h1 class="verTexto">Hello, world!</h1>
 
-@if (players == null)
+@*@if (forecasts == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -14,20 +14,67 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>PlayerName</th>
+                <th>TeamAbbreviation</th>
+                <th>Age</th>
+                <th>PlayerHeight</th>
+                <th>PlayerWeight</th>
+                <th>College</th>
+                <th>Country</th>
+                <th>DraftYear</th>
+                <th>Gp</th>
+                <th>Pts</th>
+                <th>Reb</th>
+                <th>Ast</th>
+                <th>Season</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in players)
+            @foreach (var forecast in forecasts)
             {
                 <tr>
                     <td>@forecast.PlayerName</td>
                     <td>@forecast.TeamAbbreviation</td>
                     <td>@forecast.Age</td>
                     <td>@forecast.PlayerHeight</td>
+                    <td>@forecast.PlayerWeight</td>
+                    <td>@forecast.College</td>
+                    <td>@forecast.Country</td>
+                    <td>@forecast.DraftYear</td>
+                    <td>@forecast.Gp</td>
+                    <td>@forecast.Pts</td>
+                    <td>@forecast.Reb</td>
+                    <td>@forecast.Ast</td>
+                    <td>@forecast.Season</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}*@
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>PlayerName</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Player_name</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
                 </tr>
             }
         </tbody>
