@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 
@@ -14,16 +15,25 @@ namespace NBA_Database.Pages
 
         public class PlayersName
         {
-            //player_name,team_abbreviation,age,player_height,player_weight,college,country,draft_year,
+            //player_weight,college,country,draft_year,
             //gp,pts,reb,ast,season
-
-            public string Player_name { get; set; } //jugador
-
+            //player_name
+            public string Player_name { get; set; }
+            //age
+            public int Age { get; set; }
+            //player_height
+            public double Player_height { get; set; }
+            //team_abbreviation
             public string Team_abbreviation { get; set; }
+            //Propiedad aplicando una propiedad anterio en un método para sacar solo dos decimales y en metros
+            public string Player_heightM => CalcularDecimal(Player_height);
 
-            public string? Summary { get; set; }
-
-            
+            //Saca en metros con 2 decimales
+            public string CalcularDecimal(double num)
+            {
+                num /= 100;
+                return $"{num:0.00}";
+            }
         }
         /*
             
