@@ -15,7 +15,7 @@ namespace NBA_Database.Pages
 
         public class PlayersName
         {
-            //player_weight,college,country,draft_year,
+            //college,country,draft_year,
             //gp,pts,reb,ast,season
             //player_name
             public string Player_name { get; set; }
@@ -23,10 +23,15 @@ namespace NBA_Database.Pages
             public int Age { get; set; }
             //player_height
             public double Player_height { get; set; }
+            //player_weight
+            public double Player_weight { get; set; }
             //team_abbreviation
             public string Team_abbreviation { get; set; }
+
+
             //Propiedad aplicando una propiedad anterio en un método para sacar solo dos decimales y en metros
             public string Player_heightM => CalcularDecimal(Player_height);
+            public string Player_weightG => $"{Player_weight:0.00}";
 
             //Saca en metros con 2 decimales
             public string CalcularDecimal(double num)
