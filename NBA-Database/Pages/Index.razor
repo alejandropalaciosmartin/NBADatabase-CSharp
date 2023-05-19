@@ -3,56 +3,7 @@
 
 <PageTitle>NBA Database</PageTitle>
 
-<h1 class="verTexto">Hello, world!</h1>
-
-@*@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>PlayerName</th>
-                <th>TeamAbbreviation</th>
-                <th>Age</th>
-                <th>PlayerHeight</th>
-                <th>PlayerWeight</th>
-                <th>College</th>
-                <th>Country</th>
-                <th>DraftYear</th>
-                <th>Gp</th>
-                <th>Pts</th>
-                <th>Reb</th>
-                <th>Ast</th>
-                <th>Season</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.PlayerName</td>
-                    <td>@forecast.TeamAbbreviation</td>
-                    <td>@forecast.Age</td>
-                    <td>@forecast.PlayerHeight</td>
-                    <td>@forecast.PlayerWeight</td>
-                    <td>@forecast.College</td>
-                    <td>@forecast.Country</td>
-                    <td>@forecast.DraftYear</td>
-                    <td>@forecast.Gp</td>
-                    <td>@forecast.Pts</td>
-                    <td>@forecast.Reb</td>
-                    <td>@forecast.Ast</td>
-                    <td>@forecast.Season</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}*@
-
-@if (forecasts == null)
+@if (players == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -69,7 +20,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var forecast in players)
             {
                 <tr>
                     <td>@forecast.Player_name</td>

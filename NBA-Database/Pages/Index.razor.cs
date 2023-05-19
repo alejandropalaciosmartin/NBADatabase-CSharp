@@ -1,22 +1,21 @@
-using System;
+using NBA_Database.Shared;
 using System.Net.Http.Json;
-using System.Text.Json.Serialization;
 
 namespace NBA_Database.Pages
 {
     public partial class Index
     {
-        private PlayersName[]? forecasts;
-
-        protected override async Task OnInitializedAsync()
+        private PlayersName[]? players;
+    protected override async Task OnInitializedAsync()
         {
-            forecasts = await Http.GetFromJsonAsync<PlayersName[]>("assets/data/data.json");
+            players = await Http.GetFromJsonAsync<PlayersName[]>("assets/data/data.json");
         }
 
         public class PlayersName
         {
             //college,country,draft_year,
             //gp,pts,reb,ast,season
+
             //player_name
             public string Player_name { get; set; }
             //age
@@ -40,19 +39,9 @@ namespace NBA_Database.Pages
                 return $"{num:0.00}";
             }
         }
-        /*
-            
-            [JsonPropertyName("team_abbreviation")]
-            public string TeamAbbreviation { get; set; } //
-            [JsonPropertyName("age")]
-            public int Age { get; set; } //edad jugador
 
-            [JsonPropertyName("player_height")]
-            public double PlayerHeight { get; set; } //altura
-            [JsonPropertyName("player_weight")]
-            public double PlayerWeight { get; set; } //peso
-            [JsonPropertyName("college")]
-            public string College { get; set; } //universidad en la que jugo
+
+        /*  public string College { get; set; } //universidad en la que jugo
 
             [JsonPropertyName("country")]
             public string Country { get; set; } //pais de procedencia
