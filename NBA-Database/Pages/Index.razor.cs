@@ -8,7 +8,7 @@ namespace NBA_Database.Pages
         private PlayersName[]? players;
     protected override async Task OnInitializedAsync()
         {
-            players = await Http.GetFromJsonAsync<PlayersName[]>("assets/data/data.json");
+            players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
         }
 
         public class PlayersName
