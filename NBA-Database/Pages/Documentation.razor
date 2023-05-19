@@ -1,7 +1,7 @@
 ﻿@page "/documentacion"
 
 <div style="position: relative; display: inline-block;">
-    <img src="/assets/image/pizarra-basket.jpg" style="width: 800px; height: 600px;" />
+    <img src="/assets/image/pizarra-basket.jpg" style="width: 800px; height: 600px; border-radius: 8vh" />
 
     @foreach (var circle in Circles)
     {
@@ -34,32 +34,32 @@
 
         var circle1 = new Circle
         {
-            Top = 50,
-            Left = 250,
-                Text = "<p>Este trabajo está realizado por <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://github.com/alejandropalaciosmartin\" target=\"_blank\"><span class=\"name\"><b>Alejandro</b></span></a> y <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"https://github.com/AdrianLozanoMartinez\" target=\"_blank\"><span class=\"name\"><b>Adrian</b></span></a></p>"
+            Top = 90,
+            Left = 200,
+            Text = "<p>Este trabajo está realizado por <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://github.com/alejandropalaciosmartin\" target=\"_blank\"><span class=\"name\"><b>Alejandro</b></span></a> y <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"https://github.com/AdrianLozanoMartinez\" target=\"_blank\"><span class=\"name\"><b>Adrian</b></span></a></p>"
         };
         Circles.Add(circle1);
 
         var circle2 = new Circle
             {
-                Top = 300,
-                Left = 250,
+                Top = 450,
+                Left = 200,
                 Text = "Texto2"
             };
         Circles.Add(circle2);
 
         var circle3 = new Circle
             {
-                Top = 50,
-                Left = 620,
+                Top = 90,
+                Left = 565,
                 Text = "Texto3"
             };
         Circles.Add(circle3);
 
         var circle4 = new Circle
             {
-                Top = 300,
-                Left = 620,
+                Top = 450,
+                Left = 565,
                 Text = "Texto4"
             };
         Circles.Add(circle4);
