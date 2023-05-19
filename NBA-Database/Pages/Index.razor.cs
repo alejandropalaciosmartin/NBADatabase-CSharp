@@ -19,16 +19,16 @@ namespace NBA_Database.Pages
 
             public string Player_name { get; set; } //jugador
 
-            public int TemperatureC { get; set; }
+            public string Team_abbreviation { get; set; }
 
             public string? Summary { get; set; }
 
-            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+            
         }
         /*
             
             [JsonPropertyName("team_abbreviation")]
-            public string TeamAbbreviation { get; set; } //abreviatura de equipo
+            public string TeamAbbreviation { get; set; } //
             [JsonPropertyName("age")]
             public int Age { get; set; } //edad jugador
 
