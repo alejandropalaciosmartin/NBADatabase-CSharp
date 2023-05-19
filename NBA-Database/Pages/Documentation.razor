@@ -1,7 +1,7 @@
 ﻿@page "/documentacion"
 
-<div style="position: relative; display: inline-block;">
-    <img src="/assets/image/pizarra-basket.jpg" style="width: 800px; height: 600px; border-radius: 8vh" />
+<div style="position: absolute; display: inline-block; top:120px; left:500px;">
+    <img class="pizarraBasket" src="/assets/image/pizarra-basket.jpg"/>
     @{
         foreach (var circle in Circles)
         {
@@ -9,8 +9,10 @@
                 <div class="circle" @onclick="() => ShowText(circle.Text)"></div>
                 @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
                 {
-                    <div style="position: absolute; top: 30px; left: 30px; background-color: white; padding: 5px; width:250px; height:100px; align-content:center;">
-                        <p>@(new MarkupString(circle.Text))</p>
+                    <div class="cajaTexto">
+                        <div style="padding:6px;align-items:center; align-content:center;">
+                            @(new MarkupString(circle.Text))
+                        </div>
                     </div>
                 }
             </div>
@@ -37,7 +39,7 @@
         {
             Top = 90,
             Left = 200,
-            Text = "<p>Este trabajo está realizado por <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://github.com/alejandropalaciosmartin\" target=\"_blank\"><span class=\"name\"><b>Alejandro</b></span></a> y <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"https://github.com/AdrianLozanoMartinez\" target=\"_blank\"><span class=\"name\"><b>Adrian</b></span></a></p>"
+            Text = "Este trabajo está realizado por <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://github.com/alejandropalaciosmartin\" target=\"_blank\"><span class=\"name\"><b>Alejandro</b></span></a> y <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"https://github.com/AdrianLozanoMartinez\" target=\"_blank\"><span class=\"name\"><b>Adrian</b></span></a>"
         };
         Circles.Add(circle1);
 
@@ -45,7 +47,7 @@
             {
                 Top = 450,
                 Left = 200,
-                Text = "Texto2"
+                Text = "Consulta de datos específica de los jugadores de la NBA desde el año 1996 hasta el año 2021"
             };
         Circles.Add(circle2);
 
