@@ -3,19 +3,21 @@
 <div style="position: absolute; display: inline-block; top:120px; left:500px;">
     <img class="pizarraBasket" src="/assets/image/pizarra-basket.jpg"/>
     @{
+        int num = 1;
         foreach (var circle in Circles)
         {
             <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
-                <div class="circle" @onclick="() => ShowText(circle.Text)"></div>
+                <div class="circle" @onclick="() => ShowText(circle.Text)"><span style="color:antiquewhite;margin-left:17px;margin-top:10px; font-size:20px;"><b>@num</b></span></div>
                 @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
                 {
                     <div class="cajaTexto">
-                        <div style="padding:6px;align-items:center; align-content:center;">
+                        <div style="padding:6px;">
                             @(new MarkupString(circle.Text))
                         </div>
                     </div>
                 }
             </div>
+            num++;
         }
     }
 </div>
@@ -47,7 +49,7 @@
             {
                 Top = 450,
                 Left = 200,
-                Text = "Consulta de datos específica de los jugadores de la NBA desde el año 1996 hasta el año 2021"
+                Text = "Consulta de datos específica de los jugadores de la NBA (1996 - 2021)"
             };
         Circles.Add(circle2);
 
@@ -55,7 +57,7 @@
             {
                 Top = 90,
                 Left = 565,
-                Text = "Texto3"
+                Text = "Datos sacados de <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://www.kaggle.com/datasets/justinas/nba-players-data\" target=\"_blank\"><b>URL</b></a>"
             };
         Circles.Add(circle3);
 
@@ -63,7 +65,7 @@
             {
                 Top = 450,
                 Left = 565,
-                Text = "Texto4"
+                Text = "Click <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\" \"><b>AQUÍ</b></a> descargar JSON"
             };
         Circles.Add(circle4);
         

@@ -6,7 +6,7 @@
 	border: 2px solid white;
 	border-radius: 50%;
 	cursor: pointer;
-	align-content:center;
+	display:flex;
 }
 a {
 	all: unset;
@@ -24,11 +24,11 @@ a:hover {
 
 .cajaTexto {
 	position: absolute;
-	top: 30px;
+	top: 45px;
 	left: -85px;
 	background-color: white;
 	padding: 5px;
-	width: 215px;
+	width: 225px;
 	height: 75px;
 	border-radius: 2vh;
 	display: flex;
