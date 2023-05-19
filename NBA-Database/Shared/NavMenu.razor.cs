@@ -1,13 +1,12 @@
-namespace NBA_Database.Shared
+namespace NBA_Database.Shared;
+
+public partial class NavMenu
 {
-    public partial class NavMenu
+    private bool collapseNavMenu = true;
+    public bool CollapseNavMenu { get => collapseNavMenu; set => collapseNavMenu = value; }
+    public string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private void ToggleNavMenu()
     {
-        private bool collapseNavMenu = true;
-        public bool CollapseNavMenu { get => collapseNavMenu; set => collapseNavMenu = value; }
-        public string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-        private void ToggleNavMenu()
-        {
-            collapseNavMenu = !collapseNavMenu;
-        }
+        collapseNavMenu = !collapseNavMenu;
     }
 }

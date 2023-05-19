@@ -2,18 +2,19 @@
 
 <div style="position: relative; display: inline-block;">
     <img src="/assets/image/pizarra-basket.jpg" style="width: 800px; height: 600px; border-radius: 8vh" />
-
-    @foreach (var circle in Circles)
-    {
-        <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
-            <div class="circle" @onclick="() => ShowText(circle.Text)"></div>
-            @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
-            {
-                <div style="position: absolute; top: 30px; left: 30px; background-color: white; padding: 5px; width:250px; height:100px; align-content:center;">
-                    <p>@(new MarkupString(circle.Text))</p>
-                </div>
-            }
-        </div>
+    @{
+        foreach (var circle in Circles)
+        {
+            <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
+                <div class="circle" @onclick="() => ShowText(circle.Text)"></div>
+                @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
+                {
+                    <div style="position: absolute; top: 30px; left: 30px; background-color: white; padding: 5px; width:250px; height:100px; align-content:center;">
+                        <p>@(new MarkupString(circle.Text))</p>
+                    </div>
+                }
+            </div>
+        }
     }
 </div>
 
