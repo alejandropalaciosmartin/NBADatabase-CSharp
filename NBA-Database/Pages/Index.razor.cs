@@ -12,10 +12,7 @@ namespace NBA_Database.Pages
         }
 
         public class PlayersName
-        {
-            //college,country,draft_year,
-            //gp,pts,reb,ast,season
-
+        {           
             //player_name
             public string Player_name { get; set; }
             //age
@@ -26,10 +23,27 @@ namespace NBA_Database.Pages
             public double Player_weight { get; set; }
             //team_abbreviation
             public string Team_abbreviation { get; set; }
+            //college
+            public string College { get; set; }
+            //country
+            public string Country { get; set; }
+            //draft_year
+            public int Draft_year { get; set; }
+            //gp
+            public int Gp { get; set; }
+            //pts
+            public double Pts { get; set; }
+            //reb
+            public double Reb { get; set; }
+            //ast
+            public double Ast { get; set; }
+            //season
+            public string Season { get; set; }
 
 
-            //Propiedad aplicando una propiedad anterio en un método para sacar solo dos decimales y en metros
+            //Propiedad nueva aplicando una propiedad anterior con un método para sacar solo dos decimales y en metros
             public string Player_heightM => CalcularDecimal(Player_height);
+            //En este caso directamente meterlo en un string y ponerle dos decimales porque ya está transformado el valor
             public string Player_weightG => $"{Player_weight:0.00}";
 
             //Saca en metros con 2 decimales
@@ -39,25 +53,5 @@ namespace NBA_Database.Pages
                 return $"{num:0.00}";
             }
         }
-
-
-        /*  public string College { get; set; } //universidad en la que jugo
-
-            [JsonPropertyName("country")]
-            public string Country { get; set; } //pais de procedencia
-            [JsonPropertyName("draft_year")]
-            public int DraftYear { get; set; } //año que entro en la nba
-            [JsonPropertyName("gp")]
-            public int Gp { get; set; } //partidos jugados
-            [JsonPropertyName("pts")]
-            public int Pts { get; set; } //media de puntos esa temporada
-            [JsonPropertyName("reb")]
-            public int Reb { get; set; } //media de rebotes esa temporada
-            [JsonPropertyName("ast")]
-            public int Ast { get; set; } //media de asistencias esa temporada
-            [JsonPropertyName("season")]
-            public int Season { get; set; }  //temporada a la que hace referencia todas las estadísticas anteriores
-        */
-
     }
 }

@@ -8,5 +8,6 @@ public partial class NavMenu
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+
     }
 }
