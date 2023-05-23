@@ -1,4 +1,3 @@
-using NBA_Database.Shared;
 using System.Net.Http.Json;
 
 namespace NBA_Database.Pages
@@ -6,13 +5,14 @@ namespace NBA_Database.Pages
     public partial class Index
     {
         private PlayersName[]? players;
-    protected override async Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
         {
             players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
         }
 
         public class PlayersName
-        {           
+        {
+
             //player_name
             public string Player_name { get; set; }
             //age
@@ -52,6 +52,55 @@ namespace NBA_Database.Pages
                 num /= 100;
                 return $"{num:0.00}";
             }
+
+            //Para que aparezca la imagen del equipo 
+            public string daImagen()
+            {
+                    string imagen = "";
+                    string directorio = @"/assets/image/equipos";
+                try
+                {
+                    string team = $"{Team_abbreviation}.png";
+
+                    if (!Path.Exists(directorio))
+                    {
+                        string[] archivos = Directory.GetFiles(directorio, "*.png");
+
+                        foreach (var dir in archivos)
+                        {
+                            if (dir == team)
+                            {
+                                imagen = $"/assets/image/equipos/{Team_abbreviation}.png";
+                            }
+                            else
+                            {
+                                imagen = $"/assets/image/mundo.png";
+                            }
+
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("No existe");
+                    }
+                    //    string imagen = "";
+                    //if ($"/assets/image/equipos/{Team_abbreviation}.png" == $"/assets/image/equipos/*.png")
+                    //{
+                    //    imagen = $"/assets/image/equipos/{Team_abbreviation}.png";
+                    //}
+                    //else
+                    //{
+                    //    imagen = $"/assets/image/equipos/mundo.png";
+                    //}
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                return imagen;
+            }
+            public string daImagenPais() => $"/assets/image/equipos/{Country}.png";
         }
     }
 }

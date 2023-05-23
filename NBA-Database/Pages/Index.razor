@@ -9,44 +9,52 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="celda1">Nombre</th>
-                <th class="celda2">Edad</th>
-                <th class="celda1">Altura</th>
-                <th class="celda1">Peso</th>
-                <th class="celda1">Abreviatura equipo</th>
-                <th class="celda1">Universidad</th>
-                <th class="celda1">País procedencia</th>
-                <th class="celda1">Entrada NBA</th>
-                <th class="celda1">Partidos jugados</th>
-                <th class="celda1">Temporada (T.)</th>
-                <th class="celda1">Media de puntos T.</th>
-                <th class="celda1">Media de rebotes T.</th>
-                <th class="celda1">Media de asistencias T.</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var player in players)
-            {
+    <div class="canasta">
+        <img class="canastaImagen" src="/assets/image/canasta.png" />
+    </div>
+    <div id="tabla">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td class="celda1">@player.Player_name</td>
-                    <td class="celda2">@player.Age</td>
-                    <td class="celda1">@player.Player_heightM m</td>
-                    <td class="celda1">@player.Player_weightG kg</td>
-                    <td class="celda1">@player.Team_abbreviation</td>
-                    <td class="celda1">@player.College</td>
-                    <td class="celda1">@player.Country</td>
-                    <td class="celda1">@player.Draft_year</td>
-                    <td class="celda1">@player.Gp</td>
-                    <td class="celda1">@player.Pts</td>
-                    <td class="celda1">@player.Reb</td>
-                    <td class="celda1">@player.Ast</td>
-                    <td class="celda1">@player.Season</td>
+                    <th class="nombre">Nombre</th>
+                    <th class="edad">Edad</th>
+                    <th class="altura">Altura</th>
+                    @*<th class="celda1">Peso</th>*@
+                    <th class="equipo">Abreviatura equipo</th>
+                    @*<th class="celda1">Universidad</th>*@
+                    <th class="pais">País procedencia</th>
+                    @*<th class="celda1">Entrada NBA</th>*@
+                    @*<th class="celda1">Partidos jugados</th>*@
+                    <th class="temporada">Temporada (T.)</th>
+                    @*<th class="celda1">Media de puntos T.</th>
+                <th class="celda1">Media de rebotes T.</th>
+                <th class="celda1">Media de asistencias T.</th>*@
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var player in players)
+                {
+                    <tr>
+                        <td class="nombre">@player.Player_name</td>
+                        <td class="edad">@player.Age</td>
+                        <td class="altura">@player.Player_heightM m</td>
+                        @*<td class="celda1">@player.Player_weightG kg</td>*@
+                        <td class="equipo">@player.Team_abbreviation
+                            @*Para que aparezca la imagen del equipo*@
+                            <img class="imagenEquipo" src="@player.daImagen()" />
+                        </td>
+                        @*<td class="celda1">@player.College</td>*@
+                        <td class="pais">@player.Country</td>
+                        @*              <td class="celda1">@player.Draft_year</td>
+                <td class="celda1">@player.Gp</td>*@
+                        @*<td class="celda1">@player.Pts</td>*@
+                        @*          <td class="celda1">@player.Reb</td>
+                <td class="celda1">@player.Ast</td>*@
+                        <td class="temporada">@player.Season</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 

@@ -6,20 +6,58 @@
     margin-top: 15vh;
 }
 
-table {
-    background-color: white;
-    /*border: 5px solid black;*/
-    /*vertical-align: center;*/
+#tabla {
+    margin-right: 15vh;
+    margin-left: 35vh;
+    margin-top: -95vh;
     opacity: 0.9;
+    /*background-color: white;*/
+    font-weight: bold;
+    text-align: center;
 }
 
-.celda1 {
-    padding-left: 0.5vh;
-    padding-right: 0.1vh;
-    border-right: 1px solid black;
+.canasta{
+    margin-left: -15vh;
+    margin-top: -5vh;
 }
-.celda2 {
-    padding-left: 0.5vh;
-    padding-right: 0.1vh;
-    border-right: 1px solid black;
+.canastaImagen{
+    width: 32vh;
+    height:85vh;
+}
+
+.nombre {
+    width: 10%;
+}
+
+.edad, .altura {
+    width: 2%;
+}
+
+.equipo, .pais, .temporada {
+    width: 3%;
+}
+
+th {
+    background-color: #003d55;
+    border-bottom: 3px solid white;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #0D47A1;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #1565C0;
+    color: white;
+}
+
+td:nth-child(1){
+    text-align: left;
+}
+
+.imagenEquipo{
+    width: 7vh;
+    margin-top: -1vh;
 }

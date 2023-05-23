@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\FetchData.razor" />
+    <Content Remove="wwwroot\assets\image\anasta.png" />
     <Content Remove="wwwroot\assets\image\fondo.jpg" />
     <Content Remove="wwwroot\assets\image\fondo01.jpg" />
     <Content Remove="wwwroot\assets\image\fondo02.jpg" />
@@ -25,6 +27,13 @@
 
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\assets\image\equipos\CHI.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
