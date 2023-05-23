@@ -8,7 +8,7 @@
 
 .top-row {
     height: 5.5rem;
-    width: calc(637% - 3.5rem);
+    width: calc(637% - 3.6rem);
     background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #1565C0, #1565C0, #F44336);
     box-shadow: 10px 5px 5px black; /*Sombra*/
     border-radius: 0px 5px 5px 5px;

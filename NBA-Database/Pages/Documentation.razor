@@ -1,28 +1,43 @@
 ﻿@page "/documentacion"
 
-<div style="position: absolute; display: inline-block; top:120px; left:500px;">
-    <img class="pizarraBasket" src="/assets/image/pizarra-basket.jpg"/>
-    @{
-        int num = 1;
-        foreach (var circle in Circles)
-        {
-            <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
-                <div class="circle" @onclick="() => ShowText(circle.Text)"><span style="color:antiquewhite;margin-left:17px;margin-top:10px; font-size:20px;"><b>@num</b></span></div>
-                @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
-                {
-                    <div class="cajaTexto">
-                        <div style="padding:6px;">
-                            @(new MarkupString(circle.Text))
-                        </div>
-                    </div>
-                }
-            </div>
-            num++;
-        }
-    }
+<div class="custom-div">
+    <button @onclick="() => CambiarTaF()"><img src=".. /assets/image/documentacion.png" style="width:50px" /></button>
+    <button @onclick="() => CambiarFaT()"><img src="../assets/image/video.png" style="width:50px" /></button>
 </div>
 
+@if(!show)
+{
+    <div style="position: absolute; display: inline-block; top:120px; left:500px;">
+        <img class="pizarraBasket" src="/assets/image/pizarra-basket.jpg" />
+        @{
+            int num = 1;
+            foreach (var circle in Circles)
+            {
+                <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
+                    <div class="circle" @onclick="() => ShowText(circle.Text)"><span style="color:antiquewhite;margin-left:17px;margin-top:10px; font-size:20px;"><b>@num</b></span></div>
+                    @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
+                    {
+                        <div class="cajaTexto">
+                            <div style="padding:6px;">
+                                @(new MarkupString(circle.Text))
+                            </div>
+                        </div>
+                    }
+                </div>
+                num++;
+            }
+        }
+    </div>
+}
+else
+{
+    
+}
+
+
 @code {
+    private bool show = false;
+
     class Circle
     {
         public int Top { get; set; }
@@ -68,11 +83,22 @@
                 Text = "Click <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"/assets/data/dataPrueba.json\" download=\"data.json\"><b>AQUÍ</b></a> descargar JSON"
             };
         Circles.Add(circle4);
-        
+
     }
 
     void ShowText(string text)
     {
         currentText = text;
+    }
+    
+    public void CambiarTaF()
+    {
+        if(show)
+            show = false;
+    }
+    public void CambiarFaT()
+    {
+        if (!show)
+            show = true;
     }
 }
