@@ -7,15 +7,31 @@
 {
     @foreach (var item in newsItems)
     {
-        <div class="news-item">
-            <div class="image-container">
-                <img src="@item.ImageUrl" alt="News Image" />
+        @if(item == newsItems.FirstOrDefault())
+        {
+            <div class="first-news-item">
+                <div class="image-container">
+                    <img src="@item.ImageUrl" alt="News Image" />
+                </div>
+                <div class="news-content">
+                    <h4><a href="@item.Link" target="_blank">@item.Title</a></h4>
+                    <p>@item.Description</p>
+                </div>
             </div>
-            <div class="news-content">
-                <h4><a href="@item.Link" target="_blank">@item.Title</a></h4>
-                <p>@item.Description</p>
+        }
+        else
+        {
+            <div class="news-item">
+                <div class="image-container">
+                    <img src="@item.ImageUrl" alt="News Image" />
+                </div>
+                <div class="news-content">
+                    <h4><a href="@item.Link" target="_blank">@item.Title</a></h4>
+                    <p>@item.Description</p>
+                </div>
             </div>
-        </div>
+        }
+        
     }
 }
 
@@ -48,37 +64,25 @@
             XmlNode titleNode = itemNode.SelectSingleNode("title");
             XmlNode descriptionNode = itemNode.SelectSingleNode("description");
             XmlNode linkNode = itemNode.SelectSingleNode("link");
+            XmlNode linkImageNode = itemNode.SelectSingleNode("enclosure");
 
             string title = titleNode.InnerText;
             string description = descriptionNode.InnerText;
             string link = linkNode.InnerText;
+            string linkImage = linkImageNode.Attributes["url"].Value;
 
-            // Obtener la URL de la imagen si está presente
-            string imageUrl = string.Empty;
-            XmlNodeList imageNodes = itemNode.SelectNodes("media:content[@url]", GetXmlNamespaceManager(xmlDoc));
-            if (imageNodes.Count > 0)
-            {
-                XmlNode imageNode = imageNodes[0];
-                imageUrl = imageNode.Attributes["url"].Value;
-            }
+            
 
             NewsItem newsItem = new NewsItem
                 {
                     Title = title,
                     Description = description,
                     Link = link,
-                    ImageUrl = imageUrl
+                    ImageUrl = linkImage
                 };
 
             newsItems.Add(newsItem);
         }
-    }
-
-    private XmlNamespaceManager GetXmlNamespaceManager(XmlDocument xmlDoc)
-    {
-        XmlNamespaceManager manager = new XmlNamespaceManager(xmlDoc.NameTable);
-        manager.AddNamespace("media", "http://search.yahoo.com/mrss/");
-        return manager;
     }
 
     public class NewsItem

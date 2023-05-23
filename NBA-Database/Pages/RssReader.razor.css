@@ -1,4 +1,15 @@
-﻿.news-item {
+﻿.first-news-item {
+	max-width: 1000px;
+	margin-top: 80px;
+	margin-left: 160px;
+	border: solid 2px blue;
+	padding: 20px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.news-item {
+	max-width: 1000px;
 	margin-top: 10px;
 	margin-left: 160px;
 	border: solid 2px blue;
@@ -6,4 +17,9 @@
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.newsImg{
+	width:300px;
+	height:300px
 }
