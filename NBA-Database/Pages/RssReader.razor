@@ -1,0 +1,92 @@
+﻿@page "/rssreader"
+@using System.Xml;
+
+<h3>Feed RSS</h3>
+
+@if (newsItems != null)
+{
+    @foreach (var item in newsItems)
+    {
+        <div class="news-item">
+            <div class="image-container">
+                <img src="@item.ImageUrl" alt="News Image" />
+            </div>
+            <div class="news-content">
+                <h4><a href="@item.Link" target="_blank">@item.Title</a></h4>
+                <p>@item.Description</p>
+            </div>
+        </div>
+    }
+}
+
+@code {
+    List<NewsItem> newsItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // URL del feed RSS
+        string url = "https://www.espn.com/espn/rss/nba/news";
+
+        // Crear una instancia de HttpClient
+        HttpClient httpClient = new HttpClient();
+
+        // Descargar el contenido del feed RSS
+        string xmlContent = await httpClient.GetStringAsync(url);
+
+        // Crear un objeto XmlDocument y cargar el contenido XML
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.LoadXml(xmlContent);
+
+        // Obtener todos los elementos 'item' del feed
+        XmlNodeList itemNodes = xmlDoc.SelectNodes("//item");
+
+        newsItems = new List<NewsItem>();
+
+        // Iterar sobre los elementos 'item' y obtener la información necesaria
+        foreach (XmlNode itemNode in itemNodes)
+        {
+            XmlNode titleNode = itemNode.SelectSingleNode("title");
+            XmlNode descriptionNode = itemNode.SelectSingleNode("description");
+            XmlNode linkNode = itemNode.SelectSingleNode("link");
+
+            string title = titleNode.InnerText;
+            string description = descriptionNode.InnerText;
+            string link = linkNode.InnerText;
+
+            // Obtener la URL de la imagen si está presente
+            string imageUrl = string.Empty;
+            XmlNodeList imageNodes = itemNode.SelectNodes("media:content[@url]", GetXmlNamespaceManager(xmlDoc));
+            if (imageNodes.Count > 0)
+            {
+                XmlNode imageNode = imageNodes[0];
+                imageUrl = imageNode.Attributes["url"].Value;
+            }
+
+            NewsItem newsItem = new NewsItem
+                {
+                    Title = title,
+                    Description = description,
+                    Link = link,
+                    ImageUrl = imageUrl
+                };
+
+            newsItems.Add(newsItem);
+        }
+    }
+
+    private XmlNamespaceManager GetXmlNamespaceManager(XmlDocument xmlDoc)
+    {
+        XmlNamespaceManager manager = new XmlNamespaceManager(xmlDoc.NameTable);
+        manager.AddNamespace("media", "http://search.yahoo.com/mrss/");
+        return manager;
+    }
+
+    public class NewsItem
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Link { get; set; }
+        public string ImageUrl { get; set; }
+    }
+}
+
