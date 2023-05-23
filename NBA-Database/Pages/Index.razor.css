@@ -6,6 +6,20 @@
     margin-top: 15vh;
 }
 
-table{
+table {
     background-color: white;
+    /*border: 5px solid black;*/
+    /*vertical-align: center;*/
+    opacity: 0.9;
+}
+
+.celda1 {
+    padding-left: 0.5vh;
+    padding-right: 0.1vh;
+    border-right: 1px solid black;
+}
+.celda2 {
+    padding-left: 0.5vh;
+    padding-right: 0.1vh;
+    border-right: 1px solid black;
 }

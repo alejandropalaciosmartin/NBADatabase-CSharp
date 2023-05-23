@@ -12,38 +12,38 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Edad</th>
-                <th>Altura</th>
-                <th>Peso</th>
-                <th>Abreviatura equipo</th>
-                <th>Universidad</th>
-                <th>País procedencia</th>
-                <th>Entrada NBA</th>
-                <th>Partidos jugados</th>
-                <th>Temporada (T.)</th>
-                <th>Media de puntos T.</th>
-                <th>Media de rebotes T.</th>
-                <th>Media de asistencias T.</th>
+                <th class="celda1">Nombre</th>
+                <th class="celda2">Edad</th>
+                <th class="celda1">Altura</th>
+                <th class="celda1">Peso</th>
+                <th class="celda1">Abreviatura equipo</th>
+                <th class="celda1">Universidad</th>
+                <th class="celda1">País procedencia</th>
+                <th class="celda1">Entrada NBA</th>
+                <th class="celda1">Partidos jugados</th>
+                <th class="celda1">Temporada (T.)</th>
+                <th class="celda1">Media de puntos T.</th>
+                <th class="celda1">Media de rebotes T.</th>
+                <th class="celda1">Media de asistencias T.</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in players)
+            @foreach (var player in players)
             {
                 <tr>
-                    <td>@forecast.Player_name</td>
-                    <td>@forecast.Age</td>
-                    <td>@forecast.Player_heightM m</td>
-                    <td>@forecast.Player_weightG kg</td>
-                    <td>@forecast.Team_abbreviation</td>
-                    <td>@forecast.College</td>
-                    <td>@forecast.Country</td>
-                    <td>@forecast.Draft_year</td>
-                    <td>@forecast.Gp</td>
-                    <td>@forecast.Pts</td>
-                    <td>@forecast.Reb</td>
-                    <td>@forecast.Ast</td>
-                    <td>@forecast.Season</td>
+                    <td class="celda1">@player.Player_name</td>
+                    <td class="celda2">@player.Age</td>
+                    <td class="celda1">@player.Player_heightM m</td>
+                    <td class="celda1">@player.Player_weightG kg</td>
+                    <td class="celda1">@player.Team_abbreviation</td>
+                    <td class="celda1">@player.College</td>
+                    <td class="celda1">@player.Country</td>
+                    <td class="celda1">@player.Draft_year</td>
+                    <td class="celda1">@player.Gp</td>
+                    <td class="celda1">@player.Pts</td>
+                    <td class="celda1">@player.Reb</td>
+                    <td class="celda1">@player.Ast</td>
+                    <td class="celda1">@player.Season</td>
                 </tr>
             }
         </tbody>
