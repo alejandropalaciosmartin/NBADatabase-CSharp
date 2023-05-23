@@ -13,6 +13,8 @@
     <Content Remove="wwwroot\assets\image\fondo02.jpg" />
     <Content Remove="wwwroot\assets\image\fondo03.webp" />
     <Content Remove="wwwroot\assets\image\fondo04.jpg" />
+    <Content Remove="wwwroot\assets\image\fondo2.jpg" />
+    <Content Remove="wwwroot\assets\image\pelota.png" />
   </ItemGroup>
 
   <ItemGroup>
