@@ -1,0 +1,9 @@
+﻿.news-item {
+	margin-top: 10px;
+	margin-left: 160px;
+	border: solid 2px blue;
+	padding: 20px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
