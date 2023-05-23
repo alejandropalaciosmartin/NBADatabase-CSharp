@@ -62,7 +62,7 @@ namespace NBA_Database.Pages
                 {
                     string team = $"{Team_abbreviation}.png";
 
-                    if (!Path.Exists(directorio))
+                    if (Path.Exists(directorio))
                     {
                         string[] archivos = Directory.GetFiles(directorio, "*.png");
 
