@@ -54,7 +54,7 @@ namespace NBA_Database.Pages
             }
 
             //Para que aparezca la imagen del equipo 
-            public string daImagen()
+            /*public string daImagen()
             {
                     string imagen = "";
                     string directorio = @"/assets/image/equipos";
@@ -99,7 +99,7 @@ namespace NBA_Database.Pages
                     Console.WriteLine(ex.Message);
                 }
                 return imagen;
-            }
+            }*/
             public string daImagenPais() => $"/assets/image/equipos/{Country}.png";
         }
     }

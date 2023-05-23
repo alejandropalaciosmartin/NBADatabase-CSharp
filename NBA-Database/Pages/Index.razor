@@ -41,7 +41,16 @@ else
                         @*<td class="celda1">@player.Player_weightG kg</td>*@
                         <td class="equipo">@player.Team_abbreviation
                             @*Para que aparezca la imagen del equipo*@
-                            <img class="imagenEquipo" src="@player.daImagen()" />
+                            @*<img class="imagenEquipo" src="@player.daImagen()" />*@
+                            @*NO VA POR AHORA PROBAR AQUI EL LEER DIRECTORIO*@
+                            @if (Path.Exists(@"/assets/image/equipos"))
+                            {
+                                Console.WriteLine("Existe");
+                            }
+                            else
+                            {
+                                Console.WriteLine("No existe");
+                            }
                         </td>
                         @*<td class="celda1">@player.College</td>*@
                         <td class="pais">@player.Country</td>
