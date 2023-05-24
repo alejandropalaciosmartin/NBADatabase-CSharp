@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Controller.cs" />
+    <Compile Remove="Pages\PaginadorGenerico.cs" />
+    <Compile Remove="Shared\Paginacion.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Pages\FetchData.razor" />
     <Content Remove="wwwroot\assets\image\fondo.jpg" />
     <Content Remove="wwwroot\assets\image\fondo01.jpg" />
