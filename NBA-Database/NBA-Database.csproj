@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\assets\image\equipos\CHI.png">
+    <Content Update="wwwroot\assets\image\equiposNBA\CHI.png">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>

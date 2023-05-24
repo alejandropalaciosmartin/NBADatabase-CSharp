@@ -56,36 +56,40 @@ namespace NBA_Database.Pages
                 return $"{num:0.00}";
             }
 
-            //Para que aparezca la imagen del equipo 
-            public string DaImagen()
+            //Obtener imágenes
+            public string TeamImage => DaImagenGeneral(Team_abbreviation);
+
+            public string CountryImage => DaImagenGeneral(Country);
+
+            //public string DaImagenPais() => $"/assets/image/equipos/{Country}.png";
+            public string DaImagenGeneral(string buscaBandera)
             {
-                //Creamos array con los equipos que tenemos la imagen
-                 string[] imagenExiste = { "CHI", "LAC", "TOR" };
                 //Imagen de salida que la obtenemos en el foreach del Index.razor al llamar al método
-                 string imagen = "";
-             try
-             {
+                string imagen = "";
+                //Creamos array con las banderas que tenemos la imagen
+                string[] imagenExiste = { "CHI", "LAC", "TOR", "USA" };
+                try
+                {
                     //Recorremos el array de las fotos existentes
-                 for (int i = 0; i < imagenExiste.Length; i++) 
-                 {
+                    for (int i = 0; i < imagenExiste.Length; i++)
+                    {
                         //Miramos si el valor del json que leemos lo contiene el array, si lo contiene lo muestra y sino muestra una predeterminada
-                     if (imagenExiste.Contains(Team_abbreviation))
-                     {
-                         imagen = $"/assets/image/equipos/{Team_abbreviation}.png";
-                     }
-                     else
-                     {
-                         imagen = $"/assets/image/mundo.png";
-                     }
-                 }
-             }
-             catch(Exception ex)
-             {
-                 Console.WriteLine(ex.Message);
-             }
+                        if (imagenExiste.Contains(buscaBandera))
+                        {
+                            imagen = $"/assets/image/equiposNBA/{buscaBandera}.png";
+                        }
+                        else
+                        {
+                            imagen = $"/assets/image/mundo.png";
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
                 return imagen;
             }
-            //public string DaImagenPais() => $"/assets/image/equipos/{Country}.png";
         }
     }
 }
