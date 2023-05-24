@@ -1,0 +1,27 @@
+﻿@page "/compare"
+
+<div id="filtrar">
+    <div>
+        <label for="data-type">Tipo de dato:</label>
+        <select id="data-type">
+            <option value="pts">Puntos</option>
+            <option value="ast">Asistencias</option>
+            <option value="reb">Rebotes</option>
+        </select>
+    </div>
+    <div>
+        <label for="comparison-type">Comparar por:</label>
+        <select id="comparison-type">
+            <option value="season">Temporadas</option>
+            <option value="teams">Equipos</option>
+            <option value="players">Jugadores</option>
+        </select>
+    </div>
+    <button onclick="generateChart()">Enviar</button>
+</div>
+
+
+
+@code {
+
+}
