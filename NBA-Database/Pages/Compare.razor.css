@@ -1,0 +1,17 @@
+﻿#filtrar {
+	position: absolute;
+	top: 150px;
+	left: 520px;
+	display:flex; 
+	justify-content: space-between;
+	background-color:aquamarine;
+	padding: 20px;
+	border-radius:10px;
+	border: solid 2px blue;
+}
+#data-type{
+	margin-right: 20px;
+}
+#comparison-type {
+	margin-right: 20px;
+}
