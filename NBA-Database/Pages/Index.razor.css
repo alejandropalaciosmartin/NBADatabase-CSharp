@@ -6,17 +6,27 @@
     margin-top: 15vh;
 }
 
+.cuadradBuscador {
+    margin-top: -95vh;
+    margin-left: 70vh;
+}
+
+.jugadorBuscador {
+    color: white;
+    font-weight: bold;
+}
+
 #tabla {
     margin-right: 15vh;
     margin-left: 35vh;
-    margin-top: -95vh;
+    margin-top: -14vh;
     opacity: 0.9;
     /*background-color: white;*/
     font-weight: bold;
     text-align: center;
 }
 
-.canasta{
+.canasta {
     margin-left: -15vh;
     margin-top: -5vh;
 }
@@ -41,6 +51,13 @@ th {
     background-color: #003d55;
     border-bottom: 3px solid white;
     color: white;
+}
+
+tr:hover {
+    border: rgb(227, 55, 55) 0.5vh solid;
+    font-size: 3vh;
+    font-weight: bold;
+    /*cursor: pointer;*/
 }
 
 tr:nth-child(even) {

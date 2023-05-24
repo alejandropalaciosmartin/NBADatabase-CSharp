@@ -12,6 +12,10 @@ else
     <div class="canasta">
         <img class="canastaImagen" src="/assets/image/canasta.png" />
     </div>
+    <div class="cuadradBuscador">
+        <label for="search-input" class="jugadorBuscador">Buscar Jugador:</label>
+        <input type="text" id="search-input" name="search-input">
+    </div>
     <div id="tabla">
         <table class="table">
             <thead>
@@ -48,8 +52,8 @@ else
                             @*Para que aparezca la imagen del equipo*@
                             <img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" />
                         </td>
-                        @*              <td class="celda1">@player.Draft_year</td>
-                <td class="celda1">@player.Gp</td>*@
+                        @*<td class="celda1">@player.Draft_year</td>
+                        <td class="celda1">@player.Gp</td>*@
                         @*<td class="celda1">@player.Pts</td>*@
                         @*          <td class="celda1">@player.Reb</td>
                 <td class="celda1">@player.Ast</td>*@

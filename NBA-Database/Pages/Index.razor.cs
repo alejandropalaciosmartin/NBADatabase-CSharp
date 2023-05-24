@@ -42,8 +42,6 @@ namespace NBA_Database.Pages
             public double Ast { get; set; }
             //season
             public string Season { get; set; }
-
-
             //Propiedad nueva aplicando una propiedad anterior con un método para sacar solo dos decimales y en metros
             public string Player_heightM => CalcularDecimal(Player_height);
             //En este caso directamente meterlo en un string y ponerle dos decimales porque ya está transformado el valor
@@ -55,11 +53,6 @@ namespace NBA_Database.Pages
                 num /= 100;
                 return $"{num:0.00}";
             }
-
-            //Obtener imágenes
-            public string TeamImage => DaImagenGeneral(Team_abbreviation);
-
-            public string CountryImage => DaImagenGeneral(Country);
 
             //public string DaImagenPais() => $"/assets/image/equipos/{Country}.png";
             public string DaImagenGeneral(string buscaBandera)
@@ -90,6 +83,47 @@ namespace NBA_Database.Pages
                 }
                 return imagen;
             }
+
+            public string Buscando()
+            {
+                return "";
+            }
+
+
+            /*DEMO BUSCADOR
+        const updatePokemonList = () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        container.innerHTML = '';
+        pokemon.filter(p => p.name.toLowerCase().includes(searchTerm))
+       .forEach(p => {
+         const card = document.createElement("div");
+         card.classList.add("pokemon_card");
+         card.innerHTML = `
+           <span class="name">${p.name.charAt(0).toUpperCase() + p.name.slice(1)}</span>
+           <span class="number">#${p.url.split("/")[6].padStart(3, "0")}</span>
+           <img src="">
+           <div class="types"></div>`;
+
+         card.addEventListener('click', () => { window.location.href = `single.html?id=${p.url.split("/")[6]}`; });
+               
+         fetch(p.url)
+           .then(response => response.json())
+           .then(data => {
+             card.querySelector('img').src = data.sprites.other.home.front_default;
+             const typesContainer = card.querySelector('.types');
+             data.types.forEach(typeData => {
+               const typeName = typeData.type.name;
+               const typeElement = document.createElement('div');
+               typeElement.textContent = typeTranslations[typeName];
+               typeElement.style.cssText = `background-color:${typeColors[typeName]}; color:white; padding:5px 10px; border-radius:10px; margin-right:5px; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; border:solid black 2px`;
+               typesContainer.appendChild(typeElement);
+              });
+           })
+          container.appendChild(card);
+       });
+    };
+   searchInput.addEventListener("input", updatePokemonList);
+   updatePokemonList();*/
         }
     }
 }
