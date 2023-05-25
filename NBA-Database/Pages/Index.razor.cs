@@ -88,7 +88,7 @@ public partial class Index
             return imagen;
         }
 
-        ///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
+///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
     }
     //Contabilizar
     private int contador = 0;
@@ -126,7 +126,9 @@ public partial class Index
         AgregarEliminar(contador);
         //Console.WriteLine(contador);
     }
-    //Meter datos en nuevo array
+
+
+/////////////////////////////////////////////////////////////////Meter datos en nuevo array + Paginación///////////////////////////////////////////
     public PlayersName[] AgregarEliminar(int contador)
     {
         //Se crea nuevo array para meter los nuevos datos con límite al que pongamos para no cargar toda la lista
@@ -139,15 +141,11 @@ public partial class Index
             for (int i = contador; i < contador + CANTMOSTRAR; i++) //Empieza desde el contador que vaya (ej: contador += CANTMOSTRAR y
             {                                                       //CANTMOSTRAR es 10 u otro, entonces el valor que empieza 0 se pone 
                                                                     //en 10 cuando pulsamos botón hasta los próximos 10, los 20 siguientes
-                if (i < players.Length && players[i] != null) //Si el número del for que comience es menor que el total del array json y 
+               if (i < players.Length && players[i] != null) //Si el número del for que comience es menor que el total del array json y 
                 {                                             //cada elemento es diferente a nulo
                     playersNew[newIndex] = players[i];  //Metemos cada elemento a la posición nueva del array nuevo
                     newIndex++;     //Posición nueva, después del 0 se incrementa en 1 para la próxima insercción
                 }
-                //else
-                //{
-                //    Console.WriteLine(players[i].Player_name);
-                //}
             }
         }
         catch (Exception e)
@@ -158,28 +156,24 @@ public partial class Index
     }
 
     ///////////////////////////ORDENAR//////////////////////////////////////////////////////////////////////////
-    bool pulsar = true;
-    public void OrdenarNombre()
+    bool pulsar = false;
+    //PlayersName[] playersOrdenado;
+    public PlayersName[] OrdenarNombre()
     {
+        //Controlamos con pulsar bool que cada vez le demos nos ordene de una u otra forma
         if (pulsar)
         {
-            var pl = players.OrderByDescending(x => x.Player_name).Select(x => x.Player_name);
-            foreach (var p in pl)
-            {
-                Console.WriteLine(p);
-            }
-            pulsar = false;
+            //Lo metemos en players que es la variable principal para que afecte directamente a la lista que tenemos creada y la ordene
+            //directamente en la tabla
+            players = players.OrderByDescending(x => x.Player_name).ToArray(); //Ordenamos de Z a la A
+            pulsar = false; //Cambiamos a true para que la próxima vez que le demos se ejecute el contrario, de la A a la Z
         }
         else
         {
-            var pl = players.OrderBy(x => x.Player_name).Select(x => x.Player_name);
-            foreach (var p in pl)
-            {
-                Console.WriteLine(p);
-            }
-            pulsar = true;
+            players = players.OrderBy(x => x.Player_name).ToArray(); //Ordenamos de A a la Z
+            pulsar = true; //Lo contrario del anterior, para que se ejecute luego de la Z a la A
         }
-
+        return players; 
     }
 
 
