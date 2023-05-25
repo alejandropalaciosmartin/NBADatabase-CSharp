@@ -25,6 +25,14 @@ else
     <div class="posCont">
         <div>@ContarPag()/@LIMITECONTADOR</div>
     </div>
+    <div class="ordenarNombre">
+        <button @onclick="() => OrdenarNombre()">
+            <div class="redondo">
+                <abbr title="Se Alterna el orden de A-Z y Z-A al pulsar el botón">?</abbr>
+            </div>
+            Ordenar Nombre A-Z/Z-A
+        </button>
+    </div>
     <div id="tabla">
         <table class="table">
             <thead>

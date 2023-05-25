@@ -157,4 +157,38 @@ public partial class Index
         }
         return playersNew;
     }
+
+    ///////////////////////////ORDENAR//////////////////////////////////////////////////////////////////////////
+        bool pulsar = true;
+    public void OrdenarNombre()
+    {
+        if(pulsar)
+        {
+            var pl = players.OrderByDescending(x => x.Player_name).Select(x => x.Player_name);
+            foreach (var p in pl)
+            {
+                Console.WriteLine(p);
+            }
+            pulsar = false;
+        }
+        else
+        {
+            var pl = players.OrderBy(x => x.Player_name).Select(x => x.Player_name);
+            foreach (var p in pl)
+            {
+                Console.WriteLine(p);
+            }
+            pulsar = true;
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
 }
