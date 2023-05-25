@@ -1,27 +1,8 @@
 ﻿@page "/compare"
 
-<div id="filtrar">
-    <div>
-        <label for="data-type">Tipo de dato:</label>
-        <select id="data-type">
-            <option value="pts">Puntos</option>
-            <option value="ast">Asistencias</option>
-            <option value="reb">Rebotes</option>
-        </select>
-    </div>
-    <div>
-        <label for="comparison-type">Comparar por:</label>
-        <select id="comparison-type">
-            <option value="season">Temporadas</option>
-            <option value="teams">Equipos</option>
-            <option value="players">Jugadores</option>
-        </select>
-    </div>
-    <button onclick="generateChart()">Enviar</button>
-</div>
-
-
-
-@code {
-
-}
+<ChartJsLine TItem="int" TOptions="LineOptions" TData="LineData" CanvasId="lineChart">
+    <LineData>
+        <LineDataset Label="Data" Data="@(new int[] { 65, 59, 80, 81, 56, 55, 40 })" Fill="false" BackgroundColor="#4bc0c0" BorderColor="#4bc0c0"></LineDataset>
+    </LineData>
+    <LineOptions></LineOptions>
+</ChartJsLine>
