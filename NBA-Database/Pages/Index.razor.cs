@@ -16,6 +16,7 @@ public partial class Index
     {
         //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
         players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas.json");
+        LIMITECONTADOR = players.Length / 10; //El total de json lo dividimos entre 10
     }
 
     public class PlayersName
@@ -94,7 +95,6 @@ public partial class Index
     private int contador = 0;
     private const int CANTMOSTRAR = 10;
     int LIMITECONTADOR;
-    int contarPag = 0;
 
     public int ContarPag()
     {
@@ -102,7 +102,7 @@ public partial class Index
         {
             contador = 10;
         }
-        return contarPag = contador / 10;
+        return contador / 10;
     }
 
     public void Retroceder()
@@ -128,7 +128,6 @@ public partial class Index
     //Meter datos en nuevo array
     public PlayersName[] AgregarEliminar(int contador)
     {
-        LIMITECONTADOR = players.Length/10; //El total de json lo dividimos entre 10
         //Se crea nuevo array para meter los nuevos datos con límite al que pongamos para no cargar toda la lista
         PlayersName[] playersNew = new PlayersName[CANTMOSTRAR];
         try

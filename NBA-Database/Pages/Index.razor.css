@@ -16,9 +16,27 @@
     font-weight: bold;
 }
 
+.posRetro {
+    margin-top: -15vh;
+    margin-left: 147vh;
+}
+
+.posAvan {
+    margin-top: -19vh;
+    margin-left: 155vh;
+}
+
+.posCont {
+    margin-top: -15vh;
+    margin-left: 149vh;
+    background-color: red;
+    width: 10vh;
+    text-align: center
+}
+
 #tabla {
     margin-right: 15vh;
-    margin-left: 35vh;
+    margin-left: 20vh;
     margin-top: -14vh;
     opacity: 0.9;
     /*background-color: white;*/
@@ -79,7 +97,4 @@ td:nth-child(1){
     margin-top: -0.5vh;
 }
 
-.posicionBotones{
-    margin-top: -15vh;
-}
 
