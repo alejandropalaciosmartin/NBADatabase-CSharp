@@ -118,7 +118,7 @@ public partial class Index
     }
     public void Avanzar()
     {
-        if (contador <= players.Length && contador <= LIMITECONTADOR) //Para que no cuente más de lo que debería contar al repartir
+        if (contador <= players.Length) //Para que no cuente más de lo que debería contar al repartir
         {                                                             //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
         }
