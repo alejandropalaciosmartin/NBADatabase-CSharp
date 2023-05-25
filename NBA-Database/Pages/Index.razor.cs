@@ -20,12 +20,6 @@ public partial class Index
 
     public class PlayersName
     {
-<<<<<<< Updated upstream
-        //Paginación
-        //public Paginacion paginacion { get; set; }
-
-=======
->>>>>>> Stashed changes
         //player_name
         public string Player_name { get; set; }
         //age
