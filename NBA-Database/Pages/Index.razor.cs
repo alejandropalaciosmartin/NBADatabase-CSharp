@@ -145,7 +145,7 @@ updatePokemonList();*/
         if (contador > 1)
             contador -= CANTMOSTRAR;
         AgregarEliminar(contador);
-        Console.WriteLine(contador);
+        //Console.WriteLine(contador);
     }
 
     public void Avanzar()
@@ -153,40 +153,40 @@ updatePokemonList();*/
         if (contador < players.Length)
             contador += CANTMOSTRAR;
         AgregarEliminar(contador);
-        Console.WriteLine(contador);
+        //Console.WriteLine(contador);
     }
     //Meter datos en nuevo array
     public void AgregarEliminar(int contador)
     {
-        //string[] playersNew = new string[players.Length];
-        PlayersName[] playersNew = new PlayersName[players.Length];
+        //Se crea nuevo array para meter los nuevos datos con límite al que pongamos para no cargar toda la lista
+        PlayersName[] playersNew = new PlayersName[CANTMOSTRAR];
         try
         {
-            //Meter en el nuevo array
-            for (int i = contador; i < contador + CANTMOSTRAR; i++)
-            {
-                if (contador + CANTMOSTRAR - 1 != players.Length)
-                {
-                    playersNew[i] = players[i];
-                    Console.WriteLine(contador);
+            //LLENAMOS EL NUEVO ARRAY
+            int newIndex = 0; //Creamos un contador para almacenar desde la 1º posición, ya que si ponemos contador o i que es el mismo
+            //valor, no se rellena correctamente, porque contador empieza desde donde esté
+            for (int i = contador; i < contador + CANTMOSTRAR; i++) //Empieza desde el contador que vaya (ej: contador += CANTMOSTRAR y
+            {                                                       //CANTMOSTRAR es 10 u otro, entonces el valor que empieza 0 se pone 
+                                                                    //en 10 cuando pulsamos botón hasta los próximos 10, los 20 siguientes
+                if (i < players.Length && players[i] != null) //Si el número del for que comience es menor que el total del array json y 
+                {                                             //cada elemento es diferente a nulo
+                    playersNew[newIndex] = players[i];  //Metemos cada elemento a la posición nueva del array nuevo
+                    newIndex++;     //Posición nueva, después del 0 se incrementa en 1 para la próxima insercción
                 }
             }
-            //Mostrar
-            for (int i = contador; i < contador + CANTMOSTRAR; i++)
+
+            // Mostrar los elementos
+            for (int i = 0; i < playersNew.Length; i++) //Recorremos el nuevo array
             {
-                if (contador + CANTMOSTRAR - 1 != playersNew.Length)
+                if (playersNew[i] != null) //Si no es nulo lo muestra
                 {
                     Console.WriteLine(playersNew[i].Player_name);
-                }
-                else 
-                {
-                    Console.WriteLine(playersNew[playersNew.Length-1].Player_name);
                 }
             }
         }
         catch (Exception e)
         {
-            throw new Exception("Sales del margen");
+            Console.WriteLine(e.Message);
         }
     }
 
