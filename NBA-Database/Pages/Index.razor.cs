@@ -1,4 +1,6 @@
 using System.Net.Http.Json;
+using static NBA_Database.Pages.Index;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace NBA_Database.Pages;
 
@@ -7,6 +9,9 @@ public partial class Index
 {
     //Metemos en una raíz porque el tamaño no cambiará de PlayersName
     private PlayersName[]? players;
+
+    //private Paginacion paginacion;
+
     //Leemos y pasamos a players el cotnenido de json
     protected override async Task OnInitializedAsync()
     {
@@ -15,9 +20,12 @@ public partial class Index
 
     public class PlayersName
     {
+<<<<<<< Updated upstream
         //Paginación
         //public Paginacion paginacion { get; set; }
 
+=======
+>>>>>>> Stashed changes
         //player_name
         public string Player_name { get; set; }
         //age
@@ -86,7 +94,7 @@ public partial class Index
             return imagen;
         }
 
-       
+
         public string Buscando()
         {
             return "";
@@ -127,7 +135,40 @@ public partial class Index
 };
 searchInput.addEventListener("input", updatePokemonList);
 updatePokemonList();*/
+
+
+        //PAGINACIÓN
+        /*public class Paginacion
+        {
+            public PlayersName Next { get; set; }
+            public PlayersName Back { get; set; }
+        }*/
+    }
+    private int contador = 1;
+    public void Retroceder()
+    {
+        if (contador > 1)
+            contador--;
+        Console.WriteLine(contador);
+    }
+    public void Avanzar()
+    {
+        if (contador < players.Length)
+            contador++;
+            for(int i = 0; i < contador; i++)
+            {
+            //players += players[i];
+            Console.WriteLine(players[i]);
+        }
+        Console.WriteLine(contador);
     }
 
+    public void MostrarPorPagina()
+    {
+        for (int i = 1; i < contador; i++)
+        {
+
+        }
+    }
+    
 }
-//PAGINACIÓN

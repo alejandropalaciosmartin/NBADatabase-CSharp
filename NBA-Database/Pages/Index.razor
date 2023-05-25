@@ -31,18 +31,24 @@ else
             <tbody>
                 @foreach (var player in players)
                 {
-                    <tr>
-                        <td class="nombre">@player.Player_name</td>
-                        <td class="edad">@player.Age</td>
-                        <td class="altura">@player.Player_heightM m</td>
-                        <td class="equipo">@player.Team_abbreviation<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
-                        <td class="pais">@player.Country<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
-                        <td class="temporada">@player.Season</td>
-                    </tr>
+                @*    @for (int i = 1; i < contador; i++)
+                    {*@
+                        <tr>
+                            <td class="nombre">@player.Player_name</td>
+                            <td class="edad">@player.Age</td>
+                            <td class="altura">@player.Player_heightM m</td>
+                            <td class="equipo">@player.Team_abbreviation<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
+                            <td class="pais">@player.Country<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
+                            <td class="temporada">@player.Season</td>
+                        </tr>
+                    @*}*@
                 }
             </tbody>
         </table>
-
+        <div class="posicionBotones">
+            <button @onclick="() => Retroceder()">&lt;&lt;</button>
+            <button @onclick="() => Avanzar()">>></button>
+        </div>
     </div>
 }
 
