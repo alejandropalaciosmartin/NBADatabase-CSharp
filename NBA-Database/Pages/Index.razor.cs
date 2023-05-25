@@ -118,7 +118,9 @@ public partial class Index
     }
     public void Avanzar()
     {
-        if (contador <= players.Length) //Para que no cuente más de lo que debería contar al repartir
+        //Mientras el contador sea menor que el total del array -CANTMOSTRAR, ponemos CANTMOSTRAR porque vamos en la tabla en grupo
+        // de lo que pongamos en CANTMOSTRAR
+        if (contador < players.Length - CANTMOSTRAR) //Para que no cuente más de lo que debería contar al repartir
         {                                                             //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
         }
@@ -143,6 +145,10 @@ public partial class Index
                     playersNew[newIndex] = players[i];  //Metemos cada elemento a la posición nueva del array nuevo
                     newIndex++;     //Posición nueva, después del 0 se incrementa en 1 para la próxima insercción
                 }
+                //else
+                //{
+                //    Console.WriteLine(players[i].Player_name);
+                //}
             }
         }
         catch (Exception e)
