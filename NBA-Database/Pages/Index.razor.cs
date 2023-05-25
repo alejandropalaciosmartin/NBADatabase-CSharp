@@ -150,7 +150,7 @@ updatePokemonList();*/
 
     public void Avanzar()
     {
-        if (contador < players.Length- CANTMOSTRAR)
+        if (contador < players.Length)
             contador += CANTMOSTRAR;
         AgregarEliminar(contador);
         Console.WriteLine(contador);
@@ -158,7 +158,8 @@ updatePokemonList();*/
     //Meter datos en nuevo array
     public void AgregarEliminar(int contador)
     {
-        string[] playersNew = new string[players.Length];
+        //string[] playersNew = new string[players.Length];
+        PlayersName[] playersNew = new PlayersName[players.Length];
         try
         {
             //Meter en el nuevo array
@@ -166,16 +167,20 @@ updatePokemonList();*/
             {
                 if (contador + CANTMOSTRAR - 1 != players.Length)
                 {
-                    playersNew[i] = players[i].ToString();
+                    playersNew[i] = players[i];
                     Console.WriteLine(contador);
                 }
             }
             //Mostrar
             for (int i = contador; i < contador + CANTMOSTRAR; i++)
             {
-                if (contador + CANTMOSTRAR - 1 != players.Length)
+                if (contador + CANTMOSTRAR - 1 != playersNew.Length)
                 {
-                    Console.WriteLine(players[i].Player_name);
+                    Console.WriteLine(playersNew[i].Player_name);
+                }
+                else 
+                {
+                    Console.WriteLine(playersNew[playersNew.Length-1].Player_name);
                 }
             }
         }
@@ -192,46 +197,5 @@ updatePokemonList();*/
             //si el contador muestre 2 jugadores
         }
     }
-    // private bool ParImpar => players.Length % 2 == 0;
-    /*        for (int i = contador; i < contador + CANTMOSTRAR; i++)
-        {
-            if (!ParImpar)
-            {
-                if (contador + CANTMOSTRAR - 1 != players.Length)
-                {
-                    playersNew[i] = players[i].ToString();
-                    Console.WriteLine(contador);
-                }
-            }
-            else
-            {
-                if (contador + CANTMOSTRAR != players.Length)
-                {
-                    playersNew[i] = players[i].ToString();
-                    Console.WriteLine(contador);
-                }
-            }
-        }
-        //Mostrar
-        for (int i = contador; i < contador + CANTMOSTRAR; i++)
-        {
-            if (!ParImpar)
-            {
-                if (contador + CANTMOSTRAR - 1 != players.Length)
-                {
-                    Console.WriteLine(players[i].Player_name);
-                }
-            }
-            else
-            {
-                if (contador + CANTMOSTRAR != players.Length)
-                {
-                    Console.WriteLine(players[i].Player_name);
-                }
-            }
-        }*/
-    /*public void SacarParImpar()
-    {
-        players.Length % 2 == 0;
-    }*/
+
 }
