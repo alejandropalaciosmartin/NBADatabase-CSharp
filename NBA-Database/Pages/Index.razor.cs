@@ -140,9 +140,10 @@ updatePokemonList();*/
     //Contabilizar
     private int contador = 0;
     private const int CANTMOSTRAR = 2;
+    private const int LIMITECONTADOR = 4;
     public void Retroceder()
     {
-        if (contador > 1)
+        if (contador >= 1)
             contador -= CANTMOSTRAR;
         AgregarEliminar(contador);
         //Console.WriteLine(contador);
@@ -150,7 +151,8 @@ updatePokemonList();*/
 
     public void Avanzar()
     {
-        if (contador < players.Length)
+        if (contador <= players.Length && contador <= LIMITECONTADOR) //Para que no cuente más de lo que debería contar al repartir
+                                                                      //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
         AgregarEliminar(contador);
         //Console.WriteLine(contador);
@@ -176,12 +178,15 @@ updatePokemonList();*/
             }
 
             // Mostrar los elementos
-            for (int i = 0; i < playersNew.Length; i++) //Recorremos el nuevo array
+            int mostrarLimite = Math.Min(newIndex, playersNew.Length); // Determinar el límite para mostrar elementos
+            //for (int i = 0; i < playersNew.Length; i++) //Recorremos el nuevo array
+            for (int i = 0; i < mostrarLimite; i++) //Recorremos el nuevo array
             {
                 if (playersNew[i] != null) //Si no es nulo lo muestra
                 {
                     Console.WriteLine(playersNew[i].Player_name);
                 }
+
             }
         }
         catch (Exception e)
