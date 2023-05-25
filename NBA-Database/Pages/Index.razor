@@ -23,16 +23,9 @@ else
                     <th class="nombre">Nombre</th>
                     <th class="edad">Edad</th>
                     <th class="altura">Altura</th>
-                    @*<th class="celda1">Peso</th>*@
                     <th class="equipo">Abreviatura equipo</th>
-                    @*<th class="celda1">Universidad</th>*@
                     <th class="pais">País procedencia</th>
-                    @*<th class="celda1">Entrada NBA</th>*@
-                    @*<th class="celda1">Partidos jugados</th>*@
                     <th class="temporada">Temporada (T.)</th>
-                    @*<th class="celda1">Media de puntos T.</th>
-                <th class="celda1">Media de rebotes T.</th>
-                <th class="celda1">Media de asistencias T.</th>*@
                 </tr>
             </thead>
             <tbody>
@@ -42,21 +35,8 @@ else
                         <td class="nombre">@player.Player_name</td>
                         <td class="edad">@player.Age</td>
                         <td class="altura">@player.Player_heightM m</td>
-                        @*<td class="celda1">@player.Player_weightG kg</td>*@
-                        <td class="equipo">@player.Team_abbreviation
-                            @*Para que aparezca la imagen del equipo*@
-                            <img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" />
-                        </td>
-                        @*<td class="celda1">@player.College</td>*@
-                        <td class="pais">@player.Country
-                            @*Para que aparezca la imagen del equipo*@
-                            <img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" />
-                        </td>
-                        @*<td class="celda1">@player.Draft_year</td>
-                        <td class="celda1">@player.Gp</td>*@
-                        @*<td class="celda1">@player.Pts</td>*@
-                        @*          <td class="celda1">@player.Reb</td>
-                <td class="celda1">@player.Ast</td>*@
+                        <td class="equipo">@player.Team_abbreviation<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
+                        <td class="pais">@player.Country<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
                         <td class="temporada">@player.Season</td>
                     </tr>
                 }
