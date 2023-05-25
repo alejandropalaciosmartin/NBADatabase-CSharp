@@ -29,7 +29,8 @@ else
                 </tr>
             </thead>
             <tbody>
-                @foreach (var player in players)
+                @*@MostrarPorPagina(@contador)*@ 
+                @foreach (var player in players)@*otro array diferente para que pase los 7 y 10... *@
                 {
                 @*    @for (int i = 1; i < contador; i++)
                     {*@
@@ -42,6 +43,7 @@ else
                             <td class="temporada">@player.Season</td>
                         </tr>
                     @*}*@
+                    @*Vaciar array pag para iniciar de nuevo*@
                 }
             </tbody>
         </table>

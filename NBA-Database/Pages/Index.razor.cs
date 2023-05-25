@@ -1,6 +1,5 @@
+using System.ComponentModel.Design;
 using System.Net.Http.Json;
-using static NBA_Database.Pages.Index;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace NBA_Database.Pages;
 
@@ -9,6 +8,7 @@ public partial class Index
 {
     //Metemos en una raíz porque el tamaño no cambiará de PlayersName
     private PlayersName[]? players;
+    private PlayersName[]? playersNew;
 
     //private Paginacion paginacion;
 
@@ -20,9 +20,12 @@ public partial class Index
 
     public class PlayersName
     {
+<<<<<<< Updated upstream
         //Paginación
         //public Paginacion paginacion { get; set; }
 
+=======
+>>>>>>> Stashed changes
         //player_name
         public string Player_name { get; set; }
         //age
@@ -148,24 +151,26 @@ updatePokemonList();*/
             contador--;
         Console.WriteLine(contador);
     }
+
     public void Avanzar()
     {
         if (contador < players.Length)
             contador++;
-            for(int i = 0; i < contador; i++)
-            {
-            //players += players[i];
-            Console.WriteLine(players[i]);
+        for (int i = 0; i < contador; i++)
+        {
+            playersNew[i] = players[i];
+            //Console.WriteLine(players[i].Player_name);
+            Console.WriteLine(contador);
         }
-        Console.WriteLine(contador);
+        Console.WriteLine(playersNew);
     }
 
     public void MostrarPorPagina()
     {
         for (int i = 1; i < contador; i++)
         {
-
+            //si el contador muestre 2 jugadores
         }
     }
-    
+
 }
