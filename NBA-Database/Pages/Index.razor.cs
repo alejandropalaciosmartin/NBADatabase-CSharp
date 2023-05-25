@@ -8,7 +8,6 @@ public partial class Index
 {
     //Metemos en una raíz porque el tamaño no cambiará de PlayersName
     private PlayersName[]? players;
-    private PlayersName[]? playersNew;
 
     //private Paginacion paginacion;
 
@@ -138,25 +137,52 @@ updatePokemonList();*/
             public PlayersName Back { get; set; }
         }*/
     }
-    private int contador = 1;
+    //Contabilizar
+    private int contador = 0;
+    private const int CANTMOSTRAR = 2;
     public void Retroceder()
     {
         if (contador > 1)
-            contador--;
+            contador -= CANTMOSTRAR;
+        AgregarEliminar(contador);
         Console.WriteLine(contador);
     }
 
     public void Avanzar()
     {
-        if (contador < players.Length)
-            contador++;
-        for (int i = 0; i < contador; i++)
+        if (contador < players.Length- CANTMOSTRAR)
+            contador += CANTMOSTRAR;
+        AgregarEliminar(contador);
+        Console.WriteLine(contador);
+    }
+    //Meter datos en nuevo array
+    public void AgregarEliminar(int contador)
+    {
+        string[] playersNew = new string[players.Length];
+        try
         {
-            playersNew[i] = players[i];
-            //Console.WriteLine(players[i].Player_name);
-            Console.WriteLine(contador);
+            //Meter en el nuevo array
+            for (int i = contador; i < contador + CANTMOSTRAR; i++)
+            {
+                if (contador + CANTMOSTRAR - 1 != players.Length)
+                {
+                    playersNew[i] = players[i].ToString();
+                    Console.WriteLine(contador);
+                }
+            }
+            //Mostrar
+            for (int i = contador; i < contador + CANTMOSTRAR; i++)
+            {
+                if (contador + CANTMOSTRAR - 1 != players.Length)
+                {
+                    Console.WriteLine(players[i].Player_name);
+                }
+            }
         }
-        Console.WriteLine(playersNew);
+        catch (Exception e)
+        {
+            throw new Exception("Sales del margen");
+        }
     }
 
     public void MostrarPorPagina()
@@ -166,5 +192,46 @@ updatePokemonList();*/
             //si el contador muestre 2 jugadores
         }
     }
-
+    // private bool ParImpar => players.Length % 2 == 0;
+    /*        for (int i = contador; i < contador + CANTMOSTRAR; i++)
+        {
+            if (!ParImpar)
+            {
+                if (contador + CANTMOSTRAR - 1 != players.Length)
+                {
+                    playersNew[i] = players[i].ToString();
+                    Console.WriteLine(contador);
+                }
+            }
+            else
+            {
+                if (contador + CANTMOSTRAR != players.Length)
+                {
+                    playersNew[i] = players[i].ToString();
+                    Console.WriteLine(contador);
+                }
+            }
+        }
+        //Mostrar
+        for (int i = contador; i < contador + CANTMOSTRAR; i++)
+        {
+            if (!ParImpar)
+            {
+                if (contador + CANTMOSTRAR - 1 != players.Length)
+                {
+                    Console.WriteLine(players[i].Player_name);
+                }
+            }
+            else
+            {
+                if (contador + CANTMOSTRAR != players.Length)
+                {
+                    Console.WriteLine(players[i].Player_name);
+                }
+            }
+        }*/
+    /*public void SacarParImpar()
+    {
+        players.Length % 2 == 0;
+    }*/
 }
