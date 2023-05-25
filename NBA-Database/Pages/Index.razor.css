@@ -16,22 +16,45 @@
     font-weight: bold;
 }
 
+.ordenarNombres, .botonRetro, .botonAvan {
+    width: 5vh;
+    height: 5vh;
+    background-color: red;
+    box-shadow: 0 0 5px 5px;
+    border-radius: 100px 100px 100px 100px;
+    font-weight: bold;
+}
+
+.cajaCont {
+    width: 10vh;
+    height: 3vh;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    border-radius: 50px 50px 50px 50px;
+}
+
 .posRetro {
     margin-top: -15vh;
-    margin-left: 147vh;
+    margin-left: 143vh;
 }
 
 .posAvan {
-    margin-top: -19vh;
-    margin-left: 155vh;
+    margin-top: -20vh;
+    margin-left: 160vh;
 }
 
 .posCont {
-    margin-top: -15vh;
+    margin-top: -19vh;
     margin-left: 149vh;
-    background-color: red;
-    width: 10vh;
     text-align: center
+}
+
+
+.ordenarNombres {
+    width: 30vh;
+    height: 5vh;
+    margin-left: 20vh;
+    margin-top: -1vh;
 }
 
 #tabla {
@@ -97,16 +120,3 @@ td:nth-child(1){
     margin-top: -0.5vh;
 }
 
-.ordenarNombre {
-    margin-top: -15vh;
-    margin-left: 20vh;
-    width: 100vh;
-}
-
-.redondo {
-    width: 5vh;
-    height: 5vh;
-    background-color: red;
-    box-shadow: 0 0 5px 5px;
-    border-radius: 100px 100px 100px 100px;
-}

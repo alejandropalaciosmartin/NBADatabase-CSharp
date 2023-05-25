@@ -1,4 +1,3 @@
-using System.ComponentModel.Design;
 using System.Net.Http.Json;
 
 namespace NBA_Database.Pages;
@@ -14,8 +13,8 @@ public partial class Index
     //Leemos y pasamos a players el cotnenido de json
     protected override async Task OnInitializedAsync()
     {
-        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
         players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas.json");
+        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
         LIMITECONTADOR = players.Length / 10; //El total de json lo dividimos entre 10
     }
 
@@ -89,7 +88,7 @@ public partial class Index
             return imagen;
         }
 
-///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
+        ///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
     }
     //Contabilizar
     private int contador = 0;
@@ -98,7 +97,7 @@ public partial class Index
 
     public int ContarPag()
     {
-        if(contador == 0)
+        if (contador == 0)
         {
             contador = 10;
         }
@@ -111,7 +110,7 @@ public partial class Index
         {
             contador -= CANTMOSTRAR;
             //Para que salga el número de páginas
-            
+
         }
         AgregarEliminar(contador);
         //Console.WriteLine(contador);
@@ -159,10 +158,10 @@ public partial class Index
     }
 
     ///////////////////////////ORDENAR//////////////////////////////////////////////////////////////////////////
-        bool pulsar = true;
+    bool pulsar = true;
     public void OrdenarNombre()
     {
-        if(pulsar)
+        if (pulsar)
         {
             var pl = players.OrderByDescending(x => x.Player_name).Select(x => x.Player_name);
             foreach (var p in pl)
@@ -180,7 +179,7 @@ public partial class Index
             }
             pulsar = true;
         }
-        
+
     }
 
 
