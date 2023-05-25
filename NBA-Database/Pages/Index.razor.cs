@@ -92,20 +92,36 @@ public partial class Index
     }
     //Contabilizar
     private int contador = 0;
-    private const int CANTMOSTRAR = 8;
+    private const int CANTMOSTRAR = 10;
     int LIMITECONTADOR;
+    int contarPag = 0;
+
+    public int ContarPag()
+    {
+        if(contador == 0)
+        {
+            contador = 10;
+        }
+        return contarPag = contador / 10;
+    }
+
     public void Retroceder()
     {
         if (contador >= 1)
+        {
             contador -= CANTMOSTRAR;
+            //Para que salga el número de páginas
+            
+        }
         AgregarEliminar(contador);
         //Console.WriteLine(contador);
     }
     public void Avanzar()
     {
         if (contador <= players.Length && contador <= LIMITECONTADOR) //Para que no cuente más de lo que debería contar al repartir
-                                                                      //el listado entre los que hay que mostrar
+        {                                                             //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
+        }
         AgregarEliminar(contador);
         //Console.WriteLine(contador);
     }

@@ -76,8 +76,7 @@ td:nth-child(1){
 
 .imagenEquipo{
     width: 7vh;
-    margin-top: -1vh;
-    align-items: center;
+    margin-top: -0.5vh;
 }
 
 .posicionBotones{
