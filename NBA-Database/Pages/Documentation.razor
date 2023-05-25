@@ -47,8 +47,6 @@ else
 
 @code {
 
-    private IJSInProcessObjectReference _mostrarVideo;
-
     private bool show = false;
 
     class Circle
@@ -122,6 +120,8 @@ else
         if (!show)
             show = true;
     }
+
+    private IJSInProcessObjectReference _mostrarVideo;
 
     protected override async Task OnInitializedAsync()
     {
