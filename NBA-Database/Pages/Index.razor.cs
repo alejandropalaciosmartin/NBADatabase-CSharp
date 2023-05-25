@@ -15,9 +15,7 @@ public partial class Index
     protected override async Task OnInitializedAsync()
     {
         //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
-        players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas2.json");
-        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas.json");
-        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/data.json");
+        players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas.json");
     }
 
     public class PlayersName
@@ -153,7 +151,7 @@ updatePokemonList();*/
 
     public void Avanzar()
     {
-        int LIMITECONTADOR = players.Length/10;
+        int LIMITECONTADOR = players.Length/10; //El total de json lo dividimos entre 10
         if (contador <= players.Length && contador <= LIMITECONTADOR) //Para que no cuente más de lo que debería contar al repartir
                                                                       //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
