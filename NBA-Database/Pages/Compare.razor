@@ -3,17 +3,29 @@
 @using BlazorBootstrap.Extensions
 @using Color = System.Drawing.Color
 
-<LineChart @ref="lineChart" Width="600" Class="mb-4" />
+<button @onclick="ShowChart" style="display: @(showChart ? "none" : "block"); left:300px;top:300px;">Mostrar gráfica</button>
 
-<Button Type="ButtonType.Button" Color="ButtonColor.Primary" Size="Size.Small" @onclick="async () => await AddDataAsync()">Add Random Data</Button>
-<Button Type="ButtonType.Button" Color="ButtonColor.Primary" Size="Size.Small" @onclick="async () => await ShowHorizontalLineChartAsync()">Horizontal Line Chart</Button>
-<Button Type="ButtonType.Button" Color="ButtonColor.Primary" Size="Size.Small" @onclick="async () => await ShowVerticalLineChartAsync()">Vertical Line Chart</Button>
+<div style="display: @(showChart ? "block" : "none")">
+    <LineChart @ref="lineChart" Width="600" Class="mb-4" Style="background-color:white" />
+</div>
+
+
 
 @code {
     private LineChart lineChart;
 
     private ChartData chartData;
     private LineChartOptions chartOptions;
+    private bool showChart = false;
+
+    private async Task ShowChart()
+    {
+        if (!showChart)
+        {
+            showChart = true;
+            await lineChart.UpdateAsync(chartData, chartOptions);
+        }
+    }
 
     Random random = new Random();
 
@@ -50,23 +62,10 @@
         await lineChart.UpdateAsync(chartData, chartOptions);
     }
 
-    private async Task ShowHorizontalLineChartAsync()
-    {
-        chartOptions.IndexAxis = "y";
-        await lineChart.UpdateAsync(chartData, chartOptions);
-    }
-
-    private async Task ShowVerticalLineChartAsync()
-    {
-        chartOptions.IndexAxis = "x";
-        await lineChart.UpdateAsync(chartData, chartOptions);
-    }
-
     private LineChartDataset GetRandomLineChartDataset()
     {
         // random color
         var c = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
-        Console.WriteLine($"Line Chart: Color Name: {c.Name}, HEX: {c.ToHexString()}, RGB: {c.ToRgbString()}, IsNamedColor: {c.IsNamedColor}");
 
         return new LineChartDataset()
             {
@@ -77,7 +76,7 @@
                 BorderWidth = new List<double> { 2 },
                 HoverBorderWidth = new List<double> { 4 },
                 PointBackgroundColor = new List<string> { c.ToRgbString() },
-                PointRadius = new List<int> { 0 }, // hide points
+                PointRadius = new List<int> { 0 }, 
                 PointHoverRadius = new List<int> { 4 },
             };
     }
