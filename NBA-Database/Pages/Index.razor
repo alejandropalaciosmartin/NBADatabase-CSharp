@@ -29,11 +29,11 @@ else
                 </tr>
             </thead>
             <tbody>
-                @*@MostrarPorPagina(@contador)*@ 
-                @foreach (var player in players)@*otro array diferente para que pase los 7 y 10... *@
+                @*@MostrarPorPagina(@contador)*@
+                @foreach (var player in AgregarEliminar(contador))@*otro array diferente para que pase los 7 y 10... *@
                 {
-                @*    @for (int i = 1; i < contador; i++)
-                    {*@
+                    @if (player != null)
+                    {
                         <tr>
                             <td class="nombre">@player.Player_name</td>
                             <td class="edad">@player.Age</td>
@@ -42,7 +42,7 @@ else
                             <td class="pais">@player.Country<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
                             <td class="temporada">@player.Season</td>
                         </tr>
-                    @*}*@
+                    }
                     @*Vaciar array pag para iniciar de nuevo*@
                 }
             </tbody>

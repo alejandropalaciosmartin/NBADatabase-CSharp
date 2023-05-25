@@ -54,9 +54,9 @@ th {
 }
 
 tr:hover {
-    border: rgb(227, 55, 55) 0.5vh solid;
+   /* border: rgb(227, 55, 55) 0.5vh solid;
     font-size: 3vh;
-    font-weight: bold;
+    font-weight: bold;*/
     /*cursor: pointer;*/
 }
 

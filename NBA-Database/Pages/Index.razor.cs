@@ -14,7 +14,10 @@ public partial class Index
     //Leemos y pasamos a players el cotnenido de json
     protected override async Task OnInitializedAsync()
     {
-        players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
+        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
+        players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas2.json");
+        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas.json");
+        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/data.json");
     }
 
     public class PlayersName
@@ -34,7 +37,7 @@ public partial class Index
         //country
         public string Country { get; set; }
         //draft_year
-        public int Draft_year { get; set; }
+        public int? Draft_year { get; set; }
         //gp
         public int Gp { get; set; }
         //pts
@@ -139,8 +142,7 @@ updatePokemonList();*/
     }
     //Contabilizar
     private int contador = 0;
-    private const int CANTMOSTRAR = 2;
-    private const int LIMITECONTADOR = 4;
+    private const int CANTMOSTRAR = 8;
     public void Retroceder()
     {
         if (contador >= 1)
@@ -151,6 +153,7 @@ updatePokemonList();*/
 
     public void Avanzar()
     {
+        int LIMITECONTADOR = players.Length/10;
         if (contador <= players.Length && contador <= LIMITECONTADOR) //Para que no cuente más de lo que debería contar al repartir
                                                                       //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
@@ -158,7 +161,7 @@ updatePokemonList();*/
         //Console.WriteLine(contador);
     }
     //Meter datos en nuevo array
-    public void AgregarEliminar(int contador)
+    public PlayersName[] AgregarEliminar(int contador)
     {
         //Se crea nuevo array para meter los nuevos datos con límite al que pongamos para no cargar toda la lista
         PlayersName[] playersNew = new PlayersName[CANTMOSTRAR];
@@ -178,7 +181,7 @@ updatePokemonList();*/
             }
 
             // Mostrar los elementos
-            int mostrarLimite = Math.Min(newIndex, playersNew.Length); // Determinar el límite para mostrar elementos
+            /*int mostrarLimite = Math.Min(newIndex, playersNew.Length); // Determinar el límite para mostrar elementos
             //for (int i = 0; i < playersNew.Length; i++) //Recorremos el nuevo array
             for (int i = 0; i < mostrarLimite; i++) //Recorremos el nuevo array
             {
@@ -187,20 +190,12 @@ updatePokemonList();*/
                     Console.WriteLine(playersNew[i].Player_name);
                 }
 
-            }
+            }*/
         }
         catch (Exception e)
         {
             Console.WriteLine(e.Message);
         }
+        return playersNew;
     }
-
-    public void MostrarPorPagina()
-    {
-        for (int i = 1; i < contador; i++)
-        {
-            //si el contador muestre 2 jugadores
-        }
-    }
-
 }
