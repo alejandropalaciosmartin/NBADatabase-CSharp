@@ -1,4 +1,5 @@
 ﻿@page "/documentacion"
+@inject IJSRuntime JSRuntime
 
 <div class="custom-div">
     <button @onclick="() => CambiarTaF()"><img src="../assets/image/documentacion.png" style="width:50px" /></button>
@@ -10,11 +11,10 @@
     <div style="position: absolute; display: inline-block; top:120px; left:500px;">
         <img class="pizarraBasket" src="/assets/image/pizarra-basket.jpg" />
         @{
-            int num = 1;
             foreach (var circle in Circles)
             {
                 <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
-                    <div class="circle" @onclick="() => ShowText(circle.Text)"><span style="color:antiquewhite;margin-left:17px;margin-top:10px; font-size:20px;"><b>@num</b></span></div>
+                    <img class="circle" src="../assets/image/basketball-ball.png" @onclick="() => ShowText(circle.Text)" />
                     @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
                     {
                         <div class="cajaTexto">
@@ -24,18 +24,31 @@
                         </div>
                     }
                 </div>
-                num++;
             }
         }
     </div>
 }
 else
 {
-    
+    <div style="position: absolute; display: inline-block; top:120px; left:500px; width: 760px; height: 515px;">
+        <div id="videoContainer"><span class="wait"> Waiting...</span>
+            <!-- Aquí se mostrará el video -->
+        </div>
+        <div id="buttonContainer">
+            <!-- Aquí se mostrarán los botones -->
+            <button @onclick="() => MostrarVideo(1)"><b>1</b></button>
+            <button @onclick="() => MostrarVideo(2)"><b>2</b></button>
+            <button @onclick="() => MostrarVideo(3)"><b>3</b></button>
+            <button @onclick="() => MostrarVideo(4)"><b>4</b></button>
+        </div>
+    </div>
 }
 
 
 @code {
+
+    private IJSInProcessObjectReference _mostrarVideo;
+
     private bool show = false;
 
     class Circle
@@ -84,6 +97,14 @@ else
             };
         Circles.Add(circle4);
 
+        var circle5 = new Circle
+            {
+                Top = 250,
+                Left = 370,
+                Text = "RSS feed de NBA: <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://www.espn.com/espn/rss/nba/news\" target=\"_blank\"><b>URL</b></a>"
+            };
+        Circles.Add(circle5);
+
     }
 
     void ShowText(string text)
@@ -100,5 +121,17 @@ else
     {
         if (!show)
             show = true;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        _mostrarVideo = await JSRuntime.InvokeAsync<IJSInProcessObjectReference>("import", "./js/custom.js");
+    }
+
+    private async Task MostrarVideo(int videoId)
+    {
+        await _mostrarVideo.InvokeVoidAsync("mostrarVideo", videoId);
     }
 }

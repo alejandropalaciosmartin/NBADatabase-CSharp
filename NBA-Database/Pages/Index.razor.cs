@@ -16,7 +16,7 @@ public partial class Index
     public class PlayersName
     {
         //Paginación
-        public Paginacion paginacion { get; set; }
+        //public Paginacion paginacion { get; set; }
 
         //player_name
         public string Player_name { get; set; }
