@@ -35,7 +35,7 @@ public partial class Index
         //country
         public string Country { get; set; }
         //draft_year
-        public int? Draft_year { get; set; }
+        public string Draft_year { get; set; }
         //gp
         public int Gp { get; set; }
         //pts
@@ -88,59 +88,12 @@ public partial class Index
             return imagen;
         }
 
-
-        public string Buscando()
-        {
-            return "";
-        }
-
-
-        /*DEMO BUSCADOR
-    const updatePokemonList = () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    container.innerHTML = '';
-    pokemon.filter(p => p.name.toLowerCase().includes(searchTerm))
-   .forEach(p => {
-     const card = document.createElement("div");
-     card.classList.add("pokemon_card");
-     card.innerHTML = `
-       <span class="name">${p.name.charAt(0).toUpperCase() + p.name.slice(1)}</span>
-       <span class="number">#${p.url.split("/")[6].padStart(3, "0")}</span>
-       <img src="">
-       <div class="types"></div>`;
-
-     card.addEventListener('click', () => { window.location.href = `single.html?id=${p.url.split("/")[6]}`; });
-           
-     fetch(p.url)
-       .then(response => response.json())
-       .then(data => {
-         card.querySelector('img').src = data.sprites.other.home.front_default;
-         const typesContainer = card.querySelector('.types');
-         data.types.forEach(typeData => {
-           const typeName = typeData.type.name;
-           const typeElement = document.createElement('div');
-           typeElement.textContent = typeTranslations[typeName];
-           typeElement.style.cssText = `background-color:${typeColors[typeName]}; color:white; padding:5px 10px; border-radius:10px; margin-right:5px; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; border:solid black 2px`;
-           typesContainer.appendChild(typeElement);
-          });
-       })
-      container.appendChild(card);
-   });
-};
-searchInput.addEventListener("input", updatePokemonList);
-updatePokemonList();*/
-
-
-        //PAGINACIÓN
-        /*public class Paginacion
-        {
-            public PlayersName Next { get; set; }
-            public PlayersName Back { get; set; }
-        }*/
+///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
     }
     //Contabilizar
     private int contador = 0;
     private const int CANTMOSTRAR = 8;
+    int LIMITECONTADOR;
     public void Retroceder()
     {
         if (contador >= 1)
@@ -148,10 +101,8 @@ updatePokemonList();*/
         AgregarEliminar(contador);
         //Console.WriteLine(contador);
     }
-
     public void Avanzar()
     {
-        int LIMITECONTADOR = players.Length/10; //El total de json lo dividimos entre 10
         if (contador <= players.Length && contador <= LIMITECONTADOR) //Para que no cuente más de lo que debería contar al repartir
                                                                       //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
@@ -161,6 +112,7 @@ updatePokemonList();*/
     //Meter datos en nuevo array
     public PlayersName[] AgregarEliminar(int contador)
     {
+        LIMITECONTADOR = players.Length/10; //El total de json lo dividimos entre 10
         //Se crea nuevo array para meter los nuevos datos con límite al que pongamos para no cargar toda la lista
         PlayersName[] playersNew = new PlayersName[CANTMOSTRAR];
         try
@@ -177,18 +129,6 @@ updatePokemonList();*/
                     newIndex++;     //Posición nueva, después del 0 se incrementa en 1 para la próxima insercción
                 }
             }
-
-            // Mostrar los elementos
-            /*int mostrarLimite = Math.Min(newIndex, playersNew.Length); // Determinar el límite para mostrar elementos
-            //for (int i = 0; i < playersNew.Length; i++) //Recorremos el nuevo array
-            for (int i = 0; i < mostrarLimite; i++) //Recorremos el nuevo array
-            {
-                if (playersNew[i] != null) //Si no es nulo lo muestra
-                {
-                    Console.WriteLine(playersNew[i].Player_name);
-                }
-
-            }*/
         }
         catch (Exception e)
         {

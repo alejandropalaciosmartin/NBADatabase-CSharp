@@ -35,7 +35,7 @@
     height:85vh;
 }
 
-.nombre {
+.nombre, .pais {
     width: 10%;
 }
 
@@ -43,7 +43,7 @@
     width: 2%;
 }
 
-.equipo, .pais, .temporada {
+.equipo, .temporada {
     width: 3%;
 }
 
@@ -77,6 +77,7 @@ td:nth-child(1){
 .imagenEquipo{
     width: 7vh;
     margin-top: -1vh;
+    align-items: center;
 }
 
 .posicionBotones{
