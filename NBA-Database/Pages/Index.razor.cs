@@ -157,7 +157,6 @@ public partial class Index
 
     ///////////////////////////ORDENAR//////////////////////////////////////////////////////////////////////////
     bool pulsar = false;
-    //PlayersName[] playersOrdenado;
     public PlayersName[] OrdenarNombre()
     {
         //Controlamos con pulsar bool que cada vez le demos nos ordene de una u otra forma
