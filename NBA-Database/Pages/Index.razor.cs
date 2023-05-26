@@ -95,11 +95,19 @@ public partial class Index
     }
     private int pageSize = 7; // Número de elementos por página
     private int currentPage = 1; // Página actual
-
+    //Función para mostrar y paginar
     public List<PlayersName> GetPlayersForCurrentPage()
     {
-        int startIndex = (currentPage - 1) * pageSize;
+        int startIndex = (currentPage - 1) * pageSize; //A la página actual le quito 1 para que al multiplicar
+                                                       //por 1 se ponga 0 que al multiplicar te da 0, 1º posición
+                                                       //Para obtener el siguiente grupo sería 2 que se suma abajo
+                                                       //2 menos 1 da 1 que es la 2º pagina por el tamaño que son 7
+                                                       //por lo que cogemos la siguiente posicion que empezamos que es
+                                                       //el 7, ya que antes eran del 0 al 6 (7 posiciones)
+                                                       //el siguiente del 7 al 13 (7 posiciones)
         return players.Skip(startIndex).Take(pageSize).ToList();
+        //Cogemos la lista, saltamos desde el inicio (0 al principio, luego desde la posicion 7)
+        //Take -> Cogemos la cantidad de página que queremos mostrar y pasamos a la lista para mostrar
     }
 
     public void Avanzar()
@@ -117,7 +125,7 @@ public partial class Index
             currentPage--;
         }
     }
-
+    //Cogemos la cantidad de páginas que se va a mostrar
     public int GetTotalPages()
     {
         return (int)Math.Ceiling((double)players.Count / pageSize);

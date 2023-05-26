@@ -23,8 +23,7 @@ else
         <button class="botonAvan" @onclick="() => Avanzar()">>></button>
     </div>
     <div class="posCont">
-        @*<div class="cajaCont">@ContarPag()/@LIMITECONTADOR</div>*@
-        <div class="cajaCont">xxxx</div>
+        <div class="cajaCont">@currentPage/@GetTotalPages()</div>
     </div>
     <button class="ordenarNombres"  @onclick="() => OrdenarNombre()">
         Ordenar Nombre A-Z/Z-A
