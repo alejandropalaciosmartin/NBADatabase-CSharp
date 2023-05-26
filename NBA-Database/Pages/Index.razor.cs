@@ -16,7 +16,7 @@ public partial class Index
         players = await Http.GetFromJsonAsync<List<PlayersName>>("/assets/data/datas.json");
         //CREAMOS NUEVA VARIABLE para reiniciar los datos antes de la búsqueda
         players2 = players;
-        LIMITECONTADOR = players.Count / 10; //El total de json lo dividimos entre 10
+        //LIMITECONTADOR = players.Count / 10; //El total de json lo dividimos entre 10
     }
 
     public class PlayersName
@@ -93,71 +93,36 @@ public partial class Index
 
 ///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
     }
-    //Contabilizar
-    private int contador = 0;
-    private const int CANTMOSTRAR = 10;
-    int LIMITECONTADOR;
+    private int pageSize = 7; // Número de elementos por página
+    private int currentPage = 1; // Página actual
 
-    public int ContarPag()
+    public List<PlayersName> GetPlayersForCurrentPage()
     {
-        if (contador == 0)
+        int startIndex = (currentPage - 1) * pageSize;
+        return players.Skip(startIndex).Take(pageSize).ToList();
+    }
+
+    public void Avanzar()
+    {
+        if (currentPage < GetTotalPages())
         {
-            contador = 10;
+            currentPage++;
         }
-        return contador / 10;
     }
 
     public void Retroceder()
     {
-        if (contador >= 1)
+        if (currentPage > 1)
         {
-            contador -= CANTMOSTRAR;
-            //Para que salga el número de páginas
-
+            currentPage--;
         }
-        AgregarEliminar(contador);
-        //Console.WriteLine(contador);
     }
-    public void Avanzar()
+
+    public int GetTotalPages()
     {
-        //Mientras el contador sea menor que el total del array -CANTMOSTRAR, ponemos CANTMOSTRAR porque vamos en la tabla en grupo
-        // de lo que pongamos en CANTMOSTRAR
-        if (contador < players.Count - CANTMOSTRAR) //Para que no cuente más de lo que debería contar al repartir
-        {                                                             //el listado entre los que hay que mostrar
-            contador += CANTMOSTRAR;
-        }
-        AgregarEliminar(contador);
-        //Console.WriteLine(contador);
+        return (int)Math.Ceiling((double)players.Count / pageSize);
     }
 
-
-/////////////////////////////////////////////////////////////////Meter datos en nuevo array + Paginación///////////////////////////////////////////
-    public PlayersName[] AgregarEliminar(int contador)
-    {
-        //Se crea nuevo array para meter los nuevos datos con límite al que pongamos para no cargar toda la lista
-        PlayersName[] playersNew = new PlayersName[CANTMOSTRAR];
-        try
-        {
-            //LLENAMOS EL NUEVO ARRAY
-            int newIndex = 0; //Creamos un contador para almacenar desde la 1º posición, ya que si ponemos contador o i que es el mismo
-            //valor, no se rellena correctamente, porque contador empieza desde donde esté
-            //Restamos 10 para que salgan todos los datos ya que al ir de 10 en 10 omitia 1o jugadores
-            for (int i = -10 + contador; i <= players.Count; i++) //Empieza desde el contador que vaya (ej: contador += CANTMOSTRAR y
-            {                                                       //CANTMOSTRAR es 10 u otro, entonces el valor que empieza 0 se pone 
-                                                                    //en 10 cuando pulsamos botón hasta los próximos 10, los 20 siguientes
-               if (i < players.Count && players[i] != null) //Si el número del for que comience es menor que el total del array json y 
-                {                                             //cada elemento es diferente a nulo
-                    playersNew[newIndex] = players[i];  //Metemos cada elemento a la posición nueva del array nuevo
-                    newIndex++;     //Posición nueva, después del 0 se incrementa en 1 para la próxima insercción
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-        return playersNew;
-    }
 
     ///////////////////////////ORDENAR//////////////////////////////////////////////////////////////////////////
     bool pulsar = false;

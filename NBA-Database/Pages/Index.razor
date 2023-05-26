@@ -23,7 +23,8 @@ else
         <button class="botonAvan" @onclick="() => Avanzar()">>></button>
     </div>
     <div class="posCont">
-        <div class="cajaCont">@ContarPag()/@LIMITECONTADOR</div>
+        @*<div class="cajaCont">@ContarPag()/@LIMITECONTADOR</div>*@
+        <div class="cajaCont">xxxx</div>
     </div>
     <button class="ordenarNombres"  @onclick="() => OrdenarNombre()">
         Ordenar Nombre A-Z/Z-A
@@ -61,7 +62,7 @@ else
                 </tr>
             </thead>
             <tbody>
-                @foreach (var player in AgregarEliminar(contador))
+                @foreach (var player in GetPlayersForCurrentPage())
                 {
                     @if (player != null)
                     {
@@ -71,8 +72,8 @@ else
                             </td>
                             <td class="edad">@player.Age</td>
                             <td class="altura">@player.Player_heightM m</td>
-                            <td class="equipo">@player.Team_abbreviation<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
-                            <td class="pais">@player.Country<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
+                            <td class="equipo"><img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
+                            <td class="pais"><img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
                             <td class="temporada">@player.Season</td>
                         </tr>
                     }
