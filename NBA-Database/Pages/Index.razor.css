@@ -62,12 +62,13 @@
 }
 
 .ordenarNombre {
-    margin-left: 2vh;
+    margin-left: 9vh;
     margin-top: -3vh;
 }
 
 .ordenarEdad {
-    margin-left: 15vh;
+    margin-left: -10vh;
+    margin-left: -3vh;
     margin-top: -3vh;
 }
 
