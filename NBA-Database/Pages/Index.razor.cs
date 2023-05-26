@@ -138,7 +138,8 @@ public partial class Index
             //LLENAMOS EL NUEVO ARRAY
             int newIndex = 0; //Creamos un contador para almacenar desde la 1º posición, ya que si ponemos contador o i que es el mismo
             //valor, no se rellena correctamente, porque contador empieza desde donde esté
-            for (int i = contador; i < contador + CANTMOSTRAR; i++) //Empieza desde el contador que vaya (ej: contador += CANTMOSTRAR y
+            //Restamos 10 para que salgan todos los datos ya que al ir de 10 en 10 omitia 1o jugadores
+            for (int i = -10 + contador; i <= players.Length; i++) //Empieza desde el contador que vaya (ej: contador += CANTMOSTRAR y
             {                                                       //CANTMOSTRAR es 10 u otro, entonces el valor que empieza 0 se pone 
                                                                     //en 10 cuando pulsamos botón hasta los próximos 10, los 20 siguientes
                if (i < players.Length && players[i] != null) //Si el número del for que comience es menor que el total del array json y 
