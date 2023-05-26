@@ -14,17 +14,22 @@
 .botonBuscar, .seleccionarPaises, .seleccionarEquipos, .botonRetro, .botonAvan {
     height: 5vh;
     background-color: red;
-    box-shadow: 0 0 5px 5px;
+    box-shadow: 0 0 5px 5px black;
     border-radius: 100px 100px 100px 100px;
+    color: white;
     font-weight: bold;
+    font-size: large;
 }
 
 
 .seleccionarPaises, .seleccionarEquipos {
-    width: 35vh;
+    width: 36vh;
     height: 5vh;
     margin-top: -1vh;
     text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: large;
 }
 
 .seleccionarPaises {
@@ -32,11 +37,13 @@
 }
 
 .seleccionarEquipos {
-    margin-left: 77vh;
+    margin-left: 76vh;
 }
 
 .botonBuscar {
     width: 10vh;
+    font-weight: bold;
+    color: white;
 }
 
 .cuadroBuscar {
@@ -45,6 +52,7 @@
     font-weight: bold;
     border-radius: 50px 50px 50px 50px;
     border: 3px solid black;
+    text-align: center;
 }
 
     .cuadroBuscar:hover {
