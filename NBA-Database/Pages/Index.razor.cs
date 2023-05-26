@@ -179,21 +179,62 @@ public partial class Index
     {
         if (pulsar)
         {
-            players = players.OrderByDescending(x => x.Age).ToArray(); //Ordenamos de Z a la A
-            pulsar = false; //Cambiamos a true para que la próxima vez que le demos se ejecute el contrario, de la A a la Z
+            players = players.OrderByDescending(x => x.Age).ToArray(); 
+            pulsar = false; 
         }
         else
         {
-            players = players.OrderBy(x => x.Age).ToArray(); //Ordenamos de A a la Z
-            pulsar = true; //Lo contrario del anterior, para que se ejecute luego de la Z a la A
+            players = players.OrderBy(x => x.Age).ToArray(); 
+            pulsar = true; 
         }
         return players;
     }
 
+    public PlayersName[] OrdenarAltura()
+    {
+        if (pulsar)
+        {
+            players = players.OrderByDescending(x => x.Player_heightM).ToArray();
+            pulsar = false;
+        }
+        else
+        {
+            players = players.OrderBy(x => x.Player_heightM).ToArray();
+            pulsar = true;
+        }
+        return players;
+    }
 
+    public PlayersName[] OrdenarEquipo()
+    {
+        if (pulsar)
+        {
+            players = players.OrderByDescending(x => x.Team_abbreviation).ToArray();
+            pulsar = false;
+        }
+        else
+        {
+            players = players.OrderBy(x => x.Team_abbreviation).ToArray();
+            pulsar = true;
+        }
+        return players;
+    }
 
+    public PlayersName[] OrdenarPais()
+    {
+        if (pulsar)
+        {
+            players = players.OrderByDescending(x => x.Country).ToArray();
+            pulsar = false;
+        }
+        else
+        {
+            players = players.OrderBy(x => x.Country).ToArray();
+            pulsar = true;
+        }
+        return players;
+    }
 
-
-
+    
 
 }

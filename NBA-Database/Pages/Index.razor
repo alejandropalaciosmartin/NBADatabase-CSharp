@@ -42,15 +42,26 @@ else
                             <img class="flechas" src="./assets/image/ordenarFlechas.png" />
                         </button>
                     </th>
-                    <th class="altura">Altura</th>
-                    <th class="equipo">Abreviatura equipo</th>
-                    <th class="pais">País procedencia</th>
-                    <th class="temporada">Temporada (T.)</th>
+                    <th class="altura">Altura
+                        <button class="ordenarIcono ordenarAltura" @onclick="() => OrdenarAltura()">
+                            <img class="flechas" src="./assets/image/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="equipo">Equipo
+                        <button class="ordenarIcono ordenarEquipo" @onclick="() => OrdenarEquipo()">
+                            <img class="flechas" src="./assets/image/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="pais">País
+                        <button class="ordenarIcono ordenarPais" @onclick="() => OrdenarPais()">
+                            <img class="flechas" src="./assets/image/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="temporada">Temporada</th>
                 </tr>
             </thead>
             <tbody>
-                @*@MostrarPorPagina(@contador)*@
-                @foreach (var player in AgregarEliminar(contador))@*otro array diferente para que pase los 7 y 10... *@
+                @foreach (var player in AgregarEliminar(contador))
                 {
                     @if (player != null)
                     {
@@ -63,7 +74,6 @@ else
                             <td class="temporada">@player.Season</td>
                         </tr>
                     }
-                    @*Vaciar array pag para iniciar de nuevo*@
                 }
             </tbody>
         </table>

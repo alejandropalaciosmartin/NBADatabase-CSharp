@@ -62,13 +62,22 @@
 }
 
 .ordenarNombre {
-    margin-left: 9vh;
+    margin-left: 8vh;
     margin-top: -3vh;
 }
 
-.ordenarEdad {
-    margin-left: -10vh;
-    margin-left: -3vh;
+.ordenarEdad, .ordenarAltura {
+    margin-left: -1vh;
+    margin-top: -3vh;
+}
+
+.ordenarEquipo {
+    margin-left: -1vh;
+    margin-top: -3vh;
+}
+
+.ordenarPais {
+    margin-left: 3vh;
     margin-top: -3vh;
 }
 
@@ -104,16 +113,16 @@
     height:85vh;
 }
 
-.nombre, .pais {
-    width: 10%;
-}
-
-.edad, .altura {
+.nombre {
     width: 2%;
 }
 
-.equipo, .temporada {
-    width: 3%;
+.edad, .altura, .equipo, .pais, .temporada {
+    width: 1%;
+}
+
+.imagenEquipo{
+    margin-left: 1vh;
 }
 
 th {
