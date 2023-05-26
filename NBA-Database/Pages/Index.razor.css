@@ -11,7 +11,7 @@
     margin-left: 80vh;
 }
 
-.botonBuscar, .ordenarNombres, .botonRetro, .botonAvan {
+.botonBuscar, .seleccionarPaises, .botonRetro, .botonAvan {
     height: 5vh;
     background-color: red;
     box-shadow: 0 0 5px 5px;

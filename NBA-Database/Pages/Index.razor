@@ -25,7 +25,7 @@ else
     <div class="posCont">
         <div class="cajaCont">@paginaActual/@TotalPaginas()</div>
     </div>
-    <select class="ordenarNombres" @onchange="CogePais">
+    <select class="seleccionarPaises" @onchange="CogePais">
         <option selected value="todos">Selecciona país - TODOS</option>
         <option value="Germany">Alemania</option>
         <option value="Argentina">Argentina</option>
@@ -65,7 +65,7 @@ else
         <option value="Ukraine">Ucrania</option>
         <option value="USA">USA</option>
     </select>
-    <select class="ordenarNombres" @onchange="CogeEquipo">
+    <select class="seleccionarEquipos" @onchange="CogeEquipo">
         <option selected value="todos">Selecciona equipo - TODOS</option>
         <option value="ATL">Atlanta Hawks</option>
         <option value="BOS">Boston Celtics</option>
