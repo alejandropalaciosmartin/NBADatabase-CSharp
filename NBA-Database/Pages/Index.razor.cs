@@ -229,10 +229,10 @@ public partial class Index
     /////PAÍSES
     public void CogePais(ChangeEventArgs e)
     {
-        var selectedValue = e.Value.ToString();
+        var seleccionar = e.Value.ToString();
         string pais = " ";
 
-        switch (selectedValue)
+        switch (seleccionar)
         {
             case "Germany": pais = "Germany"; break;
             case "Argentina": pais = "Argentina"; break;
@@ -273,7 +273,51 @@ public partial class Index
             case "USA": pais = "USA"; break;
             default: players = players2; break; // Restablece la lista original si no hay coincidencia
         }
-        if(selectedValue == "todos") players = players2.Select(x => x).ToList();
+        if(seleccionar == "todos") players = players2.Select(x => x).ToList();
         else players = players2.Where(x => x.Country == pais).ToList();
+    }
+
+    /////EQUIPO
+    public void CogeEquipo(ChangeEventArgs e)
+    {
+        var seleccionar = e.Value.ToString();
+        string equipo = " ";
+
+        switch (seleccionar)
+        {
+            case "ATL": equipo = "ATL"; break;
+            case "BOS": equipo = "BOS"; break;
+            case "BKN": equipo = "BKN"; break;
+            case "CHA": equipo = "CHA"; break;
+            case "CHI": equipo = "CHI"; break;
+            case "CLE": equipo = "CLE"; break;
+            case "DAL": equipo = "DAL"; break;
+            case "DEN": equipo = "DEN"; break;
+            case "DET": equipo = "DET"; break;
+            case "GSW": equipo = "GSW"; break;
+            case "HOU": equipo = "HOU"; break;
+            case "IND": equipo = "IND"; break;
+            case "LAC": equipo = "LAC"; break;
+            case "LAL": equipo = "LAL"; break;
+            case "MEM": equipo = "MEM"; break;
+            case "MIA": equipo = "MIA"; break;
+            case "MIL": equipo = "MIL"; break;
+            case "MIN": equipo = "MIN"; break;
+            case "NOP": equipo = "NOP"; break;
+            case "NYK": equipo = "NYK"; break;
+            case "OKC": equipo = "OKC"; break;
+            case "ORL": equipo = "ORL"; break;
+            case "PHI": equipo = "PHI"; break;
+            case "PHX": equipo = "PHX"; break;
+            case "POR": equipo = "POR"; break;
+            case "SAC": equipo = "SAC"; break;
+            case "SAS": equipo = "SAS"; break;
+            case "TOR": equipo = "TOR"; break;
+            case "UTA": equipo = "UTA"; break;
+            case "WAS": equipo = "WAS"; break;
+            default: players = players2; break; // Restablece la lista original si no hay coincidencia
+        }
+        if (seleccionar == "todos") players = players2.Select(x => x).ToList();
+        else players = players2.Where(x => x.Team_abbreviation == equipo).ToList();
     }
 }
