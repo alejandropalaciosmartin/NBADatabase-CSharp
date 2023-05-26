@@ -112,7 +112,7 @@ public partial class Index
 
     public void Avanzar()
     {
-        if (currentPage < GetTotalPages())
+        if (currentPage < GetTotalPages()) //Si es menor a la catidad total de página avanza 1
         {
             currentPage++;
         }
@@ -128,7 +128,7 @@ public partial class Index
     //Cogemos la cantidad de páginas que se va a mostrar
     public int GetTotalPages()
     {
-        return (int)Math.Ceiling((double)players.Count / pageSize);
+        return (int)Math.Ceiling((double)players.Count / pageSize); //En este caso 63
     }
 
 
