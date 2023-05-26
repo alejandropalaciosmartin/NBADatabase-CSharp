@@ -158,13 +158,7 @@ else
         <div class="tarjeta">
             <div class="cerrar" @onclick="CerrarInformacion"><b>X</b></div>
             <div class="contenido">
-                <!-- Aquí muestras la información detallada del jugador -->
-                <h3>@jugadorSeleccionado.Player_name</h3>
-                <p>Edad: @jugadorSeleccionado.Age</p>
-                <p>Altura: @jugadorSeleccionado.Player_heightM m</p>
-                <p>Equipo: @jugadorSeleccionado.Team_abbreviation</p>
-                <p>País: @jugadorSeleccionado.Country</p>
-                <p>Temporada: @jugadorSeleccionado.Season</p>
+                    <img src="@LinkPlayer(jugadorSeleccionado.Player_name)" />
                 <!-- Agrega más detalles si es necesario -->
             </div>
         </div>
@@ -185,5 +179,26 @@ else
     private void CerrarInformacion()
     {
         mostrarInformacion = false;
+    }
+
+    public string LinkPlayer(string name)
+    {
+        string link = "";
+        bool existe = false;
+
+
+        foreach (PlayerLink playerLink in playersLinks)
+        {
+            if(!existe)
+            {
+                if (name == playerLink.Name)
+                {
+                    link = playerLink.Link;
+                    existe = true;
+                }
+            }
+        }
+
+        return link;
     }
 }
