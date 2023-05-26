@@ -175,7 +175,20 @@ public partial class Index
         return players; 
     }
 
-
+    public PlayersName[] OrdenarEdad()
+    {
+        if (pulsar)
+        {
+            players = players.OrderByDescending(x => x.Age).ToArray(); //Ordenamos de Z a la A
+            pulsar = false; //Cambiamos a true para que la próxima vez que le demos se ejecute el contrario, de la A a la Z
+        }
+        else
+        {
+            players = players.OrderBy(x => x.Age).ToArray(); //Ordenamos de A a la Z
+            pulsar = true; //Lo contrario del anterior, para que se ejecute luego de la Z a la A
+        }
+        return players;
+    }
 
 
 
