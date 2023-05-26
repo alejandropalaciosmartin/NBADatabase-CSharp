@@ -66,11 +66,13 @@ else
                     @if (player != null)
                     {
                         <tr>
-                            <td class="nombre">@player.Player_name</td>
+                            <td class="nombre">
+                                <a @onclick="() => MostrarInformacion(player)" style="cursor: pointer;">@player.Player_name</a>
+                            </td>
                             <td class="edad">@player.Age</td>
                             <td class="altura">@player.Player_heightM m</td>
-                            <td class="equipo"><img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
-                            <td class="pais"><img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
+                            <td class="equipo">@player.Team_abbreviation<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
+                            <td class="pais">@player.Country<img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
                             <td class="temporada">@player.Season</td>
                         </tr>
                     }
@@ -79,5 +81,39 @@ else
         </table>
 
     </div>
+
+    @if (mostrarInformacion)
+    {
+        <div class="overlay">
+        <div class="tarjeta">
+            <div class="cerrar" @onclick="CerrarInformacion">Cerrar</div>
+            <div class="contenido">
+                <!-- Aquí muestras la información detallada del jugador -->
+                <h3>@jugadorSeleccionado.Player_name</h3>
+                <p>Edad: @jugadorSeleccionado.Age</p>
+                <p>Altura: @jugadorSeleccionado.Player_heightM m</p>
+                <p>Equipo: @jugadorSeleccionado.Team_abbreviation</p>
+                <p>País: @jugadorSeleccionado.Country</p>
+                <p>Temporada: @jugadorSeleccionado.Season</p>
+                <!-- Agrega más detalles si es necesario -->
+            </div>
+        </div>
+        </div> <!-- Agrega un div overlay para bloquear la interacción -->
+    }
 }
 
+@code {
+    private bool mostrarInformacion = false;
+    private PlayersName jugadorSeleccionado;
+
+    private void MostrarInformacion(PlayersName player)
+    {
+        jugadorSeleccionado = player;
+        mostrarInformacion = true;
+    }
+
+    private void CerrarInformacion()
+    {
+        mostrarInformacion = false;
+    }
+}
