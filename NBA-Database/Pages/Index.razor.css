@@ -7,8 +7,8 @@
 }
 
 .cuadradBuscador {
-    margin-top: -95vh;
-    margin-left: 90vh;
+    margin-top: -98vh;
+    margin-left: 75vh;
 }
 
 .botonBuscar, .seleccionarPaises, .seleccionarEquipos, .botonRetro, .botonAvan {
@@ -21,10 +21,10 @@
 
 
 .seleccionarPaises, .seleccionarEquipos {
-    width: 30vh;
+    width: 35vh;
     height: 5vh;
-    margin-left: 20vh;
     margin-top: -1vh;
+    text-align: center;
 }
 
 .seleccionarPaises {
@@ -32,7 +32,7 @@
 }
 
 .seleccionarEquipos {
-    margin-left: 1vh;
+    margin-left: 77vh;
 }
 
 .botonBuscar {
@@ -64,18 +64,18 @@
 }
 
 .posRetro {
-    margin-top: -20vh;
-    margin-left: 143vh;
+    margin-top: -15vh;
+    margin-left: -27vh;
 }
 
 .posAvan {
     margin-top: -20vh;
-    margin-left: 160vh;
+    margin-left: 12vh;
 }
 
 .posCont {
     margin-top: -19vh;
-    margin-left: 149vh;
+    margin-left: 65vh;
     text-align: center
 }
 

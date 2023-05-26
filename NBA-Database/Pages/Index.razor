@@ -16,17 +16,8 @@ else
         <input @bind="searchTerm" class="cuadroBuscar" placeholder="Nombre jugador" />
         <button class="botonBuscar" @onclick="() => Buscar()">Buscar</button>
     </div>
-    <div class="posRetro">
-        <button class="botonRetro" @onclick=" ()=> Retroceder()">&lt;&lt;</button>
-    </div>
-    <div class="posAvan">
-        <button class="botonAvan" @onclick="() => Avanzar()">>></button>
-    </div>
-    <div class="posCont">
-        <div class="cajaCont">@paginaActual/@TotalPaginas()</div>
-    </div>
     <select class="seleccionarPaises" @onchange="CogePais">
-        <option selected value="todos">Selecciona país - TODOS</option>
+        <option selected value="todos">Selecciona país / TODOS</option>
         <option value="Germany">Alemania</option>
         <option value="Argentina">Argentina</option>
         <option value="Australia">Australia</option>
@@ -66,7 +57,7 @@ else
         <option value="USA">USA</option>
     </select>
     <select class="seleccionarEquipos" @onchange="CogeEquipo">
-        <option selected value="todos">Selecciona equipo - TODOS</option>
+        <option selected value="todos">Selecciona equipo / TODOS</option>
         <option value="ATL">Atlanta Hawks</option>
         <option value="BOS">Boston Celtics</option>
         <option value="BKN">Brooklyn Nets</option>
@@ -149,7 +140,15 @@ else
                 }
             </tbody>
         </table>
-
+        <div class="posRetro">
+            <button class="botonRetro" @onclick=" ()=> Retroceder()">&lt;&lt;</button>
+        </div>
+        <div class="posAvan">
+            <button class="botonAvan" @onclick="() => Avanzar()">>></button>
+        </div>
+        <div class="posCont">
+            <div class="cajaCont">@paginaActual/@TotalPaginas()</div>
+        </div>
     </div>
 
     @if (mostrarInformacion)

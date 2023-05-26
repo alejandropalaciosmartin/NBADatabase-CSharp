@@ -278,9 +278,9 @@ public partial class Index
             case "Turkey": pais = "Turkey"; break;
             case "Ukraine": pais = "Ukraine"; break;
             case "USA": pais = "USA"; break;
-            default: players = players2; break; // Restablece la lista original si no hay coincidencia
+            default: players = players2.Select(x => x).ToList(); break; // Restablece la lista original si no hay coincidencia
         }
-        if(seleccionar == "todos") players = players2.Select(x => x).ToList();
+        if (seleccionar == "todos") players = players2.Select(x => x).ToList();
         else players = players2.Where(x => x.Country == pais).ToList();
     }
 
@@ -322,7 +322,7 @@ public partial class Index
             case "TOR": equipo = "TOR"; break;
             case "UTA": equipo = "UTA"; break;
             case "WAS": equipo = "WAS"; break;
-            default: players = players2; break; // Restablece la lista original si no hay coincidencia
+            default: players = players2.Select(x => x).ToList(); break; // Restablece la lista original si no hay coincidencia
         }
         if (seleccionar == "todos") players = players2.Select(x => x).ToList();
         else players = players2.Where(x => x.Team_abbreviation == equipo).ToList();
