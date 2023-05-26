@@ -8,15 +8,31 @@
 
 .cuadradBuscador {
     margin-top: -95vh;
-    margin-left: 80vh;
+    margin-left: 90vh;
 }
 
-.botonBuscar, .seleccionarPaises, .botonRetro, .botonAvan {
+.botonBuscar, .seleccionarPaises, .seleccionarEquipos, .botonRetro, .botonAvan {
     height: 5vh;
     background-color: red;
     box-shadow: 0 0 5px 5px;
     border-radius: 100px 100px 100px 100px;
     font-weight: bold;
+}
+
+
+.seleccionarPaises, .seleccionarEquipos {
+    width: 30vh;
+    height: 5vh;
+    margin-left: 20vh;
+    margin-top: -1vh;
+}
+
+.seleccionarPaises {
+    margin-left: 20vh;
+}
+
+.seleccionarEquipos {
+    margin-left: 1vh;
 }
 
 .botonBuscar {
@@ -35,7 +51,7 @@
         border: 5px solid black;
     }
 
-.ordenarNombres, .botonRetro, .botonAvan {
+.botonRetro, .botonAvan {
     width: 5vh;
 }
 
@@ -99,13 +115,6 @@
     width: 2.5vh;
     margin-top: -0.5vh;
     margin-left: -0.2vh;
-}
-
-.ordenarNombres {
-    width: 30vh;
-    height: 5vh;
-    margin-left: 20vh;
-    margin-top: -1vh;
 }
 
 #tabla {
