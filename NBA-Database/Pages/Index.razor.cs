@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using static NBA_Database.Pages.Compare;
 
 namespace NBA_Database.Pages;
 
@@ -6,16 +7,16 @@ namespace NBA_Database.Pages;
 public partial class Index
 {
     //Metemos en una raíz porque el tamaño no cambiará de PlayersName
-    private PlayersName[]? players;
+    private List<PlayersName> players;
+    private List<PlayersName> players2;
 
-    //private Paginacion paginacion;
-
-    //Leemos y pasamos a players el cotnenido de json
+    //Leemos y pasamos a players el contenido de json
     protected override async Task OnInitializedAsync()
     {
-        players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/datas.json");
-        //players = await Http.GetFromJsonAsync<PlayersName[]>("/assets/data/dataPrueba.json");
-        LIMITECONTADOR = players.Length / 10; //El total de json lo dividimos entre 10
+        players = await Http.GetFromJsonAsync<List<PlayersName>>("/assets/data/datas.json");
+        //CREAMOS NUEVA VARIABLE para reiniciar los datos antes de la búsqueda
+        players2 = players;
+        LIMITECONTADOR = players.Count / 10; //El total de json lo dividimos entre 10
     }
 
     public class PlayersName
@@ -119,7 +120,7 @@ public partial class Index
     {
         //Mientras el contador sea menor que el total del array -CANTMOSTRAR, ponemos CANTMOSTRAR porque vamos en la tabla en grupo
         // de lo que pongamos en CANTMOSTRAR
-        if (contador < players.Length - CANTMOSTRAR) //Para que no cuente más de lo que debería contar al repartir
+        if (contador < players.Count - CANTMOSTRAR) //Para que no cuente más de lo que debería contar al repartir
         {                                                             //el listado entre los que hay que mostrar
             contador += CANTMOSTRAR;
         }
@@ -139,10 +140,10 @@ public partial class Index
             int newIndex = 0; //Creamos un contador para almacenar desde la 1º posición, ya que si ponemos contador o i que es el mismo
             //valor, no se rellena correctamente, porque contador empieza desde donde esté
             //Restamos 10 para que salgan todos los datos ya que al ir de 10 en 10 omitia 1o jugadores
-            for (int i = -10 + contador; i <= players.Length; i++) //Empieza desde el contador que vaya (ej: contador += CANTMOSTRAR y
+            for (int i = -10 + contador; i <= players.Count; i++) //Empieza desde el contador que vaya (ej: contador += CANTMOSTRAR y
             {                                                       //CANTMOSTRAR es 10 u otro, entonces el valor que empieza 0 se pone 
                                                                     //en 10 cuando pulsamos botón hasta los próximos 10, los 20 siguientes
-               if (i < players.Length && players[i] != null) //Si el número del for que comience es menor que el total del array json y 
+               if (i < players.Count && players[i] != null) //Si el número del for que comience es menor que el total del array json y 
                 {                                             //cada elemento es diferente a nulo
                     playersNew[newIndex] = players[i];  //Metemos cada elemento a la posición nueva del array nuevo
                     newIndex++;     //Posición nueva, después del 0 se incrementa en 1 para la próxima insercción
@@ -158,84 +159,93 @@ public partial class Index
 
     ///////////////////////////ORDENAR//////////////////////////////////////////////////////////////////////////
     bool pulsar = false;
-    public PlayersName[] OrdenarNombre()
+    public List<PlayersName> OrdenarNombre()
     {
         //Controlamos con pulsar bool que cada vez le demos nos ordene de una u otra forma
         if (pulsar)
         {
             //Lo metemos en players que es la variable principal para que afecte directamente a la lista que tenemos creada y la ordene
             //directamente en la tabla
-            players = players.OrderByDescending(x => x.Player_name).ToArray(); //Ordenamos de Z a la A
+            players = players.OrderByDescending(x => x.Player_name).ToList(); //Ordenamos de Z a la A
             pulsar = false; //Cambiamos a true para que la próxima vez que le demos se ejecute el contrario, de la A a la Z
         }
         else
         {
-            players = players.OrderBy(x => x.Player_name).ToArray(); //Ordenamos de A a la Z
+            players = players.OrderBy(x => x.Player_name).ToList(); //Ordenamos de A a la Z
             pulsar = true; //Lo contrario del anterior, para que se ejecute luego de la Z a la A
         }
         return players; 
     }
 
-    public PlayersName[] OrdenarEdad()
+    public List<PlayersName> OrdenarEdad()
     {
         if (pulsar)
         {
-            players = players.OrderByDescending(x => x.Age).ToArray(); 
+            players = players.OrderByDescending(x => x.Age).ToList(); 
             pulsar = false; 
         }
         else
         {
-            players = players.OrderBy(x => x.Age).ToArray(); 
+            players = players.OrderBy(x => x.Age).ToList(); 
             pulsar = true; 
         }
         return players;
     }
 
-    public PlayersName[] OrdenarAltura()
+    public List<PlayersName> OrdenarAltura()
     {
         if (pulsar)
         {
-            players = players.OrderByDescending(x => x.Player_heightM).ToArray();
+            players = players.OrderByDescending(x => x.Player_heightM).ToList();
             pulsar = false;
         }
         else
         {
-            players = players.OrderBy(x => x.Player_heightM).ToArray();
+            players = players.OrderBy(x => x.Player_heightM).ToList();
             pulsar = true;
         }
         return players;
     }
 
-    public PlayersName[] OrdenarEquipo()
+    public List<PlayersName> OrdenarEquipo()
     {
         if (pulsar)
         {
-            players = players.OrderByDescending(x => x.Team_abbreviation).ToArray();
+            players = players.OrderByDescending(x => x.Team_abbreviation).ToList();
             pulsar = false;
         }
         else
         {
-            players = players.OrderBy(x => x.Team_abbreviation).ToArray();
+            players = players.OrderBy(x => x.Team_abbreviation).ToList();
             pulsar = true;
         }
         return players;
     }
 
-    public PlayersName[] OrdenarPais()
+    public List<PlayersName> OrdenarPais()
     {
         if (pulsar)
         {
-            players = players.OrderByDescending(x => x.Country).ToArray();
+            players = players.OrderByDescending(x => x.Country).ToList();
             pulsar = false;
         }
         else
         {
-            players = players.OrderBy(x => x.Country).ToArray();
+            players = players.OrderBy(x => x.Country).ToList();
             pulsar = true;
         }
         return players;
     }
 
-    
+    ///////////////////////////////////////////BUSCADOR///////////////////////////////////////////////////////////////////
+    private string searchTerm = "";
 
+    public void Buscar()
+    {
+        players = players2; //CREAMOS NUEVA VARIABLE para reiniciar los datos antes de la búsqueda
+        players = players.Where(p => p.Player_name.IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
+        //private List<PlayersName> filteredPlayers => players.Where(p => p.Player_name.IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
+        //IndexOf -> se comporta como contains, sino encuentra nada searchTerm devuelve -1 y por eso es >= 0 para que coja los resultados
+        //y tiene StringComparison.OrdinalIgnoreCase para ignorarno distiga mayuscula/minuscula 
+    }
 }

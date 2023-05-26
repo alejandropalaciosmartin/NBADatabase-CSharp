@@ -13,8 +13,8 @@ else
         <img class="canastaImagen" src="/assets/image/canasta.png" />
     </div>
     <div class="cuadradBuscador">
-        <label for="search-input" class="jugadorBuscador">Buscar Jugador:</label>
-        <input type="text" id="search-input" name="search-input">
+        <input @bind="searchTerm" class="cuadroBuscar" placeholder="Nombre jugador" />
+        <button class="botonBuscar" @onclick="() => Buscar()">Buscar</button>
     </div>
     <div class="posRetro">
         <button class="botonRetro" @onclick=" ()=> Retroceder()">&lt;&lt;</button>

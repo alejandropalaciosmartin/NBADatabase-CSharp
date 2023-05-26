@@ -8,21 +8,35 @@
 
 .cuadradBuscador {
     margin-top: -95vh;
-    margin-left: 70vh;
+    margin-left: 80vh;
 }
 
-.jugadorBuscador {
-    color: white;
-    font-weight: bold;
-}
-
-.ordenarNombres, .botonRetro, .botonAvan {
-    width: 5vh;
+.botonBuscar, .ordenarNombres, .botonRetro, .botonAvan {
     height: 5vh;
     background-color: red;
     box-shadow: 0 0 5px 5px;
     border-radius: 100px 100px 100px 100px;
     font-weight: bold;
+}
+
+.botonBuscar {
+    width: 10vh;
+}
+
+.cuadroBuscar {
+    width: 25vh;
+    height: 5vh;
+    font-weight: bold;
+    border-radius: 50px 50px 50px 50px;
+    border: 3px solid black;
+}
+
+    .cuadroBuscar:hover {
+        border: 5px solid black;
+    }
+
+.ordenarNombres, .botonRetro, .botonAvan {
+    width: 5vh;
 }
 
 .cajaCont {
