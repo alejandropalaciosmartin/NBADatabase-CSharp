@@ -11,21 +11,14 @@ public partial class Index
     //Metemos en una raíz porque el tamaño no cambiará de PlayersName
     private List<PlayersName> players;
     private List<PlayersName> players2;
-    private List<PlayerLink> playersLinks;
 
     //Leemos y pasamos a players el contenido de json
     protected override async Task OnInitializedAsync()
     {
         players = await Http.GetFromJsonAsync<List<PlayersName>>("/assets/data/datas.json");
-        playersLinks = await Http.GetFromJsonAsync<List<PlayerLink>>("/assets/data/players.json");
         //CREAMOS NUEVA VARIABLE para reiniciar los datos antes de la búsqueda
         players2 = players;
         //LIMITECONTADOR = players.Count / 10; //El total de json lo dividimos entre 10
-    }
-    public class PlayerLink
-    {
-        public string Name { get; set; }
-        public string Link { get; set; }
     }
     public class PlayersName
     {
