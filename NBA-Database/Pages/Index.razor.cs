@@ -230,7 +230,7 @@ public partial class Index
     public void CogePais(ChangeEventArgs e)
     {
         var selectedValue = e.Value.ToString();
-        string pais = " "; 
+        string pais = " ";
 
         switch (selectedValue)
         {
@@ -273,6 +273,7 @@ public partial class Index
             case "USA": pais = "USA"; break;
             default: players = players2; break; // Restablece la lista original si no hay coincidencia
         }
-        players = players2.Where(x => x.Country == pais).ToList();
+        if(selectedValue == "todos") players = players2.Select(x => x).ToList();
+        else players = players2.Where(x => x.Country == pais).ToList();
     }
 }
