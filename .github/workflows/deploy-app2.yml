@@ -15,7 +15,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-  
+
 jobs:
   deploy-to-github-pages:
     # Use ubuntu-latest image to run steps on
@@ -23,7 +23,7 @@ jobs:
     steps:
     # Uses GitHub's checkout action to checkout code form the master branch
     - uses: actions/checkout@v3
-    
+
     # Sets up .NET SDK
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v3.0.3
@@ -39,7 +39,7 @@ jobs:
     # Publishes Blazor project to the release-folder
     - name: Publish .NET Project
       run: dotnet publish $PROJECT_NAME/$PROJECT_NAME.csproj -c Release -p:RunAOTCompilation=true -o release --nologo
-      
+
      # Change base tag in all html files to include subfolder
     - name: Change base tag
       working-directory: release/wwwroot
@@ -86,7 +86,7 @@ jobs:
     # Add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
-      
+
     # Publishes app to GitHub Pages
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
