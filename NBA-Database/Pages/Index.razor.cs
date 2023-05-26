@@ -245,6 +245,8 @@ public partial class Index
             case "China": pais = "China"; break;
             case "Croatia": pais = "Croatia"; break;
             case "Egypt": pais = "Egypt"; break;
+            case "Slovenia": pais = "Slovenia"; break;
+            case "Spain": pais = "Spain"; break;
             case "France": pais = "France"; break;
             case "Georgia": pais = "Georgia"; break;
             case "Greece": pais = "Greece"; break;
@@ -256,11 +258,18 @@ public partial class Index
             case "New Zealand": pais = "New Zealand"; break;
             case "Poland": pais = "Poland"; break;
             case "Puerto Rico": pais = "Puerto Rico"; break;
+            case "United Kingdom": pais = "United Kingdom"; break;
             case "Czech Republic": pais = "Czech Republic"; break;
             case "Democratic Republic of the Congo": pais = "Democratic Republic of the Congo"; break;
             case "Dominican Republic": pais = "Dominican Republic"; break;
             case "Russia": pais = "Russia"; break;
-            case "Spain": pais = "Spain"; break;
+            case "Senegal": pais = "Senegal"; break;
+            case "Serbia": pais = "Serbia"; break;
+            case "South Sudan": pais = "South Sudan"; break;
+            case "Sweden": pais = "Sweden"; break;
+            case "Switzerland": pais = "Switzerland"; break;
+            case "Turkey": pais = "Turkey"; break;
+            case "Ukraine": pais = "Ukraine"; break;
             case "USA": pais = "USA"; break;
             default: players = players2; break; // Restablece la lista original si no hay coincidencia
         }
