@@ -34,7 +34,7 @@
 }
 
 .posRetro {
-    margin-top: -15vh;
+    margin-top: -20vh;
     margin-left: 143vh;
 }
 
@@ -99,7 +99,6 @@
     margin-left: 20vh;
     margin-top: -14vh;
     opacity: 0.9;
-    /*background-color: white;*/
     font-weight: bold;
     text-align: center;
 }
@@ -129,13 +128,6 @@ th {
     background-color: #003d55;
     border-bottom: 3px solid white;
     color: white;
-}
-
-tr:hover {
-   /* border: rgb(227, 55, 55) 0.5vh solid;
-    font-size: 3vh;
-    font-weight: bold;*/
-    /*cursor: pointer;*/
 }
 
 tr:nth-child(even) {
