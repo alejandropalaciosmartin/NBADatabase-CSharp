@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Components;
 using System.Net.Http.Json;
 using static NBA_Database.Pages.Compare;
 
@@ -93,42 +94,42 @@ public partial class Index
 
 ///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
     }
-    private int pageSize = 7; // Número de elementos por página
-    private int currentPage = 1; // Página actual
+    private int elementosPagina = 7; // Número de elementos por página
+    private int paginaActual = 1; // Página actual
     //Función para mostrar y paginar
-    public List<PlayersName> GetPlayersForCurrentPage()
+    public List<PlayersName> ConseguirJugadoresPaginacion()
     {
-        int startIndex = (currentPage - 1) * pageSize; //A la página actual le quito 1 para que al multiplicar
+        int primerElemento = (paginaActual - 1) * elementosPagina; //A la página actual le quito 1 para que al multiplicar
                                                        //por 1 se ponga 0 que al multiplicar te da 0, 1º posición
                                                        //Para obtener el siguiente grupo sería 2 que se suma abajo
                                                        //2 menos 1 da 1 que es la 2º pagina por el tamaño que son 7
                                                        //por lo que cogemos la siguiente posicion que empezamos que es
                                                        //el 7, ya que antes eran del 0 al 6 (7 posiciones)
                                                        //el siguiente del 7 al 13 (7 posiciones)
-        return players.Skip(startIndex).Take(pageSize).ToList();
+        return players.Skip(primerElemento).Take(elementosPagina).ToList();
         //Cogemos la lista, saltamos desde el inicio (0 al principio, luego desde la posicion 7)
         //Take -> Cogemos la cantidad de página que queremos mostrar y pasamos a la lista para mostrar
     }
 
     public void Avanzar()
     {
-        if (currentPage < GetTotalPages()) //Si es menor a la catidad total de página avanza 1
+        if (paginaActual < TotalPaginas()) //Si es menor a la catidad total de página avanza 1
         {
-            currentPage++;
+            paginaActual++;
         }
     }
 
     public void Retroceder()
     {
-        if (currentPage > 1)
+        if (paginaActual > 1)
         {
-            currentPage--;
+            paginaActual--;
         }
     }
     //Cogemos la cantidad de páginas que se va a mostrar
-    public int GetTotalPages()
+    public int TotalPaginas()
     {
-        return (int)Math.Ceiling((double)players.Count / pageSize); //En este caso 63
+        return (int)Math.Ceiling((double)players.Count / elementosPagina); //En este caso 63
     }
 
 
@@ -222,5 +223,47 @@ public partial class Index
         //private List<PlayersName> filteredPlayers => players.Where(p => p.Player_name.IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
         //IndexOf -> se comporta como contains, sino encuentra nada searchTerm devuelve -1 y por eso es >= 0 para que coja los resultados
         //y tiene StringComparison.OrdinalIgnoreCase para ignorarno distiga mayuscula/minuscula 
+    }
+
+    //////////////////////SELECCIÓN 
+    /////PAÍSES
+    public void CogePais(ChangeEventArgs e)
+    {
+        var selectedValue = e.Value.ToString();
+        string pais = " "; 
+
+        switch (selectedValue)
+        {
+            case "Germany": pais = "Germany"; break;
+            case "Argentina": pais = "Argentina"; break;
+            case "Australia": pais = "Australia"; break;
+            case "Bahamas": pais = "Bahamas"; break;
+            case "Bosnia and Herzegovina": pais = "Bosnia and Herzegovina"; break;
+            case "Brazil": pais = "Brazil"; break;
+            case "Cameroon": pais = "Cameroon"; break;
+            case "Canada": pais = "Canada"; break;
+            case "China": pais = "China"; break;
+            case "Croatia": pais = "Croatia"; break;
+            case "Egypt": pais = "Egypt"; break;
+            case "France": pais = "France"; break;
+            case "Georgia": pais = "Georgia"; break;
+            case "Greece": pais = "Greece"; break;
+            case "Haiti": pais = "Haiti"; break;
+            case "Italy": pais = "Italy"; break;
+            case "Latvia": pais = "Latvia"; break;
+            case "Lithuania": pais = "Lithuania"; break;
+            case "Mali": pais = "Mali"; break;
+            case "New Zealand": pais = "New Zealand"; break;
+            case "Poland": pais = "Poland"; break;
+            case "Puerto Rico": pais = "Puerto Rico"; break;
+            case "Czech Republic": pais = "Czech Republic"; break;
+            case "Democratic Republic of the Congo": pais = "Democratic Republic of the Congo"; break;
+            case "Dominican Republic": pais = "Dominican Republic"; break;
+            case "Russia": pais = "Russia"; break;
+            case "Spain": pais = "Spain"; break;
+            case "USA": pais = "USA"; break;
+            default: players = players2; break; // Restablece la lista original si no hay coincidencia
+        }
+        players = players2.Where(x => x.Country == pais).ToList();
     }
 }
