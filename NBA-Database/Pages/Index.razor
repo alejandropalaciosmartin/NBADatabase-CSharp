@@ -32,8 +32,16 @@ else
         <table class="table">
             <thead>
                 <tr>
-                    <th class="nombre">Nombre</th>
-                    <th class="edad">Edad</th>
+                    <th class="nombre">Nombre
+                        <button class="ordenarIcono ordenarNombre" @onclick="() => OrdenarNombre()">
+                            <img class="flechas" src="./assets/image/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="edad">Edad
+                        <button class="ordenarIcono ordenarEdad" @onclick="() => OrdenarNombre()">
+                            <img class="flechas" src="./assets/image/ordenarFlechas.png" />
+                        </button>
+                    </th>
                     <th class="altura">Altura</th>
                     <th class="equipo">Abreviatura equipo</th>
                     <th class="pais">País procedencia</th>

@@ -49,6 +49,33 @@
     text-align: center
 }
 
+.ordenarIcono {
+    width: 4vh;
+    height: 4vh;
+    background-color: red;
+    box-shadow: 0 0 5px 5px;
+    border-radius: 100px 100px 100px 100px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ordenarNombre {
+    margin-left: 2vh;
+    margin-top: -3vh;
+}
+
+.ordenarEdad {
+    margin-left: 15vh;
+    margin-top: -3vh;
+}
+
+.flechas {
+    width: 2.5vh;
+    margin-top: -0.5vh;
+    margin-left: -0.2vh;
+}
 
 .ordenarNombres {
     width: 30vh;

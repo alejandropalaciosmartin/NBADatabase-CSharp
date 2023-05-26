@@ -15,6 +15,8 @@
 
   <ItemGroup>
     <Content Remove="Pages\FetchData.razor" />
+    <Content Remove="wwwroot\assets\image\flechas.png" />
+    <Content Remove="wwwroot\assets\image\flechasOrdenar.png" />
     <Content Remove="wwwroot\assets\image\fondo.jpg" />
     <Content Remove="wwwroot\assets\image\fondo01.jpg" />
     <Content Remove="wwwroot\assets\image\fondo02.jpg" />
