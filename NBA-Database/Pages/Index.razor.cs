@@ -64,7 +64,7 @@ public partial class Index
             //Imagen de salida que la obtenemos en el foreach del Index.razor al llamar al método
             string imagen = "";
             //Creamos array con las banderas que tenemos la imagen
-            string[] imagenExiste = { "CHI", "LAC", "TOR", "USA" };
+            string[] imagenExiste = { "CHI", "BOS", "BKN", "NYK", "PHI", "TOR", "CLE", "DET", "IND", "MIL", "DEN", "MIN", "OKC", "POR", "UTA", "GSW", "LAC", "LAL", "PHX", "SAC", "ATL", "CHA", "DAL", "MIA", "MEM", "WAS", "SAS", "NOP", "HOU", "ORL", "USA" };
             try
             {
                 //Recorremos el array de las fotos existentes
