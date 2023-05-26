@@ -168,14 +168,15 @@ td:nth-child(1){
 
 .tarjeta {
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 300px;
-    background-color: white;
-    border: 1px solid black;
+    width: 450px;
+    height: 480px;
+    background-color: darkgray;
+    border: 5px solid black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
     padding: 20px;
     z-index: 9999;
 }
@@ -183,19 +184,27 @@ td:nth-child(1){
 /* Estilos del botón de cierre */
 .cerrar {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -100px;
+    right: 25px;
     cursor: pointer;
+    background-color:lightcoral;
+    border:solid 3px darkred;
+    border-radius:4px;
+    padding:8px;
+    font-size:large;
 }
 
 /* Estilos del contenido de la tarjeta */
 .contenido {
     margin-top: 30px;
 }
+.contenido ul li{
+    margin-top: 0;
+}
 
 .overlay {
     position: fixed;
-    top: 0;
+    top: -120px;
     left: 0;
     width: 100%;
     height: 100%;
