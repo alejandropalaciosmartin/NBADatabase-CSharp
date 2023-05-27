@@ -121,7 +121,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-UnUplUIQTjZwsF4PCN5aQeaoHlmxx\/iO5LHvdNVV+TU=",
+      "hash": "sha256-wSzLPCLpsIPycp1SPUjeZBvDLXRLcF6nMhNWFdS1qC8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -197,7 +197,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-0et5m7iflxlvAAGPTMDgOxVlZ74PZknoYBPr7ZV8vrs=",
+      "hash": "sha256-YVZZWTjr\/7WV6ZmJBWjaFsmZSMGPaB8\/VzVhq5S3+bM=",
       "url": "_framework\/NBA-Database.dll"
     },
     {
@@ -377,7 +377,7 @@
       "url": "_framework\/dotnet.7.0.5.oj5kf2kghq.js"
     },
     {
-      "hash": "sha256-wQZJAtW0JMhnu2FuTpNb6iB81KT6zU5wtyBbhNEdCA4=",
+      "hash": "sha256-1zjv\/WTDHjms255sa6V85E6jN3PyT\/9bKwqSGsYx8nc=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -397,5 +397,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "gk0DtS3w"
+  "version": "+1YlnWs6"
 };
