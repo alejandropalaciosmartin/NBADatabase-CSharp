@@ -153,6 +153,14 @@
       "url": "NBADatabase.styles.css"
     },
     {
+      "hash": "sha256-65CKuvgLfTWSJYbxb6reXaf\/CKj1LNlsoowx4sV43DU=",
+      "url": "assets\/data\/datas.json"
+    },
+    {
+      "hash": "sha256-vo1nmynGmW7NugQqgweDlyZE3J6NAs9\/vamoLK0yi2M=",
+      "url": "assets\/data\/players.json"
+    },
+    {
       "hash": "sha256-10KEeWxsgry5D9LUZc0K86lpIg9RcWdyyBB5sXq6Ypk=",
       "url": "css\/app.css"
     },
@@ -225,5 +233,5 @@
       "url": "sample-data\/weather.json"
     }
   ],
-  "version": "+kuB\/MwP"
+  "version": "XawUzr8I"
 };
