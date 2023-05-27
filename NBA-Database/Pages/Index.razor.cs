@@ -65,10 +65,9 @@ public partial class Index
             //Imagen de salida que la obtenemos en el foreach del Index.razor al llamar al método
             string imagen = "";
             //Creamos array con las banderas que tenemos la imagen
-            //string[] imagenExiste = { 
-            //    "USA","Bahamas","Canada","Croatia","Democratic Republic of the Congo","France","Germany","Greece","Lithuania","Mali","Puerto Rico","Senegal","Serbia","Slovenia","Turkey","Brazil", "Latvia","Australia","Italy","Sweden","Ukraine","Austria",
-            //    "Egypt", "Spain","Dominican Republic","Cameroon","New Zealand","South Sudan", "Czech Republic","Russia","Poland","Argentina","United Kingdom","Haiti" ,"China","Bosnia and Herzegovina","Georgia", "Switzerland"};
-            string[] imagenExiste = { "CHI", "BOS", "BKN", "NYK", "PHI", "TOR", "CLE", "DET", "IND", "MIL", "DEN", "MIN", "OKC", "POR", "UTA", "GSW", "LAC", "LAL", "PHX", "SAC", "ATL", "CHA", "DAL", "MIA", "MEM", "WAS", "SAS", "NOP", "HOU", "ORL" };
+            string[] imagenExiste = { "CHI", "BOS", "BKN", "NYK", "PHI", "TOR", "CLE", "DET", "IND", "MIL", "DEN", "MIN", "OKC", "POR", "UTA", "GSW", "LAC", "LAL", "PHX", "SAC", "ATL", "CHA", "DAL", "MIA", "MEM", "WAS", "SAS", "NOP", "HOU", "ORL",
+                "USA","Bahamas","Canada","Croatia","Democratic Republic of the Congo","France","Germany","Greece","Lithuania","Mali","Puerto Rico","Senegal","Serbia","Slovenia","Turkey","Brazil", "Latvia","Australia","Italy","Sweden","Ukraine","Austria",
+                "Egypt", "Spain","Dominican Republic","Cameroon","New Zealand","South Sudan", "Czech Republic","Russia","Poland","Argentina","United Kingdom","Haiti" ,"China","Bosnia and Herzegovina","Georgia", "Switzerland"};
             try
             {
                 //Recorremos el array de las fotos existentes
@@ -81,48 +80,7 @@ public partial class Index
                     }
                     else
                     {
-                        switch (buscaBandera)
-                        {
-                            case "Germany": imagen = "https://www.banderas-mundo.es/data/flags/w702/de.png"; break;
-                            case "Argentina": imagen = "https://www.banderas-mundo.es/data/flags/w702/ar.webp"; break;
-                            case "Austria": imagen = "https://www.banderas-mundo.es/data/flags/w702/at.png"; break;
-                            case "Australia": imagen = "https://www.banderas-mundo.es/data/flags/w702/au.webp"; break;
-                            case "Bahamas": imagen = "https://www.banderas-mundo.es/data/flags/w702/bs.webp"; break;
-                            case "Bosnia and Herzegovina": imagen = "https://www.banderas-mundo.es/data/flags/w702/ba.webp"; break;
-                            case "Brazil": imagen = "https://www.banderas-mundo.es/data/flags/w702/br.webp"; break;
-                            case "Cameroon": imagen = "https://www.banderas-mundo.es/data/flags/w702/cm.webp"; break;
-                            case "Canada": imagen = "https://www.banderas-mundo.es/data/flags/w702/ca.webp"; break;
-                            case "China": imagen = "https://www.banderas-mundo.es/data/flags/w702/cn.webp"; break;
-                            case "Croatia": imagen = "https://www.banderas-mundo.es/data/flags/w702/hr.webp"; break;
-                            case "Egypt": imagen = "https://www.banderas-mundo.es/data/flags/w702/eg.webp"; break;
-                            case "Slovenia": imagen = "https://www.banderas-mundo.es/data/flags/h80/si.webp"; break;
-                            case "Spain": imagen = "https://www.banderas-mundo.es/data/flags/w702/es.webp"; break;
-                            case "France": imagen = "https://www.banderas-mundo.es/data/flags/w702/fr.png"; break;
-                            case "Georgia": imagen = "https://www.banderas-mundo.es/data/flags/w702/ge.webp"; break;
-                            case "Greece": imagen = "https://www.banderas-mundo.es/data/flags/w702/gr.webp"; break;
-                            case "Haiti": imagen = "https://www.banderas-mundo.es/data/flags/w702/ht.webp"; break;
-                            case "Italy": imagen = "https://www.banderas-mundo.es/data/flags/w702/it.png"; break;
-                            case "Latvia": imagen = "https://www.banderas-mundo.es/data/flags/w702/lv.png"; break;
-                            case "Lithuania": imagen = "https://www.banderas-mundo.es/data/flags/w702/lt.png"; break;
-                            case "Mali": imagen = "https://www.banderas-mundo.es/data/flags/w702/ml.png"; break;
-                            case "New Zealand": imagen = "https://www.banderas-mundo.es/data/flags/w702/nz.webp"; break;
-                            case "Poland": imagen = "https://www.banderas-mundo.es/data/flags/w702/pl.png"; break;
-                            case "Puerto Rico": imagen = "https://www.banderas-mundo.es/data/flags/w702/pr.webp"; break;
-                            case "United Kingdom": imagen = "https://www.banderas-mundo.es/data/flags/w702/gb.webp"; break;
-                            case "Czech Republic": imagen = "https://www.banderas-mundo.es/data/flags/w702/cz.webp"; break;
-                            case "Democratic Republic of the Congo": imagen = "https://www.banderas-mundo.es/data/flags/w702/cd.webp"; break;
-                            case "Dominican Republic": imagen = "https://www.banderas-mundo.es/data/flags/w702/do.webp"; break;
-                            case "Russia": imagen = "https://www.banderas-mundo.es/data/flags/w702/ru.png"; break;
-                            case "Senegal": imagen = "https://www.banderas-mundo.es/data/flags/w702/sn.webp"; break;
-                            case "Serbia": imagen = "https://www.banderas-mundo.es/data/flags/w702/rs.webp"; break;
-                            case "South Sudan": imagen = "https://www.banderas-mundo.es/data/flags/w702/ss.webp"; break;
-                            case "Sweden": imagen = "https://www.banderas-mundo.es/data/flags/w702/se.png"; break;
-                            case "Switzerland": imagen = "https://www.banderas-mundo.es/data/flags/w702/ch.png"; break;
-                            case "Turkey": imagen = "https://www.banderas-mundo.es/data/flags/w702/tr.webp"; break;
-                            case "Ukraine": imagen = "https://www.banderas-mundo.es/data/flags/w702/ua.png"; break;
-                            case "USA": imagen = "https://www.banderas-mundo.es/data/flags/w702/us.webp"; break;
-                            default: imagen = $"/assets/image/mundo.png"; break;
-                        }
+                        imagen = $"/assets/image/mundo.png";
                     }
                 }
             }
