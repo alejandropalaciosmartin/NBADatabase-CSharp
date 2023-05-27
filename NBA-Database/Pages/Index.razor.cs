@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using System.Net.Http.Json;
 using static NBA_Database.Pages.Compare;
 using static NBA_Database.Pages.Index;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace NBA_Database.Pages;
 
@@ -70,31 +71,32 @@ public partial class Index
                 switch (buscaBandera)
                 {
                     case "Germany": imagen = "https://www.banderas-mundo.es/data/flags/w702/de.png"; break;
-                    case "Argentina": imagen = "Argentina"; break;
-                    case "Australia": imagen = "Australia"; break;
-                    case "Bahamas": imagen = "Bahamas"; break;
-                    case "Bosnia and Herzegovina": imagen = "Bosnia and Herzegovina"; break;
-                    case "Brazil": imagen = "Brazil"; break;
-                    case "Cameroon": imagen = "Cameroon"; break;
-                    case "Canada": imagen = "Canada"; break;
-                    case "China": imagen = "China"; break;
-                    case "Croatia": imagen = "Croatia"; break;
-                    case "Egypt": imagen = "Egypt"; break;
-                    case "Slovenia": imagen = "Slovenia"; break;
+                    case "Argentina": imagen = "https://www.banderas-mundo.es/data/flags/w702/ar.webp"; break;
+                    case "Austria": imagen = "https://www.banderas-mundo.es/data/flags/w702/at.png"; break;
+                    case "Australia": imagen = "https://www.banderas-mundo.es/data/flags/w702/au.webp"; break;
+                    case "Bahamas": imagen = "https://www.banderas-mundo.es/data/flags/w702/bs.webp"; break;
+                    case "Bosnia and Herzegovina": imagen = "https://www.banderas-mundo.es/data/flags/w702/ba.webp"; break;
+                    case "Brazil": imagen = "https://www.banderas-mundo.es/data/flags/w702/br.webp"; break;
+                    case "Cameroon": imagen = "https://www.banderas-mundo.es/data/flags/w702/cm.webp"; break;
+                    case "Canada": imagen = "https://www.banderas-mundo.es/data/flags/w702/ca.webp"; break;
+                    case "China": imagen = "https://www.banderas-mundo.es/data/flags/w702/cn.webp"; break;
+                    case "Croatia": imagen = "https://www.banderas-mundo.es/data/flags/w702/hr.webp"; break;
+                    case "Egypt": imagen = "https://www.banderas-mundo.es/data/flags/w702/eg.webp"; break;
+                    case "Slovenia": imagen = "https://www.banderas-mundo.es/data/flags/h80/si.webp"; break;
                     case "Spain": imagen = "https://www.banderas-mundo.es/data/flags/w702/es.webp"; break;
-                    case "France": imagen = "France"; break;
-                    case "Georgia": imagen = "Georgia"; break;
+                    case "France": imagen = "https://www.banderas-mundo.es/data/flags/w702/fr.png"; break;
+                    case "Georgia": imagen = "https://www.banderas-mundo.es/data/flags/w702/ge.webp"; break;
                     case "Greece": imagen = "Greece"; break;
-                    case "Haiti": imagen = "Haiti"; break;
-                    case "Italy": imagen = "Italy"; break;
+                    case "Haiti": imagen = "https://www.banderas-mundo.es/data/flags/w702/ht.webp"; break;
+                    case "Italy": imagen = "https://www.banderas-mundo.es/data/flags/w702/it.png"; break;
                     case "Latvia": imagen = "Latvia"; break;
-                    case "Lithuania": imagen = "Lithuania"; break;
+                    case "Lithuania": imagen = "https://www.banderas-mundo.es/data/flags/w702/lt.png"; break;
                     case "Mali": imagen = "Mali"; break;
                     case "New Zealand": imagen = "New Zealand"; break;
                     case "Poland": imagen = "Poland"; break;
                     case "Puerto Rico": imagen = "Puerto Rico"; break;
                     case "United Kingdom": imagen = "United Kingdom"; break;
-                    case "Czech Republic": imagen = "Czech Republic"; break;
+                    case "Czech Republic": imagen = "https://www.banderas-mundo.es/data/flags/w702/cz.webp"; break;
                     case "Democratic Republic of the Congo": imagen = "Democratic Republic of the Congo"; break;
                     case "Dominican Republic": imagen = "Dominican Republic"; break;
                     case "Russia": imagen = "Russia"; break;
@@ -261,6 +263,7 @@ public partial class Index
             case "Germany": pais = "Germany"; break;
             case "Argentina": pais = "Argentina"; break;
             case "Australia": pais = "Australia"; break;
+            case "Austria": pais = "Austria"; break;
             case "Bahamas": pais = "Bahamas"; break;
             case "Bosnia and Herzegovina": pais = "Bosnia and Herzegovina"; break;
             case "Brazil": pais = "Brazil"; break;
