@@ -157,9 +157,11 @@ else
         <div class="tarjeta">
             <div class="cerrar" @onclick="CerrarInformacion"><b>X</b></div>
             <div class="contenido">
-                <img src="@LinkPlayer(jugadorSeleccionado.Player_name)" />
-                <!-- -->
-                <!-- Agrega más detalles si es necesario -->
+
+                <!--ADRI, AQUI VA EL CONTENIDO DEL JUGADOR, TE DEJO UN EJEMPLO ABAJO DE COMO SERIA-->
+                    <p>Nombre: @jugadorSeleccionado.Player_name</p>
+                    <p>Edad: @jugadorSeleccionado.Age</p>
+
             </div>
         </div>
         </div> <!-- Agrega un div overlay para bloquear la interacción -->
@@ -179,26 +181,5 @@ else
     private void CerrarInformacion()
     {
         mostrarInformacion = false;
-    }
-
-    public string LinkPlayer(string name)
-    {
-        string link = "";
-        bool existe = false;
-
-
-        foreach (PlayerLink playerLink in playersLinks)
-        {
-            if(!existe)
-            {
-                if (name == playerLink.Name)
-                {
-                    link = playerLink.Link;
-                    existe = true;
-                }
-            }
-        }
-
-        return link;
     }
 }
