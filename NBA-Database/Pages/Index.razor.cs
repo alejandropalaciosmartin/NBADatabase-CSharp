@@ -121,6 +121,15 @@ public partial class Index
                             case "Turkey": imagen = "Turkey"; break;
                             case "Ukraine": imagen = "Ukraine"; break;
                             case "USA": imagen = "https://www.banderas-mundo.es/data/flags/w702/us.webp"; break;
+                            //case "CHI": imagen = $"/assets/image/mundo.png"; break;
+                            case "BOS": imagen = $"/assets/image/mundo.png"; break;
+                            case "NYK": imagen = $"/assets/image/mundo.png"; break;
+                            case "PHI": imagen = $"/assets/image/mundo.png"; break;
+                            case "TOR": imagen = $"/assets/image/mundo.png"; break;
+                            case "CLE": imagen = $"/assets/image/mundo.png"; break;
+                            case "DET": imagen = $"/assets/image/mundo.png"; break;
+                            case "IND": imagen = $"/assets/image/mundo.png"; break;
+                           //"MIL", "DEN", "MIN", "OKC", "POR", "UTA", "GSW", "LAC", "LAL", "PHX", "SAC", "ATL", "CHA", "DAL", "MIA", "MEM", "WAS", "SAS", "NOP", "HOU", "ORL"
                             default: imagen = $"/assets/image/mundo.png"; break;
                         }
                     }
