@@ -29,14 +29,6 @@
       "url": "assets\/image\/documentacion.png"
     },
     {
-      "hash": "sha256-v\/42W+ZybH97mtSWay3kE+SntKxP96rBpUUBWRXaiFI=",
-      "url": "assets\/image\/equiposNBA\/Spain.png"
-    },
-    {
-      "hash": "sha256-uSo8NZj95T+BS1NRwxtjwNbyqqT8t453R4tH0ALFYcI=",
-      "url": "assets\/image\/equiposNBA\/USA.png"
-    },
-    {
       "hash": "sha256-gsRczwxQbXiv69kDI912Qoxdo8lNdDcifilJfN6pAuc=",
       "url": "assets\/image\/jugador.png"
     },
@@ -129,7 +121,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-c18xpZOP0LACrzVyDefUqog+AMK5RXeznenb3zrwQZ4=",
+      "hash": "sha256-UnUplUIQTjZwsF4PCN5aQeaoHlmxx\/iO5LHvdNVV+TU=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -205,7 +197,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-\/b7DVBiOBtu7K4Nts8H\/VTeuSEUVVtbIx6dH6NcxRVM=",
+      "hash": "sha256-0et5m7iflxlvAAGPTMDgOxVlZ74PZknoYBPr7ZV8vrs=",
       "url": "_framework\/NBA-Database.dll"
     },
     {
@@ -385,7 +377,7 @@
       "url": "_framework\/dotnet.7.0.5.oj5kf2kghq.js"
     },
     {
-      "hash": "sha256-180oaTZ2l3fY32NYZatYj2Q7J58W4phmmseZsnFXI5c=",
+      "hash": "sha256-wQZJAtW0JMhnu2FuTpNb6iB81KT6zU5wtyBbhNEdCA4=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -405,5 +397,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "NtBYFmrr"
+  "version": "gk0DtS3w"
 };
