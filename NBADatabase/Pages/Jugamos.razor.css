@@ -4,4 +4,6 @@
 
 .zonaJuego{
     width: 200vh;
+    background-color: red;
+    margin-top: 50vh;
 }
