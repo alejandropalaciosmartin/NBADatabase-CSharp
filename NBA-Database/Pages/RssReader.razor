@@ -73,9 +73,14 @@
             string title = titleNode.InnerText;
             string description = descriptionNode.InnerText;
             string link = linkNode.InnerText;
+            //Si no se recibe imagen de las urls muestra una por defecto
             if (linkImageNode != null && linkImageNode.Attributes["url"] != null)
             {
                 linkImage = linkImageNode.Attributes["url"].Value;
+            }
+            else
+            {
+                linkImage = "./assets/image/mundo.png";
             }
             string date = dateNode.InnerText;
 
