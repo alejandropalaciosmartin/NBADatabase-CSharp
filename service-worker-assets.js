@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-aHrKpWLh+\/xhUnwKHTWOwFHsnsyCvZLJP2GXDOYUaZY=",
+      "hash": "sha256-M9782oSgO0hMBUIycSpkSBHHYOP4cl2YjsjKNj0uQdc=",
       "url": "NBADatabase.styles.css"
     },
     {
@@ -31,6 +31,14 @@
     {
       "hash": "sha256-S4xshYR1NYnsA85o1uGCQkPaLXJvEw1BbyDD\/AxWUDM=",
       "url": "assets\/image\/equiposNBA\/Argentina.png"
+    },
+    {
+      "hash": "sha256-b7NlTnnxGTjh2aM27kh+2IbY\/APXVDyuXwOOEVEJ6Pc=",
+      "url": "assets\/image\/equiposNBA\/Australia.png"
+    },
+    {
+      "hash": "sha256-Ng6J+4pBUwAS2sAlr3ueR3N6NgdBatuzmfI4bufFljA=",
+      "url": "assets\/image\/equiposNBA\/Austria.png"
     },
     {
       "hash": "sha256-v\/42W+ZybH97mtSWay3kE+SntKxP96rBpUUBWRXaiFI=",
@@ -189,7 +197,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-L88q8Jh\/\/8ZRDTdS17Z6kb80YaLRaHjtz46YBQ4J3oc=",
+      "hash": "sha256-72ChzA0FYW4RA+ZTkqLEt4InHY52OKCOFQHZb2pHXF8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -261,7 +269,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-h\/1c8948DTjdAd4LUdGRtB9QckopQciQVd6gdanrlfA=",
+      "hash": "sha256-qXcvGT37HPgthP2VaNwZEXNPxviUvpL1lw4EEuUyUN0=",
       "url": "_framework\/NBADatabase.dll"
     },
     {
@@ -441,7 +449,7 @@
       "url": "_framework\/dotnet.7.0.5.87a5mes8pe.js"
     },
     {
-      "hash": "sha256-enUqBh+2KtN01ohs+xpU4HCsPAtYfWWHd4sUakxhgUI=",
+      "hash": "sha256-DG7AX2BRDManZnTwcqObJGQAal6OTNcR6jKptCgwNLk=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -461,5 +469,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "7L3tTEDq"
+  "version": "Gka2bmpa"
 };

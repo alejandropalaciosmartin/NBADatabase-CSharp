@@ -468,6 +468,10 @@ td:nth-child(1)[b-39v03b9e2e]{
     margin-top: -1vh;
     font-weight: bold;
 }
+
+*[b-39v03b9e2e] {
+    cursor: url(https://cur.cursors-4u.net/sports/spo-2/spo145.cur), auto !important;
+}
 /* /Pages/RssReader.razor.rz.scp.css */
 .first-news-item[b-esdxcqz2lk] {
 	display: flex;
@@ -648,12 +652,6 @@ main[b-3velz6oino] {
     align-items: center;
 }
 
-/*.oi {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
-}*/
 /*Botones*/
 .nav-item[b-ur4mayblgh] {
     font-size: 0.9rem;
@@ -729,6 +727,10 @@ main[b-3velz6oino] {
 .textoNav[b-ur4mayblgh] {
     margin-left: 1vh;
     margin-top: 2.5vh;
+}
+
+*[b-ur4mayblgh], .canasta[b-ur4mayblgh] {
+    cursor: url(https://cur.cursors-4u.net/sports/spo-2/spo145.cur), auto !important;
 }
 
 /*Para pantalla peque�a*/
