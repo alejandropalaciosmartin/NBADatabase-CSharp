@@ -463,6 +463,11 @@ td:nth-child(1)[b-39v03b9e2e]{
     align-items: center;
     justify-content: center;
 }
+
+.tarjetita[b-39v03b9e2e]{
+    margin-top: -1vh;
+    font-weight: bold;
+}
 /* /Pages/RssReader.razor.rz.scp.css */
 .first-news-item[b-esdxcqz2lk] {
 	display: flex;

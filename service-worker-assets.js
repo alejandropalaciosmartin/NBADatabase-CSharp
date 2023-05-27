@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-7nD9jd2PshHUmMzeGWevUID3iCNncX8aHYHwZFyKB3A=",
+      "hash": "sha256-aHrKpWLh+\/xhUnwKHTWOwFHsnsyCvZLJP2GXDOYUaZY=",
       "url": "NBADatabase.styles.css"
     },
     {
@@ -27,6 +27,14 @@
     {
       "hash": "sha256-xZAgIJpjdLmxiE6i+WoILkMWC4XSNRjVTdpdsE0oHpE=",
       "url": "assets\/image\/documentacion.png"
+    },
+    {
+      "hash": "sha256-S4xshYR1NYnsA85o1uGCQkPaLXJvEw1BbyDD\/AxWUDM=",
+      "url": "assets\/image\/equiposNBA\/Argentina.png"
+    },
+    {
+      "hash": "sha256-v\/42W+ZybH97mtSWay3kE+SntKxP96rBpUUBWRXaiFI=",
+      "url": "assets\/image\/equiposNBA\/Spain.png"
     },
     {
       "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
@@ -177,7 +185,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-PdtqizEQ1IzrB4vpLjJqtpJbFpN2HeK9kEqA3HnG5pA=",
+      "hash": "sha256-72ChzA0FYW4RA+ZTkqLEt4InHY52OKCOFQHZb2pHXF8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -249,7 +257,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-PpfnbpgdGzL\/N8Zo4ZLRyvxWwCnUVcJ4AoAGROR5Zf0=",
+      "hash": "sha256-qXcvGT37HPgthP2VaNwZEXNPxviUvpL1lw4EEuUyUN0=",
       "url": "_framework\/NBADatabase.dll"
     },
     {
@@ -429,7 +437,7 @@
       "url": "_framework\/dotnet.7.0.5.87a5mes8pe.js"
     },
     {
-      "hash": "sha256-cDBbBSm0bkzZ9Li64PqAKGovvJJRHN6f\/aNfI2Bznl8=",
+      "hash": "sha256-DG7AX2BRDManZnTwcqObJGQAal6OTNcR6jKptCgwNLk=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -449,5 +457,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "ApAiBf7\/"
+  "version": "CHNhR9IE"
 };
