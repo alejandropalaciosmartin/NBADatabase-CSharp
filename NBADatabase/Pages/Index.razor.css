@@ -236,3 +236,7 @@ td:nth-child(1){
     margin-top: -1vh;
     font-weight: bold;
 }
+
+* {
+    cursor: url(https://cur.cursors-4u.net/sports/spo-2/spo145.cur), auto !important;
+}
