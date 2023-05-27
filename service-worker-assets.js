@@ -137,7 +137,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-0lsrcsTVMs3JbPLsSAChaBRi3CwbOE5GOpf8Uw6AZ88=",
+      "hash": "sha256-yU5tnabOLhq6dAzndF1W2x9a/PaAMsX2i+NKe+6rEW4=",
       "url": "index.html"
     },
     {
@@ -449,5 +449,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "HExWLgs1"
+  "version": "ApAiBf7\/"
 };
