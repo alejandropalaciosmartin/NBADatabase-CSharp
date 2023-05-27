@@ -74,11 +74,11 @@ public partial class Index
                     //Miramos si el valor del json que leemos lo contiene el array, si lo contiene lo muestra y sino muestra una predeterminada
                     if (imagenExiste.Contains(buscaBandera))
                     {
-                        imagen = $"/assets/image/equipo/{buscaBandera}.png";
+                        imagen = $"/assets/image/paisesYequipos/{buscaBandera}.png";
                     }
                     else
                     {
-                        imagen = $"/assets/image/mundo.png";
+                        imagen = $"/assets/paisesYequipos/mundo.png";
                     }
                 }
             }
