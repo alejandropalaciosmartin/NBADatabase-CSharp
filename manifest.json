@@ -1,6 +1,6 @@
 {
-  "name": "NBADatabase",
-  "short_name": "NBADatabase",
+  "name": "NBA-Database",
+  "short_name": "NBA-Database",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -1,8 +1,8 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-aBlAlqzqjZVZQx8O33rUmARxL1McmAeaKiNqKtOeHKU=",
-      "url": "NBADatabase.styles.css"
+      "hash": "sha256-Gk6OxpVjy3iw0SW0XwyMeCh+IOeSP3IDKGKINL5usY0=",
+      "url": "NBA-Database.styles.css"
     },
     {
       "hash": "sha256-65CKuvgLfTWSJYbxb6reXaf\/CKj1LNlsoowx4sV43DU=",
@@ -29,108 +29,12 @@
       "url": "assets\/image\/documentacion.png"
     },
     {
-      "hash": "sha256-S4xshYR1NYnsA85o1uGCQkPaLXJvEw1BbyDD\/AxWUDM=",
-      "url": "assets\/image\/equiposNBA\/Argentina.png"
-    },
-    {
-      "hash": "sha256-b7NlTnnxGTjh2aM27kh+2IbY\/APXVDyuXwOOEVEJ6Pc=",
-      "url": "assets\/image\/equiposNBA\/Australia.png"
-    },
-    {
-      "hash": "sha256-Ng6J+4pBUwAS2sAlr3ueR3N6NgdBatuzmfI4bufFljA=",
-      "url": "assets\/image\/equiposNBA\/Austria.png"
-    },
-    {
-      "hash": "sha256-viVKmPHgqXOwUHm75BfFqDKElk6uwn\/rqonX3OVJiUo=",
-      "url": "assets\/image\/equiposNBA\/Bahamas.png"
-    },
-    {
-      "hash": "sha256-TU+DBpmQMFmRiGY4PG49LIDMRo9z4Urw0b6p2XfDk0w=",
-      "url": "assets\/image\/equiposNBA\/Brasil.png"
-    },
-    {
-      "hash": "sha256-yPpt+CY9iIclTCfRLlmaiXen8T0k6hQXvOsTY8oD118=",
-      "url": "assets\/image\/equiposNBA\/Canada.png"
-    },
-    {
-      "hash": "sha256-FFJpHQ4xMlQqNIcWeUdJlnx7UTA\/EVLI9ERb0exkVgo=",
-      "url": "assets\/image\/equiposNBA\/China.png"
-    },
-    {
-      "hash": "sha256-SBC6dYNMxvdcQw7zRLQY9ksWxjd9KmnzYjKeOF5SVKA=",
-      "url": "assets\/image\/equiposNBA\/Croatia.png"
-    },
-    {
-      "hash": "sha256-1wHKC7xthYFYfRitpX7RAil3lpi6sR\/LY4R9FCInXBY=",
-      "url": "assets\/image\/equiposNBA\/Egypt.png"
-    },
-    {
-      "hash": "sha256-Kd6LH6Mmn\/jIY42MqKjGTszaO3kYjJ+tubnTInLmB4s=",
-      "url": "assets\/image\/equiposNBA\/France.png"
-    },
-    {
-      "hash": "sha256-FsXG9TdXsV7nSNsAWvJoZMqkMxk4FhxyFEXYW0tJRq4=",
-      "url": "assets\/image\/equiposNBA\/Georgia.png"
-    },
-    {
-      "hash": "sha256-ejZiB138+wQ6pb90hpOKKyASzyQGRvCRv5ll5QJnTO4=",
-      "url": "assets\/image\/equiposNBA\/Lithuania.png"
-    },
-    {
-      "hash": "sha256-A5EjUU3h4HZJVQyMicIGoILbg5aCEjeiHUQM7bNYHbo=",
-      "url": "assets\/image\/equiposNBA\/Mali.png"
-    },
-    {
-      "hash": "sha256-htJMFrCFQOPjrEpWdbjJLQJ8nqo7NewUeqiK1j3PPbk=",
-      "url": "assets\/image\/equiposNBA\/Poland.png"
-    },
-    {
-      "hash": "sha256-u0KsnuNC4aeBL0nwzxLncvxia6kAHMfchhkY\/G00+Ws=",
-      "url": "assets\/image\/equiposNBA\/Russia.png"
-    },
-    {
-      "hash": "sha256-\/6M+QYdUhHDmYyWbwPJ1suUjFIAJ\/tt\/Mgqj\/Vwz9Hc=",
-      "url": "assets\/image\/equiposNBA\/Senegal.png"
-    },
-    {
-      "hash": "sha256-XOEUbkwBInZYv4CrFqa4FenNz5\/Mt2oPGqT\/IcwpuLM=",
-      "url": "assets\/image\/equiposNBA\/Serbia.png"
-    },
-    {
-      "hash": "sha256-lCH+7fWReW6jTZIrW6jAuQFmqp4HRBP\/+k\/N51j5m8A=",
-      "url": "assets\/image\/equiposNBA\/Slovenia.png"
-    },
-    {
       "hash": "sha256-v\/42W+ZybH97mtSWay3kE+SntKxP96rBpUUBWRXaiFI=",
       "url": "assets\/image\/equiposNBA\/Spain.png"
     },
     {
-      "hash": "sha256-3JAsm2+7af4Cb0mf5kfpRYJ56NVAS4ibwwbeYSVAwBk=",
-      "url": "assets\/image\/equiposNBA\/Sweden.png"
-    },
-    {
-      "hash": "sha256-q8eoPco4bjwumOMdmrqe1xPgXHPwuEQsKJCBlFqaB30=",
-      "url": "assets\/image\/equiposNBA\/Switzerland.png"
-    },
-    {
-      "hash": "sha256-9\/Fs2qkZjcmphze9+lYMprVrn7cmHAsd17+2RxkyHLI=",
-      "url": "assets\/image\/equiposNBA\/Turkey.png"
-    },
-    {
-      "hash": "sha256-QjMFOxw6\/kSjoKHoR+O8ct0Kst5uPoN7KMLcMibgDYc=",
-      "url": "assets\/image\/equiposNBA\/Ukraine.png"
-    },
-    {
-      "hash": "sha256-JDYAq+az6osv8V85ZqFrj6X5Aad27qTJrckjq8RJF2o=",
+      "hash": "sha256-uSo8NZj95T+BS1NRwxtjwNbyqqT8t453R4tH0ALFYcI=",
       "url": "assets\/image\/equiposNBA\/USA.png"
-    },
-    {
-      "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
-      "url": "assets\/image\/flechas.png"
-    },
-    {
-      "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
-      "url": "assets\/image\/flechasOrdenar.png"
     },
     {
       "hash": "sha256-gsRczwxQbXiv69kDI912Qoxdo8lNdDcifilJfN6pAuc=",
@@ -173,52 +77,8 @@
       "url": "assets\/image\/video.png"
     },
     {
-      "hash": "sha256-LPh+jq4JAmANnUoQMHlynOAoJ5YIiGsugyHT0VUaxNI=",
+      "hash": "sha256-odqim3y90i\/wBN6m1JVCsiSKsjjSfmwqQ\/TjMxDJC70=",
       "url": "css\/app.css"
-    },
-    {
-      "hash": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
-      "url": "css\/bootstrap\/bootstrap.min.css"
-    },
-    {
-      "hash": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
-      "url": "css\/bootstrap\/bootstrap.min.css.map"
-    },
-    {
-      "hash": "sha256-+Q44zfEaCMmXduni5Td+IgCbk8sSUQwES2nWs+KKQz0=",
-      "url": "css\/open-iconic\/FONT-LICENSE"
-    },
-    {
-      "hash": "sha256-BJ\/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=",
-      "url": "css\/open-iconic\/font\/css\/open-iconic-bootstrap.min.css"
-    },
-    {
-      "hash": "sha256-OK3poGPgzKI2NzNgP07XMbJa3Dz6USoUh\/chSkSvQpc=",
-      "url": "css\/open-iconic\/font\/fonts\/open-iconic.eot"
-    },
-    {
-      "hash": "sha256-sDUtuZAEzWZyv\/U1xl\/9D3ehyU69JE+FvAcu5HQ+\/a0=",
-      "url": "css\/open-iconic\/font\/fonts\/open-iconic.otf"
-    },
-    {
-      "hash": "sha256-oUpLdS+SoLJFwf4bzA3iKD7TCm66oLkTpAQlVJ2s1wc=",
-      "url": "css\/open-iconic\/font\/fonts\/open-iconic.svg"
-    },
-    {
-      "hash": "sha256-p+RP8CV3vRK1YbIkNzq3rPo1jyETPnR07ULb+HVYL8w=",
-      "url": "css\/open-iconic\/font\/fonts\/open-iconic.ttf"
-    },
-    {
-      "hash": "sha256-cZPqVlRJfSNW0KaQ4+UPOXZ\/v\/QzXlejRDwUNdZIofI=",
-      "url": "css\/open-iconic\/font\/fonts\/open-iconic.woff"
-    },
-    {
-      "hash": "sha256-s\/Is6Ey6jfNAEfXUIOyHrXXX+RcA8hzchYnuOIWUMl4=",
-      "url": "css\/open-iconic\/ICON-LICENSE"
-    },
-    {
-      "hash": "sha256-f7rXj2KSx8rOrKHjkkyN+tLJV5mfHEDVLGIZvcj\/hgg=",
-      "url": "css\/open-iconic\/README.md"
     },
     {
       "hash": "sha256-gjzHtXhQwE2dgNMsN4nIHC5Ij\/GaCwU8HbUnxZIuApc=",
@@ -233,7 +93,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-yU5tnabOLhq6dAzndF1W2x9a/PaAMsX2i+NKe+6rEW4=",
+      "hash": "sha256-yq38vVcRuFjabY2WM928ZmlU9Ef2g0wl+CpQCIPD4LI=",
       "url": "index.html"
     },
     {
@@ -241,12 +101,8 @@
       "url": "js\/custom.js"
     },
     {
-      "hash": "sha256-WSHm730g0brin05KdWe9FOTR\/lOSUejKir8tpBBAjio=",
+      "hash": "sha256-t8f1\/ItFXgQfPS\/L\/n1dQKZVcxqAWCkrlFUQDfoZSOE=",
       "url": "manifest.json"
-    },
-    {
-      "hash": "sha256-paIeuWnSzjeLGITWkk4p3rcejUsZWCJGPeOK9UhWXtg=",
-      "url": "sample-data\/weather.json"
     },
     {
       "hash": "sha256-lOCs45frNf+D7me6lKLgUhRCdt4VwHCp9H6Ct+YWzfs=",
@@ -273,12 +129,16 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-m72+Z75k+T4BUNdOSIl1w18eHvuGxTb0kDFJ1NJ5zOY=",
+      "hash": "sha256-c18xpZOP0LACrzVyDefUqog+AMK5RXeznenb3zrwQZ4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
       "hash": "sha256-ttbPmxdYWC7ela7jRLatfmuY2MJrtHfTQGPLjKspfJI=",
       "url": "_framework\/BlazorBootstrap.dll"
+    },
+    {
+      "hash": "sha256-oh395MqwHOdv87ggl0L2cpWEDZZGFYe3CVUXnzSo8rY=",
+      "url": "_framework\/CsvHelper.dll"
     },
     {
       "hash": "sha256-6+kW2+K8k2QuscyJmCqh+geBAaVpzrE\/2Ry\/PKNBqC4=",
@@ -297,7 +157,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
-      "hash": "sha256-3Tx67OFC357JUOENi2kemV6iWM6LD0ahMMHeJ8ah+cc=",
+      "hash": "sha256-Kx53sqxdpBKYs9mx1cK48zHVp3ZBeOvlC92fITY5M9U=",
       "url": "_framework\/Microsoft.CSharp.dll"
     },
     {
@@ -345,8 +205,8 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-DwvxPSG+QXOuELSPvsh9J3vEmxhWuxgBk7KtmWyaH2E=",
-      "url": "_framework\/NBADatabase.dll"
+      "hash": "sha256-\/b7DVBiOBtu7K4Nts8H\/VTeuSEUVVtbIx6dH6NcxRVM=",
+      "url": "_framework\/NBA-Database.dll"
     },
     {
       "hash": "sha256-IsZJ91\/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=",
@@ -357,7 +217,7 @@
       "url": "_framework\/System.Collections.Concurrent.dll"
     },
     {
-      "hash": "sha256-4vhd2E7\/GKHYe1F4jqYLmqEgzdpEkLl9pVLZsNYiGoQ=",
+      "hash": "sha256-YtIvyz5HLtewyKVnQjdUO23pkaWFUdVie9vF2OYhmcE=",
       "url": "_framework\/System.Collections.dll"
     },
     {
@@ -381,11 +241,11 @@
       "url": "_framework\/System.ComponentModel.TypeConverter.dll"
     },
     {
-      "hash": "sha256-OKvF\/ns+ATcsytoDvuaFeYIqYswTN9ppB2+cK+j1\/VM=",
+      "hash": "sha256-6Soqa+qzEimTIutg\/7FOP10zE56fMqdC3AGBQLJlCGU=",
       "url": "_framework\/System.Console.dll"
     },
     {
-      "hash": "sha256-CQMUoTlwede6Vw\/Bhj+W0HRywJrTTMlWe8zwnyyKeqs=",
+      "hash": "sha256-VmPscQWqOIvLiqvatjTRM3FdvqbnX2wo0QwKTKghrV8=",
       "url": "_framework\/System.Data.Common.dll"
     },
     {
@@ -405,15 +265,15 @@
       "url": "_framework\/System.Drawing.Primitives.dll"
     },
     {
-      "hash": "sha256-p7Mqi1puv\/lykFj5wlJllcbFxOCgOkBA0FtjKWMjYWM=",
+      "hash": "sha256-PzgBp7glZx+fsgvhM8flDJliWmEerpyv+Lx+1k3OiKo=",
       "url": "_framework\/System.Linq.dll"
     },
     {
-      "hash": "sha256-z5old+BjXRtXo3lWY89KqAEsrxmH8f6xilVCriUMeZc=",
+      "hash": "sha256-KTMToOceUCqdzXkxqAeF5Idh3pnnathP1HgPv3PntKg=",
       "url": "_framework\/System.Linq.Expressions.dll"
     },
     {
-      "hash": "sha256-JXImOhG2oDuiRYqFJcwoBXPI04+Wgv9+8NqWpM0\/Mxo=",
+      "hash": "sha256-z8hh5CqJyma5sOo3uh+OVBmCjGSU8aFuwNRmqu5W9TU=",
       "url": "_framework\/System.Memory.dll"
     },
     {
@@ -433,7 +293,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-Z856MDMKQ1Q+ayLKSGMF3xTftDLv+pHlIUW9iTNEH9Y=",
+      "hash": "sha256-r2aoDf+Xjk4yLd\/C\/SZTmInWI8d4PfGOV3dRwcyL2hg=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -441,7 +301,7 @@
       "url": "_framework\/System.Private.Uri.dll"
     },
     {
-      "hash": "sha256-+dCXJcsVlyY4yfUoyEoPaVPdsEEM63QvbtPt8BiKNJg=",
+      "hash": "sha256-WRppizo3abUECddsedTnoaVeI+EWGXNhZzXUO5luDwo=",
       "url": "_framework\/System.Private.Xml.dll"
     },
     {
@@ -461,7 +321,7 @@
       "url": "_framework\/System.Reflection.Primitives.dll"
     },
     {
-      "hash": "sha256-JZs879KT\/RmGHxEV4Z2EIKbCN5wHkKR\/WBm7Fx3KgHY=",
+      "hash": "sha256-7YHYY4jxVJB7NOfJAX2ndgs4K5fdeJ+CwvnBp458JFM=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -501,7 +361,7 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-uT7Y\/zecJUJk9bY2N4mR72YCJnILl+K4025JXtmEiq8=",
+      "hash": "sha256-YJS0Q3Kwbl+aSgSz6+z6dVUAFi5a2UgEDxdK2ZXVqtY=",
       "url": "_framework\/System.Text.RegularExpressions.dll"
     },
     {
@@ -521,11 +381,11 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-zWAhZGCEstFO\/q2Pz1H5HB55ZdAIGBKY\/QM4MB+vqPI=",
-      "url": "_framework\/dotnet.7.0.5.87a5mes8pe.js"
+      "hash": "sha256-6gQTtugVSUwmVpIDJzneJRoSCx6ApIJS1b8BQR\/3d8g=",
+      "url": "_framework\/dotnet.7.0.5.oj5kf2kghq.js"
     },
     {
-      "hash": "sha256-SkDYc0lBeKlH3Xs+3jUNIoXkgb2vwTehI33+JML8ZHo=",
+      "hash": "sha256-180oaTZ2l3fY32NYZatYj2Q7J58W4phmmseZsnFXI5c=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -545,5 +405,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "L+YyxaHf"
+  "version": "NtBYFmrr"
 };
