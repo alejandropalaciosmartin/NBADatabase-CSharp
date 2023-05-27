@@ -9,6 +9,74 @@
       "url": "assets\/data\/datas.json"
     },
     {
+      "hash": "sha256-S4Kmy0inIb03v2aNcMFzGx9shKSNWxWTeKGQyQcw\/PU=",
+      "url": "assets\/image\/ball.png"
+    },
+    {
+      "hash": "sha256-SawxEz9n6+tmL6nWn6jlrtnEpkutqMD6g9SqOxdLqSY=",
+      "url": "assets\/image\/basketball-ball.png"
+    },
+    {
+      "hash": "sha256-vxZaVdIV7U1nICQuY\/HJHPHD5B5Qi4pPOnqr1frMwcI=",
+      "url": "assets\/image\/canasta.png"
+    },
+    {
+      "hash": "sha256-1D10HggzIOcPQ\/2YTbkCNo00b\/JWISoR6IRf5Wh+UDs=",
+      "url": "assets\/image\/chart.png"
+    },
+    {
+      "hash": "sha256-xZAgIJpjdLmxiE6i+WoILkMWC4XSNRjVTdpdsE0oHpE=",
+      "url": "assets\/image\/documentacion.png"
+    },
+    {
+      "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
+      "url": "assets\/image\/flechas.png"
+    },
+    {
+      "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
+      "url": "assets\/image\/flechasOrdenar.png"
+    },
+    {
+      "hash": "sha256-gsRczwxQbXiv69kDI912Qoxdo8lNdDcifilJfN6pAuc=",
+      "url": "assets\/image\/jugador.png"
+    },
+    {
+      "hash": "sha256-+TUPU\/kFD6ucWvQ6lBT+DRyg9UCAkc0B13uasXXXqTc=",
+      "url": "assets\/image\/mundo.png"
+    },
+    {
+      "hash": "sha256-TFfS03NARblURrhYo2O6epen+3E9qGe4Iq9ig16jz8c=",
+      "url": "assets\/image\/nba.png"
+    },
+    {
+      "hash": "sha256-qD5Mgu7QUGbrvR95Gc30iXjYl6kpxDAlPIjBMwKv95M=",
+      "url": "assets\/image\/nbaFondo.jpg"
+    },
+    {
+      "hash": "sha256-utwW\/C6VYz3fp7ebwxBJk9f\/LgZIVRT+S+giW8rmUqs=",
+      "url": "assets\/image\/news.png"
+    },
+    {
+      "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
+      "url": "assets\/image\/ordenarFlechas.png"
+    },
+    {
+      "hash": "sha256-ncn9PHdWgwEtPNZRekPr+LTVTpNgQyi+5rCsVS2rxL0=",
+      "url": "assets\/image\/pelota.jpg"
+    },
+    {
+      "hash": "sha256-Q04vQjb0Qs96xDB4Mr8hyWrMOU8YFz+O2kn95he4iTc=",
+      "url": "assets\/image\/pizarra-basket.jpg"
+    },
+    {
+      "hash": "sha256-INgy05lU99sVZBVbNzwZoDFrO3QYXHfbQnCfxVEBvHM=",
+      "url": "assets\/image\/question.png"
+    },
+    {
+      "hash": "sha256-Y10z5nP1CxEfEPLgtVOeZ+19ZYgdlb3wHUsottHZ6GU=",
+      "url": "assets\/image\/video.png"
+    },
+    {
       "hash": "sha256-LPh+jq4JAmANnUoQMHlynOAoJ5YIiGsugyHT0VUaxNI=",
       "url": "css\/app.css"
     },
@@ -381,5 +449,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "vN\/l+MQL"
+  "version": "HExWLgs1"
 };
