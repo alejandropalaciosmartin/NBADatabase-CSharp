@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-M9782oSgO0hMBUIycSpkSBHHYOP4cl2YjsjKNj0uQdc=",
+      "hash": "sha256-aBlAlqzqjZVZQx8O33rUmARxL1McmAeaKiNqKtOeHKU=",
       "url": "NBADatabase.styles.css"
     },
     {
@@ -41,8 +41,84 @@
       "url": "assets\/image\/equiposNBA\/Austria.png"
     },
     {
+      "hash": "sha256-viVKmPHgqXOwUHm75BfFqDKElk6uwn\/rqonX3OVJiUo=",
+      "url": "assets\/image\/equiposNBA\/Bahamas.png"
+    },
+    {
+      "hash": "sha256-TU+DBpmQMFmRiGY4PG49LIDMRo9z4Urw0b6p2XfDk0w=",
+      "url": "assets\/image\/equiposNBA\/Brasil.png"
+    },
+    {
+      "hash": "sha256-yPpt+CY9iIclTCfRLlmaiXen8T0k6hQXvOsTY8oD118=",
+      "url": "assets\/image\/equiposNBA\/Canada.png"
+    },
+    {
+      "hash": "sha256-FFJpHQ4xMlQqNIcWeUdJlnx7UTA\/EVLI9ERb0exkVgo=",
+      "url": "assets\/image\/equiposNBA\/China.png"
+    },
+    {
+      "hash": "sha256-SBC6dYNMxvdcQw7zRLQY9ksWxjd9KmnzYjKeOF5SVKA=",
+      "url": "assets\/image\/equiposNBA\/Croatia.png"
+    },
+    {
+      "hash": "sha256-1wHKC7xthYFYfRitpX7RAil3lpi6sR\/LY4R9FCInXBY=",
+      "url": "assets\/image\/equiposNBA\/Egypt.png"
+    },
+    {
+      "hash": "sha256-Kd6LH6Mmn\/jIY42MqKjGTszaO3kYjJ+tubnTInLmB4s=",
+      "url": "assets\/image\/equiposNBA\/France.png"
+    },
+    {
+      "hash": "sha256-FsXG9TdXsV7nSNsAWvJoZMqkMxk4FhxyFEXYW0tJRq4=",
+      "url": "assets\/image\/equiposNBA\/Georgia.png"
+    },
+    {
+      "hash": "sha256-ejZiB138+wQ6pb90hpOKKyASzyQGRvCRv5ll5QJnTO4=",
+      "url": "assets\/image\/equiposNBA\/Lithuania.png"
+    },
+    {
+      "hash": "sha256-A5EjUU3h4HZJVQyMicIGoILbg5aCEjeiHUQM7bNYHbo=",
+      "url": "assets\/image\/equiposNBA\/Mali.png"
+    },
+    {
+      "hash": "sha256-htJMFrCFQOPjrEpWdbjJLQJ8nqo7NewUeqiK1j3PPbk=",
+      "url": "assets\/image\/equiposNBA\/Poland.png"
+    },
+    {
+      "hash": "sha256-u0KsnuNC4aeBL0nwzxLncvxia6kAHMfchhkY\/G00+Ws=",
+      "url": "assets\/image\/equiposNBA\/Russia.png"
+    },
+    {
+      "hash": "sha256-\/6M+QYdUhHDmYyWbwPJ1suUjFIAJ\/tt\/Mgqj\/Vwz9Hc=",
+      "url": "assets\/image\/equiposNBA\/Senegal.png"
+    },
+    {
+      "hash": "sha256-XOEUbkwBInZYv4CrFqa4FenNz5\/Mt2oPGqT\/IcwpuLM=",
+      "url": "assets\/image\/equiposNBA\/Serbia.png"
+    },
+    {
+      "hash": "sha256-lCH+7fWReW6jTZIrW6jAuQFmqp4HRBP\/+k\/N51j5m8A=",
+      "url": "assets\/image\/equiposNBA\/Slovenia.png"
+    },
+    {
       "hash": "sha256-v\/42W+ZybH97mtSWay3kE+SntKxP96rBpUUBWRXaiFI=",
       "url": "assets\/image\/equiposNBA\/Spain.png"
+    },
+    {
+      "hash": "sha256-3JAsm2+7af4Cb0mf5kfpRYJ56NVAS4ibwwbeYSVAwBk=",
+      "url": "assets\/image\/equiposNBA\/Sweden.png"
+    },
+    {
+      "hash": "sha256-q8eoPco4bjwumOMdmrqe1xPgXHPwuEQsKJCBlFqaB30=",
+      "url": "assets\/image\/equiposNBA\/Switzerland.png"
+    },
+    {
+      "hash": "sha256-9\/Fs2qkZjcmphze9+lYMprVrn7cmHAsd17+2RxkyHLI=",
+      "url": "assets\/image\/equiposNBA\/Turkey.png"
+    },
+    {
+      "hash": "sha256-QjMFOxw6\/kSjoKHoR+O8ct0Kst5uPoN7KMLcMibgDYc=",
+      "url": "assets\/image\/equiposNBA\/Ukraine.png"
     },
     {
       "hash": "sha256-JDYAq+az6osv8V85ZqFrj6X5Aad27qTJrckjq8RJF2o=",
@@ -197,7 +273,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-72ChzA0FYW4RA+ZTkqLEt4InHY52OKCOFQHZb2pHXF8=",
+      "hash": "sha256-m72+Z75k+T4BUNdOSIl1w18eHvuGxTb0kDFJ1NJ5zOY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -269,7 +345,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-qXcvGT37HPgthP2VaNwZEXNPxviUvpL1lw4EEuUyUN0=",
+      "hash": "sha256-DwvxPSG+QXOuELSPvsh9J3vEmxhWuxgBk7KtmWyaH2E=",
       "url": "_framework\/NBADatabase.dll"
     },
     {
@@ -449,7 +525,7 @@
       "url": "_framework\/dotnet.7.0.5.87a5mes8pe.js"
     },
     {
-      "hash": "sha256-DG7AX2BRDManZnTwcqObJGQAal6OTNcR6jKptCgwNLk=",
+      "hash": "sha256-SkDYc0lBeKlH3Xs+3jUNIoXkgb2vwTehI33+JML8ZHo=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -469,5 +545,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "Gka2bmpa"
+  "version": "L+YyxaHf"
 };
