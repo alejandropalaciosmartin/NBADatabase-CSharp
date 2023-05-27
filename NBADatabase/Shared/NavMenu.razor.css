@@ -95,10 +95,6 @@
     margin-top: 2.5vh;
 }
 
-*, .canasta {
-    cursor: url(https://cur.cursors-4u.net/sports/spo-2/spo145.cur), auto !important;
-}
-
 /*Para pantalla pequeña*/
 @media (max-width: 641px) {
     .top-row {
