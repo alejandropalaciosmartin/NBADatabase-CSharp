@@ -79,6 +79,21 @@
     height: 9vh;
 }
 
+#imagenBall:active {
+    animation-name: imageBall;
+    animation-duration: 6s;
+}
+
+@keyframes imageBall { /*Se mueva la pelota arriba y abajo*/
+    0% {
+        transform: translatey(1.5vh);
+    }
+
+    100% {
+        transform: translatey(1vh);
+    }
+}
+
 #positionImage, #positionBall {
     margin-top: -6vh;
 }
