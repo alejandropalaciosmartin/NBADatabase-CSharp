@@ -29,10 +29,6 @@
       "url": "assets\/image\/documentacion.png"
     },
     {
-      "hash": "sha256-S4xshYR1NYnsA85o1uGCQkPaLXJvEw1BbyDD\/AxWUDM=",
-      "url": "assets\/image\/equiposNBA\/Argentina.png"
-    },
-    {
       "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
       "url": "assets\/image\/flechas.png"
     },
@@ -453,5 +449,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "wvdlxoIQ"
+  "version": "ApAiBf7\/"
 };
