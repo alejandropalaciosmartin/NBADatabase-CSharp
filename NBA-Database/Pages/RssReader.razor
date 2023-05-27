@@ -67,12 +67,16 @@
             XmlNode descriptionNode = itemNode.SelectSingleNode("description");
             XmlNode linkNode = itemNode.SelectSingleNode("link");
             XmlNode linkImageNode = itemNode.SelectSingleNode("enclosure");
+            string linkImage = string.Empty;
             XmlNode dateNode = itemNode.SelectSingleNode("pubDate");
 
             string title = titleNode.InnerText;
             string description = descriptionNode.InnerText;
             string link = linkNode.InnerText;
-            string linkImage = linkImageNode.Attributes["url"].Value;
+            if (linkImageNode != null && linkImageNode.Attributes["url"] != null)
+            {
+                linkImage = linkImageNode.Attributes["url"].Value;
+            }
             string date = dateNode.InnerText;
 
             
