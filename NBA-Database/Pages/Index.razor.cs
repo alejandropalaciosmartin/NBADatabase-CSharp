@@ -129,7 +129,13 @@ public partial class Index
                             case "CLE": imagen = $"/assets/image/mundo.png"; break;
                             case "DET": imagen = $"/assets/image/mundo.png"; break;
                             case "IND": imagen = $"/assets/image/mundo.png"; break;
-                           //"MIL", "DEN", "MIN", "OKC", "POR", "UTA", "GSW", "LAC", "LAL", "PHX", "SAC", "ATL", "CHA", "DAL", "MIA", "MEM", "WAS", "SAS", "NOP", "HOU", "ORL"
+                            case "MIL": imagen = $"/assets/image/mundo.png"; break;
+                            case "DEN": imagen = $"/assets/image/mundo.png"; break;
+                            case "MIN": imagen = $"/assets/image/mundo.png"; break;
+                            case "OKC": imagen = $"/assets/image/mundo.png"; break;
+                            case "POR": imagen = $"/assets/image/mundo.png"; break;
+                            case "UTA": imagen = $"/assets/image/mundo.png"; break;
+                           //"", "", "", "", "", "", "GSW", "LAC", "LAL", "PHX", "SAC", "ATL", "CHA", "DAL", "MIA", "MEM", "WAS", "SAS", "NOP", "HOU", "ORL"
                             default: imagen = $"/assets/image/mundo.png"; break;
                         }
                     }
