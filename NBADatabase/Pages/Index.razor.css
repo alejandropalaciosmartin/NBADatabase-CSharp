@@ -1,0 +1,233 @@
+﻿* {
+    margin-top: 15vh;
+}
+
+.verTexto {
+    margin-top: 15vh;
+}
+
+.cuadradBuscador {
+    margin-top: -98vh;
+    margin-left: 75vh;
+}
+
+.botonBuscar, .seleccionarPaises, .seleccionarEquipos, .botonRetro, .botonAvan {
+    height: 5vh;
+    background-color: red;
+    box-shadow: 0 0 5px 5px black;
+    border-radius: 100px 100px 100px 100px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.seleccionarPaises, .seleccionarEquipos {
+    width: 36vh;
+    height: 5vh;
+    margin-top: -1vh;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.seleccionarPaises {
+    margin-left: 20vh;
+}
+
+.seleccionarEquipos {
+    margin-left: 76vh;
+}
+
+.botonBuscar {
+    width: 10vh;
+    font-weight: bold;
+    color: white;
+}
+
+.cuadroBuscar {
+    width: 25vh;
+    height: 5vh;
+    font-weight: bold;
+    border-radius: 50px 50px 50px 50px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+    .cuadroBuscar:hover {
+        border: 5px solid black;
+    }
+
+.botonRetro, .botonAvan {
+    width: 5vh;
+}
+
+.cajaCont {
+    width: 10vh;
+    height: 3vh;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.posRetro {
+    margin-top: -15vh;
+    margin-left: -27vh;
+}
+
+.posAvan {
+    margin-top: -20vh;
+    margin-left: 12vh;
+}
+
+.posCont {
+    margin-top: -19vh;
+    margin-left: 65vh;
+    text-align: center
+}
+
+.ordenarIcono {
+    width: 4vh;
+    height: 4vh;
+    background-color: red;
+    box-shadow: 0 0 5px 5px;
+    border-radius: 100px 100px 100px 100px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ordenarNombre {
+    margin-left: 8vh;
+    margin-top: -3vh;
+}
+
+.ordenarEdad, .ordenarAltura {
+    margin-left: -1vh;
+    margin-top: -3vh;
+}
+
+.ordenarEquipo {
+    margin-left: -1vh;
+    margin-top: -3vh;
+}
+
+.ordenarPais {
+    margin-left: 3vh;
+    margin-top: -3vh;
+}
+
+.flechas {
+    width: 2.5vh;
+    margin-top: -0.5vh;
+    margin-left: -0.2vh;
+}
+
+#tabla {
+    margin-right: 15vh;
+    margin-left: 20vh;
+    margin-top: -14vh;
+    opacity: 0.9;
+    font-weight: bold;
+    text-align: center;
+}
+
+.canasta {
+    margin-left: -15vh;
+    margin-top: -5vh;
+}
+.canastaImagen{
+    width: 32vh;
+    height:85vh;
+}
+
+.nombre {
+    width: 2%;
+}
+
+.edad, .altura, .equipo, .pais, .temporada {
+    width: 1%;
+}
+
+.imagenEquipo{
+    margin-left: 1vh;
+}
+
+th {
+    background-color: #003d55;
+    border-bottom: 3px solid white;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #0D47A1;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #1565C0;
+    color: white;
+}
+
+td:nth-child(1){
+    text-align: left;
+}
+
+.imagenEquipo{
+    width: 7vh;
+    margin-top: -0.5vh;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+
+.tarjeta {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 480px;
+    background-color: darkgray;
+    border: 5px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 9999;
+}
+
+/* Estilos del botón de cierre */
+.cerrar {
+    position: absolute;
+    top: -100px;
+    right: 25px;
+    cursor: pointer;
+    background-color:lightcoral;
+    border:solid 3px darkred;
+    border-radius:4px;
+    padding:8px;
+    font-size:large;
+}
+
+/* Estilos del contenido de la tarjeta */
+.contenido {
+    margin-top: 30px;
+}
+.contenido ul li{
+    margin-top: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
+    z-index: 9999; /* Asegura que el overlay esté en la parte superior */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
