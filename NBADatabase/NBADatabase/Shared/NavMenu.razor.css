@@ -1,0 +1,128 @@
+* {
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row {
+    height: 5.5rem;
+    width: calc(637% - 3.6rem);
+    background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #1565C0, #1565C0, #F44336);
+    box-shadow: 10px 5px 5px black; /*Sombra*/
+    border-radius: 0px 5px 5px 5px;
+    /*Centrar*/
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/*.oi {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}*/
+/*Botones*/
+.nav-item {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    width: 25vh;
+}
+
+    .nav-item:first-of-type {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item ::deep a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+/*Navbar vertical*/
+.nav-scrollable {
+    height: calc(89.3vh - 1.5rem);
+    background-image: linear-gradient(to bottom, #0D47A1, #0D47A1, #1565C0, #1565C0, #1565C0, #F44336);
+    box-shadow: 3px 3px black;
+    border-radius: 0px 0px 5px 5px;
+}
+
+/*Botón activado*/
+.nav-item ::deep a.active {
+    color: white;
+    box-shadow: 10px 5px 5px red;
+}
+
+/*Se ilumine los botones al pasar por encima*/
+.nav-item ::deep a:hover {
+    box-shadow: 10px 5px 5px yellow;
+    color: white;
+}
+
+/*Imágenes*/
+#imagenNBA {
+    width: 10vh;
+    height: 8vh;
+}
+
+#imagenBall {
+    width: 9vh;
+    height: 9vh;
+}
+
+#positionImage, #positionBall {
+    margin-top: -6vh;
+}
+
+#positionBall {
+    margin-left: auto;
+    margin-right: 5vh;
+}
+
+/*Título*/
+#nbaDatabase {
+    color: white;
+    margin-top: -4vh;
+    margin-left: 23%;
+    text-shadow: 5px 5px 5px red, 5px 5px 5px black; /*Sombra*/
+}
+
+.textoNav {
+    margin-left: 1vh;
+    margin-top: 2.5vh;
+}
+
+/*Para pantalla pequeña*/
+@media (max-width: 641px) {
+    .top-row {
+        width: 100%;
+    }
+
+    #positionImage {
+        margin-top: -5vh;
+    }
+
+    #nbaDatabase {
+        margin-left: 25%;
+    }
+
+    /*Navbar vertical*/
+    .nav-scrollable {
+        height: calc(30vh - 3.5rem);
+        background-image: linear-gradient(90deg, #0D47A1, #0D47A1, #1565C0, #1565C0, #1565C0, #F44336);
+        background-color: black;
+    }
+    /*Desaparece pelota al disminuir pantalla*/
+    #positionBall {
+        display: none;
+    }
+}
