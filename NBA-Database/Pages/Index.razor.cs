@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Components;
 using System.Net.Http.Json;
-using static NBA_Database.Pages.Compare;
-using static NBA_Database.Pages.Index;
 
 namespace NBA_Database.Pages;
 
@@ -91,7 +89,7 @@ public partial class Index
             return imagen;
         }
 
-///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
+        ///////////////////////////PAGINACIÓN//////////////////////////////////////////////////////////////////////////
     }
     private int elementosPagina = 7; // Número de elementos por página
     private int paginaActual = 1; // Página actual
@@ -99,12 +97,12 @@ public partial class Index
     public List<PlayersName> ConseguirJugadoresPaginacion()
     {
         int primerElemento = (paginaActual - 1) * elementosPagina; //A la página actual le quito 1 para que al multiplicar
-                                                       //por 1 se ponga 0 que al multiplicar te da 0, 1º posición
-                                                       //Para obtener el siguiente grupo sería 2 que se suma abajo
-                                                       //2 menos 1 da 1 que es la 2º pagina por el tamaño que son 7
-                                                       //por lo que cogemos la siguiente posicion que empezamos que es
-                                                       //el 7, ya que antes eran del 0 al 6 (7 posiciones)
-                                                       //el siguiente del 7 al 13 (7 posiciones)
+                                                                   //por 1 se ponga 0 que al multiplicar te da 0, 1º posición
+                                                                   //Para obtener el siguiente grupo sería 2 que se suma abajo
+                                                                   //2 menos 1 da 1 que es la 2º pagina por el tamaño que son 7
+                                                                   //por lo que cogemos la siguiente posicion que empezamos que es
+                                                                   //el 7, ya que antes eran del 0 al 6 (7 posiciones)
+                                                                   //el siguiente del 7 al 13 (7 posiciones)
         return players.Skip(primerElemento).Take(elementosPagina).ToList();
         //Cogemos la lista, saltamos desde el inicio (0 al principio, luego desde la posicion 7)
         //Take -> Cogemos la cantidad de página que queremos mostrar y pasamos a la lista para mostrar
@@ -149,20 +147,20 @@ public partial class Index
             players = players.OrderBy(x => x.Player_name).ToList(); //Ordenamos de A a la Z
             pulsar = true; //Lo contrario del anterior, para que se ejecute luego de la Z a la A
         }
-        return players; 
+        return players;
     }
 
     public List<PlayersName> OrdenarEdad()
     {
         if (pulsar)
         {
-            players = players.OrderByDescending(x => x.Age).ToList(); 
-            pulsar = false; 
+            players = players.OrderByDescending(x => x.Age).ToList();
+            pulsar = false;
         }
         else
         {
-            players = players.OrderBy(x => x.Age).ToList(); 
-            pulsar = true; 
+            players = players.OrderBy(x => x.Age).ToList();
+            pulsar = true;
         }
         return players;
     }
