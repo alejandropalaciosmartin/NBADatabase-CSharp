@@ -33,8 +33,16 @@
       "url": "assets\/image\/equipo\/CHI.png"
     },
     {
+      "hash": "sha256-27FE3pBtOlMkF2M1YVhbQ4opPQeDiK2g1um55HdUO9E=",
+      "url": "assets\/image\/equipo\/HOU.png"
+    },
+    {
       "hash": "sha256-ZPG06rvvUbZu6qOwyFqm5+Uch1+x1pfajyb8skKk6Kc=",
       "url": "assets\/image\/equipo\/LAL.png"
+    },
+    {
+      "hash": "sha256-9CeAn9POl\/JyEDG7pjIF9YeXU2E\/A1ntF8m7t61zRFA=",
+      "url": "assets\/image\/equipo\/MEM.png"
     },
     {
       "hash": "sha256-gsRczwxQbXiv69kDI912Qoxdo8lNdDcifilJfN6pAuc=",
@@ -129,7 +137,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-dOfQdPRgDsTtpyjK\/zMO5xTxRi0\/AWAAi4\/OMd8dQIo=",
+      "hash": "sha256-KK\/XMcNLfx4Icy3r1hG2Af+B\/swgNkrpXo7pJhjLsXM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -205,7 +213,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-BHNFDPKEJ89\/KSE6jneXaU\/7Z5ksVReqObf6B2QGBwY=",
+      "hash": "sha256-4dtliXe6CNjzGa\/oYzs7lfdH2EnVZzHH3hQhzpyI0aU=",
       "url": "_framework\/NBA-Database.dll"
     },
     {
@@ -385,7 +393,7 @@
       "url": "_framework\/dotnet.7.0.5.oj5kf2kghq.js"
     },
     {
-      "hash": "sha256-n\/weIa7rWwBsIGi53VNue6ISs5QUDkLYziNpKAyZtMM=",
+      "hash": "sha256-x0NoB5ZY2PuU1vso5JMG8\/pcoKGfOFpYcof+1fx0XlI=",
       "url": "_framework\/dotnet.wasm"
     },
     {
@@ -405,5 +413,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "ULrFJsob"
+  "version": "n\/zBLvLx"
 };
