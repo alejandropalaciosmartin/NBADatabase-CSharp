@@ -1,0 +1,138 @@
+﻿@page "/documentacion"
+@inject IJSRuntime JSRuntime
+
+<div class="custom-div">
+    <button @onclick="() => CambiarTaF()"><img src="../assets/image/documentacion.png" style="width:50px" /></button>
+    <button @onclick="() => CambiarFaT()"><img src="../assets/image/video.png" style="width:50px" /></button>
+</div>
+
+@if(!show)
+{
+    <div class="indicador"><b>Pulse una pelota para más información</b></div>
+    <div style="position: absolute; display: inline-block; top:120px; left:500px;">
+        <img class="pizarraBasket" src="/assets/image/pizarra-basket.jpg" />
+        @{
+            foreach (var circle in Circles)
+            {
+                <div style="position: absolute; top: @(circle.Top)px; left: @(circle.Left)px;">
+                    <img class="circle" src="../assets/image/basketball-ball.png" @onclick="() => ShowText(circle.Text)" />
+                    @if (!string.IsNullOrEmpty(circle.Text) && circle.Text == currentText)
+                    {
+                        <div class="cajaTexto">
+                            <div style="padding:6px;">
+                                @(new MarkupString(circle.Text))
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+}
+else
+{
+    <div style="position: absolute; display: inline-block; top:120px; left:500px; width: 760px; height: 515px;">
+        <div id="videoContainer"><span class="wait"> Pulse una de las opciones de abajo </span>
+            <!-- Aquí se mostrará el video -->
+        </div>
+        <div id="buttonContainer">
+            <!-- Aquí se mostrarán los botones -->
+            <button @onclick="() => MostrarVideo(1)"><b>1</b></button>
+            <button @onclick="() => MostrarVideo(2)"><b>2</b></button>
+            <button @onclick="() => MostrarVideo(3)"><b>3</b></button>
+            <button @onclick="() => MostrarVideo(4)"><b>4</b></button>
+        </div>
+    </div>
+}
+
+
+@code {
+
+    private bool show = false;
+
+    class Circle
+    {
+        public int Top { get; set; }
+        public int Left { get; set; }
+        public string Text { get; set; }
+    }
+
+    List<Circle> Circles = new List<Circle>();
+    string currentText = "";
+
+    protected override void OnInitialized()
+    {
+        // Agregar cuatro círculos en posiciones aleatorias
+
+        var circle1 = new Circle
+        {
+            Top = 90,
+            Left = 200,
+            Text = "Este trabajo está realizado por <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://github.com/alejandropalaciosmartin\" target=\"_blank\"><span class=\"name\"><b>Alejandro</b></span></a> y <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"https://github.com/AdrianLozanoMartinez\" target=\"_blank\"><span class=\"name\"><b>Adrian</b></span></a>"
+        };
+        Circles.Add(circle1);
+
+        var circle2 = new Circle
+            {
+                Top = 450,
+                Left = 200,
+                Text = "Consulta de datos específica de los jugadores de la NBA (2017 - 2018)"
+            };
+        Circles.Add(circle2);
+
+        var circle3 = new Circle
+            {
+                Top = 90,
+                Left = 565,
+                Text = "Datos sacados de <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://www.kaggle.com/datasets/justinas/nba-players-data\" target=\"_blank\"><b>URL</b></a>"
+            };
+        Circles.Add(circle3);
+
+        var circle4 = new Circle
+            {
+                Top = 450,
+                Left = 565,
+                Text = "Click <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href=\"/assets/data/datas.json\" download=\"data.json\"><b>AQUÍ</b></a> descargar JSON"
+            };
+        Circles.Add(circle4);
+
+        var circle5 = new Circle
+            {
+                Top = 250,
+                Left = 370,
+                Text = "RSS feed de NBA: <a style=\"all: unset; cursor: pointer; text-decoration: underline;\" href =\"https://www.espn.com/espn/rss/nba/news\" target=\"_blank\"><b>URL</b></a>"
+            };
+        Circles.Add(circle5);
+
+    }
+
+    void ShowText(string text)
+    {
+        currentText = text;
+    }
+    
+    public void CambiarTaF()
+    {
+        if(show)
+            show = false;
+    }
+    public void CambiarFaT()
+    {
+        if (!show)
+            show = true;
+    }
+
+    private IJSInProcessObjectReference _mostrarVideo;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        _mostrarVideo = await JSRuntime.InvokeAsync<IJSInProcessObjectReference>("import", "./js/custom.js");
+    }
+
+    private async Task MostrarVideo(int videoId)
+    {
+        await _mostrarVideo.InvokeVoidAsync("mostrarVideo", videoId);
+    }
+}

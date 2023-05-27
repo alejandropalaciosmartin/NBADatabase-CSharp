@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Controller.cs" />
+    <Compile Remove="Pages\PaginadorGenerico.cs" />
+    <Compile Remove="Shared\Paginacion.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\FetchData.razor" />
+    <Content Remove="wwwroot\assets\image\flechas.png" />
+    <Content Remove="wwwroot\assets\image\flechasOrdenar.png" />
+    <Content Remove="wwwroot\assets\image\fondo.jpg" />
+    <Content Remove="wwwroot\assets\image\fondo01.jpg" />
+    <Content Remove="wwwroot\assets\image\fondo02.jpg" />
+    <Content Remove="wwwroot\assets\image\fondo03.webp" />
+    <Content Remove="wwwroot\assets\image\fondo04.jpg" />
+    <Content Remove="wwwroot\assets\image\fondo2.jpg" />
+    <Content Remove="wwwroot\assets\image\pelota.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazor.Bootstrap" Version="1.7.3" />
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.5" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Text.Json" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\assets\image\equiposNBA\CHI.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
