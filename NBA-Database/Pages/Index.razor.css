@@ -231,3 +231,8 @@ td:nth-child(1){
     align-items: center;
     justify-content: center;
 }
+
+.tarjetita {
+    margin-top: -1vh;
+    font-weight: bold;
+}

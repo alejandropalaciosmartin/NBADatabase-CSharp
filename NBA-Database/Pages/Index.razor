@@ -157,11 +157,19 @@ else
         <div class="tarjeta">
             <div class="cerrar" @onclick="CerrarInformacion"><b>X</b></div>
             <div class="contenido">
-
-                <!--ADRI, AQUI VA EL CONTENIDO DEL JUGADOR, TE DEJO UN EJEMPLO ABAJO DE COMO SERIA-->
-                    <p>Nombre: @jugadorSeleccionado.Player_name</p>
-                    <p>Edad: @jugadorSeleccionado.Age</p>
-
+                <p class="tarjetita">Nombre: @jugadorSeleccionado.Player_name</p>
+                <p class="tarjetita">Edad: @jugadorSeleccionado.Age</p>
+                <p class="tarjetita">Altura: @jugadorSeleccionado.Player_heightM</p>
+                <p class="tarjetita">Peso: @jugadorSeleccionado.Player_weightG</p>
+                <p class="tarjetita">Equipo: @jugadorSeleccionado.Team_abbreviation</p>
+                <p class="tarjetita">País: @jugadorSeleccionado.Country</p>
+                <p class="tarjetita">Temporada: @jugadorSeleccionado.Season</p>
+                <p class="tarjetita">Partidos jugados: @jugadorSeleccionado.Gp</p>
+                <p class="tarjetita">Rebotes: @jugadorSeleccionado.Reb</p>
+                <p class="tarjetita">Universidad: @jugadorSeleccionado.College</p>
+                <p class="tarjetita">Puntos: @jugadorSeleccionado.Pts</p>
+                <p class="tarjetita">Año del draft: @jugadorSeleccionado.Draft_year</p>
+                <p class="tarjetita">Asistencias: @jugadorSeleccionado.Ast</p>
             </div>
         </div>
         </div> <!-- Agrega un div overlay para bloquear la interacción -->
