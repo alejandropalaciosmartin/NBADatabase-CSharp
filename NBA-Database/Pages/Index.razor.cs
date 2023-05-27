@@ -65,24 +65,48 @@ public partial class Index
         {
             //Imagen de salida que la obtenemos en el foreach del Index.razor al llamar al método
             string imagen = "";
-            //Creamos array con las banderas que tenemos la imagen
-            string[] imagenExiste = { "CHI", "BOS", "BKN", "NYK", "PHI", "TOR", "CLE", "DET", "IND", "MIL", "DEN", "MIN", "OKC", "POR", "UTA", "GSW", "LAC", "LAL", "PHX", "SAC", "ATL", "CHA", "DAL", "MIA", "MEM", "WAS", "SAS", "NOP", "HOU", "ORL",
-                "USA","Bahamas","Canada","Croatia","Democratic Republic of the Congo","France","Germany","Greece","Lithuania","Mali","Puerto Rico","Senegal","Serbia","Slovenia","Turkey","Brazil", "Latvia","Australia","Italy","Sweden","Ukraine","Austria",
-                "Egypt", "Spain","Dominican Republic","Cameroon","New Zealand","South Sudan", "Czech Republic","Russia","Poland","Argentina","United Kingdom","Haiti" ,"China","Bosnia and Herzegovina","Georgia", "Switzerland"};
             try
             {
-                //Recorremos el array de las fotos existentes
-                for (int i = 0; i < imagenExiste.Length; i++)
+                switch (buscaBandera)
                 {
-                    //Miramos si el valor del json que leemos lo contiene el array, si lo contiene lo muestra y sino muestra una predeterminada
-                    if (imagenExiste.Contains(buscaBandera))
-                    {
-                        imagen = $"/assets/image/equiposNBA/{buscaBandera}.png";
-                    }
-                    else
-                    {
-                        imagen = $"/assets/image/mundo.png";
-                    }
+                    case "Germany": imagen = "https://www.banderas-mundo.es/data/flags/w702/de.png"; break;
+                    case "Argentina": imagen = "Argentina"; break;
+                    case "Australia": imagen = "Australia"; break;
+                    case "Bahamas": imagen = "Bahamas"; break;
+                    case "Bosnia and Herzegovina": imagen = "Bosnia and Herzegovina"; break;
+                    case "Brazil": imagen = "Brazil"; break;
+                    case "Cameroon": imagen = "Cameroon"; break;
+                    case "Canada": imagen = "Canada"; break;
+                    case "China": imagen = "China"; break;
+                    case "Croatia": imagen = "Croatia"; break;
+                    case "Egypt": imagen = "Egypt"; break;
+                    case "Slovenia": imagen = "Slovenia"; break;
+                    case "Spain": imagen = "https://www.banderas-mundo.es/data/flags/w702/es.webp"; break;
+                    case "France": imagen = "France"; break;
+                    case "Georgia": imagen = "Georgia"; break;
+                    case "Greece": imagen = "Greece"; break;
+                    case "Haiti": imagen = "Haiti"; break;
+                    case "Italy": imagen = "Italy"; break;
+                    case "Latvia": imagen = "Latvia"; break;
+                    case "Lithuania": imagen = "Lithuania"; break;
+                    case "Mali": imagen = "Mali"; break;
+                    case "New Zealand": imagen = "New Zealand"; break;
+                    case "Poland": imagen = "Poland"; break;
+                    case "Puerto Rico": imagen = "Puerto Rico"; break;
+                    case "United Kingdom": imagen = "United Kingdom"; break;
+                    case "Czech Republic": imagen = "Czech Republic"; break;
+                    case "Democratic Republic of the Congo": imagen = "Democratic Republic of the Congo"; break;
+                    case "Dominican Republic": imagen = "Dominican Republic"; break;
+                    case "Russia": imagen = "Russia"; break;
+                    case "Senegal": imagen = "Senegal"; break;
+                    case "Serbia": imagen = "Serbia"; break;
+                    case "South Sudan": imagen = "South Sudan"; break;
+                    case "Sweden": imagen = "Sweden"; break;
+                    case "Switzerland": imagen = "Switzerland"; break;
+                    case "Turkey": imagen = "Turkey"; break;
+                    case "Ukraine": imagen = "Ukraine"; break;
+                    case "USA": imagen = "https://www.banderas-mundo.es/data/flags/w702/us.webp"; break;
+                    default: imagen = $"/assets/image/mundo.png"; break;
                 }
             }
             catch (Exception ex)
