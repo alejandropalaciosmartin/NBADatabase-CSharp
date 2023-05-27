@@ -1,0 +1,46 @@
+name: Deploy NBADatabase Blazor WebAssembly App
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.302
+
+      - name: Install wasm-tools
+        run: dotnet tool install -g wasm-tools
+
+      - name: Build and publish NBADatabase project
+        run: dotnet publish NBADatabase/NBADatabase.csproj -c Release -o ./publish
+
+      - name: Change base tag
+        working-directory: ./publish/wwwroot
+        run: |
+          find . -name "*.html" | while read htmlFile; do
+              sed -i 's/<base href="\/"/<base href="\/${{ env.REPO_NAME }}\/"/g' $htmlFile
+          done
+
+      - name: Copy index.html to 404.html
+        run: cp ./publish/wwwroot/index.html ./publish/wwwroot/404.html
+
+      - name: Add .nojekyll file
+        run: touch ./publish/wwwroot/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: ./publish/wwwroot
