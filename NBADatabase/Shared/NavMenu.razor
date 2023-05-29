@@ -1,0 +1,42 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <h1 id="nbaDatabase">NBA Database</h1>
+    <div id="positionImage">
+        <img src="./assets/imagenes/nba.png" id="imagenNBA">
+    </div>
+    <div id="positionBall">
+        <img src="./assets/imagenes/pelota.jpg" id="imagenBall">
+    </div>
+</div>
+
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <img src="./assets/imagenes/ball.png" style="width:20px"><p class="textoNav">Database</p>
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="documentacion">
+                <img src="./assets/imagenes/question.png" style="width:20px"><p class="textoNav">Documentación</p>
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="rssreader">
+                <img src="./assets/imagenes/news.png" style="width:20px"><p class="textoNav">Noticias</p>
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="compare">
+                <img src="./assets/imagenes/chart.png" style="width:20px"><p class="textoNav">Estadísticas</p>
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+

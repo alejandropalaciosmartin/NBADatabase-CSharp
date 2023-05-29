@@ -1,0 +1,195 @@
+﻿@page "/"
+@inject HttpClient Http
+
+<PageTitle>NBA Database</PageTitle>
+
+@if (players == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="cuadradBuscador">
+        <input @bind="searchTerm" class="cuadroBuscar" placeholder="Nombre jugador" />
+        <button class="botonBuscar" @onclick="() => Buscar()">Buscar</button>
+    </div>
+    <select class="seleccionarPaises" @onchange="CogePais">
+        <option selected value="todos">Selecciona país / TODOS</option>
+        <option value="Germany">Alemania</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Australia">Australia</option>
+        <option value="Bahamas">Bahamas</option>
+        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+        <option value="Brazil">Brasil</option>
+        <option value="Cameroon">Camerún</option>
+        <option value="Canada">Canada</option>
+        <option value="China">China</option>
+        <option value="Croatia">Croacia</option>
+        <option value="Egypt">Egipto</option>
+        <option value="Slovenia">Eslovenia</option>
+        <option value="Spain">España</option>
+        <option value="France">Francia</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Greece">Grecia</option>
+        <option value="Haiti">Haití</option>
+        <option value="Italy">Italia</option>
+        <option value="Latvia">Letonia</option>
+        <option value="Lithuania">Lituania</option>
+        <option value="Mali">Malí</option>
+        <option value="New Zealand">Nueva Zelanda</option>
+        <option value="Poland">Polonia</option>
+        <option value="Puerto Rico">Puerto Rico</option>
+        <option value="United Kingdom">Reino Unido</option>
+        <option value="Czech Republic">República Checa</option>
+        <option value="Democratic Republic of the Congo">República Democrática del Congo</option>
+        <option value="Dominican Republic">República Dominicana</option>
+        <option value="Russia">Rusia</option>
+        <option value="Senegal">Senegal</option>
+        <option value="Serbia">Serbia</option>
+        <option value="South Sudan">Sudán del Sur</option>
+        <option value="Sweden">Suecia</option>
+        <option value="Switzerland">Suiza</option>
+        <option value="Turkey">Turquía</option>
+        <option value="Ukraine">Ucrania</option>
+        <option value="USA">USA</option>
+    </select>
+    <select class="seleccionarEquipos" @onchange="CogeEquipo">
+        <option selected value="todos">Selecciona equipo / TODOS</option>
+        <option value="ATL">Atlanta Hawks</option>
+        <option value="BOS">Boston Celtics</option>
+        <option value="BKN">Brooklyn Nets</option>
+        <option value="CHA">Charlotte Hornets</option>
+        <option value="CHI">Chicago Bulls</option>
+        <option value="CLE">Cleveland Cavaliers</option>
+        <option value="DAL">Dallas Mavericks</option>
+        <option value="DEN">Denver Nuggets</option>
+        <option value="DET">Detroit Pistons</option>
+        <option value="GSW">Golden State Warriors</option>
+        <option value="HOU">Houston Rockets</option>
+        <option value="IND">Indiana Pacers</option>
+        <option value="LAC">LA Clippers</option>
+        <option value="LAL">Los Angeles Lakers</option>
+        <option value="MEM">Memphis Grizzlies</option>
+        <option value="MIA">Miami Heat</option>
+        <option value="MIL">Milwaukee Bucks</option>
+        <option value="MIN">Minnesota Timberwolves</option>
+        <option value="NOP">New Orleans Pelicans</option>
+        <option value="NYK">New York Knicks</option>
+        <option value="OKC">Oklahoma City Thunder</option>
+        <option value="ORL">Orlando Magic</option>
+        <option value="PHI">Philadelphia 76ers</option>
+        <option value="PHX">Phoenix Suns</option>
+        <option value="POR">Portland Trail Blazers</option>
+        <option value="SAC">Sacramento Kings</option>
+        <option value="SAS">San Antonio Spurs</option>
+        <option value="TOR">Toronto Raptors</option>
+        <option value="UTA">Utah Jazz</option>
+        <option value="WAS">Washington Wizards</option>
+    </select>
+    <div id="tabla">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="nombre">
+                        Nombre
+                        <button class="ordenarIcono ordenarNombre" @onclick="() => OrdenarNombre()">
+                            <img class="flechas" src="./assets/imagenes/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="edad">
+                        Edad
+                        <button class="ordenarIcono ordenarEdad" @onclick="() => OrdenarEdad()">
+                            <img class="flechas" src="./assets/imagenes/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="altura">
+                        Altura
+                        <button class="ordenarIcono ordenarAltura" @onclick="() => OrdenarAltura()">
+                            <img class="flechas" src="./assets/imagenes/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="equipo">
+                        Equipo
+                        <button class="ordenarIcono ordenarEquipo" @onclick="() => OrdenarEquipo()">
+                            <img class="flechas" src="./assets/imagenes/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="pais">
+                        País
+                        <button class="ordenarIcono ordenarPais" @onclick="() => OrdenarPais()">
+                            <img class="flechas" src="./assets/imagenes/ordenarFlechas.png" />
+                        </button>
+                    </th>
+                    <th class="temporada">Temporada</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var player in ConseguirJugadoresPaginacion())
+                {
+                    @if (player != null)
+                    {
+                        <tr>
+                            <td class="nombre">
+                                <a @onclick="() => MostrarInformacion(player)" style="cursor: pointer;">@player.Player_name</a>
+                            </td>
+                            <td class="edad">@player.Age</td>
+                            <td class="altura">@player.Player_heightM m</td>
+                            <td class="equipo"><img class="imagenEquipo" src="@player.DaImagenGeneral(player.Team_abbreviation)" /></td>
+                            <td class="pais"><img class="imagenEquipo" src="@player.DaImagenGeneral(player.Country)" /></td>
+                            <td class="temporada">@player.Season</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <div class="posRetro">
+            <button class="botonRetro" @onclick=" ()=> Retroceder()">&lt;&lt;</button>
+        </div>
+        <div class="posAvan">
+            <button class="botonAvan" @onclick="() => Avanzar()">>></button>
+        </div>
+        <div class="posCont">
+            <div class="cajaCont">@paginaActual/@TotalPaginas()</div>
+        </div>
+    </div>
+
+    @if (mostrarInformacion)
+    {
+        <div class="overlay">
+            <div class="tarjeta">
+                <div class="cerrar" @onclick="CerrarInformacion"><b>X</b></div>
+                <div class="contenido">
+                    <p class="tarjetita">Nombre: @jugadorSeleccionado.Player_name</p>
+                    <p class="tarjetita">Edad: @jugadorSeleccionado.Age</p>
+                    <p class="tarjetita">Altura: @jugadorSeleccionado.Player_heightM</p>
+                    <p class="tarjetita">Peso: @jugadorSeleccionado.Player_weightG</p>
+                    <p class="tarjetita">Equipo: @jugadorSeleccionado.Team_abbreviation</p>
+                    <p class="tarjetita">País: @jugadorSeleccionado.Country</p>
+                    <p class="tarjetita">Temporada: @jugadorSeleccionado.Season</p>
+                    <p class="tarjetita">Partidos jugados: @jugadorSeleccionado.Gp</p>
+                    <p class="tarjetita">Rebotes: @jugadorSeleccionado.Reb</p>
+                    <p class="tarjetita">Universidad: @jugadorSeleccionado.College</p>
+                    <p class="tarjetita">Puntos: @jugadorSeleccionado.Pts</p>
+                    <p class="tarjetita">Año del draft: @jugadorSeleccionado.Draft_year</p>
+                    <p class="tarjetita">Asistencias: @jugadorSeleccionado.Ast</p>
+                </div>
+            </div>
+        </div> <!-- Agrega un div overlay para bloquear la interacción -->
+    }
+}
+
+@code {
+    private bool mostrarInformacion = false;
+    private PlayersName jugadorSeleccionado;
+
+    private void MostrarInformacion(PlayersName player)
+    {
+        jugadorSeleccionado = player;
+        mostrarInformacion = true;
+    }
+
+    private void CerrarInformacion()
+    {
+        mostrarInformacion = false;
+    }
+}
