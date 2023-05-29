@@ -1,291 +1,339 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-ksJ1OO10Dzx7rjS8ODr6NEfr0FafkU\/tfNNuUF43Mfo=",
-      "url": "NBA-Database.styles.css"
+      "hash": "sha256-Z+X9cQlq8OpnTkR2y\/i04Yzr8riTXdOn4nDhpF3nxsg=",
+      "url": "NBADatabase.styles.css"
     },
     {
       "hash": "sha256-65CKuvgLfTWSJYbxb6reXaf\/CKj1LNlsoowx4sV43DU=",
-      "url": "assets\/data\/datas.json"
+      "url": "assets\/datas.json"
     },
     {
       "hash": "sha256-S4Kmy0inIb03v2aNcMFzGx9shKSNWxWTeKGQyQcw\/PU=",
-      "url": "assets\/image\/ball.png"
+      "url": "assets\/imagenes\/ball.png"
     },
     {
       "hash": "sha256-SawxEz9n6+tmL6nWn6jlrtnEpkutqMD6g9SqOxdLqSY=",
-      "url": "assets\/image\/basketball-ball.png"
-    },
-    {
-      "hash": "sha256-vxZaVdIV7U1nICQuY\/HJHPHD5B5Qi4pPOnqr1frMwcI=",
-      "url": "assets\/image\/canasta.png"
+      "url": "assets\/imagenes\/basketball-ball.png"
     },
     {
       "hash": "sha256-1D10HggzIOcPQ\/2YTbkCNo00b\/JWISoR6IRf5Wh+UDs=",
-      "url": "assets\/image\/chart.png"
+      "url": "assets\/imagenes\/chart.png"
     },
     {
       "hash": "sha256-xZAgIJpjdLmxiE6i+WoILkMWC4XSNRjVTdpdsE0oHpE=",
-      "url": "assets\/image\/documentacion.png"
-    },
-    {
-      "hash": "sha256-S4xshYR1NYnsA85o1uGCQkPaLXJvEw1BbyDD\/AxWUDM=",
-      "url": "assets\/image\/equipo\/Argentina.png"
-    },
-    {
-      "hash": "sha256-vq6Ja81lJUf3eeckvf6rNN\/k2gXSyGEcgWhUgy7h0c4=",
-      "url": "assets\/image\/equipo\/ATL.png"
-    },
-    {
-      "hash": "sha256-b7NlTnnxGTjh2aM27kh+2IbY\/APXVDyuXwOOEVEJ6Pc=",
-      "url": "assets\/image\/equipo\/Australia.png"
-    },
-    {
-      "hash": "sha256-Ng6J+4pBUwAS2sAlr3ueR3N6NgdBatuzmfI4bufFljA=",
-      "url": "assets\/image\/equipo\/Austria.png"
-    },
-    {
-      "hash": "sha256-viVKmPHgqXOwUHm75BfFqDKElk6uwn\/rqonX3OVJiUo=",
-      "url": "assets\/image\/equipo\/Bahamas.png"
-    },
-    {
-      "hash": "sha256-R0V9U\/JnX1UAcODXuFiyI4SXDmDskMCxWkO\/HxsmMe8=",
-      "url": "assets\/image\/equipo\/BKN.png"
-    },
-    {
-      "hash": "sha256-nG9SkzpFn4\/rdg7Ayg0PczFR077sOk4SeGMttQCyQSQ=",
-      "url": "assets\/image\/equipo\/BOS.png"
-    },
-    {
-      "hash": "sha256-TU+DBpmQMFmRiGY4PG49LIDMRo9z4Urw0b6p2XfDk0w=",
-      "url": "assets\/image\/equipo\/Brasil.png"
-    },
-    {
-      "hash": "sha256-yPpt+CY9iIclTCfRLlmaiXen8T0k6hQXvOsTY8oD118=",
-      "url": "assets\/image\/equipo\/Canada.png"
-    },
-    {
-      "hash": "sha256-qKhLI4oPT3jZ5Y1OaJ23eSlPkrvMlbYiuzOpkrND1ME=",
-      "url": "assets\/image\/equipo\/CHA.png"
-    },
-    {
-      "hash": "sha256-WJxmZsBaBTVy2Jxf09MNIporDrW04IZOoQuzoMlwlbo=",
-      "url": "assets\/image\/equipo\/CHI.png"
-    },
-    {
-      "hash": "sha256-FFJpHQ4xMlQqNIcWeUdJlnx7UTA\/EVLI9ERb0exkVgo=",
-      "url": "assets\/image\/equipo\/China.png"
-    },
-    {
-      "hash": "sha256-a00qi9haxQwEjjHA\/roEW2TQmHTNXIDEpyzu+sghXoQ=",
-      "url": "assets\/image\/equipo\/CLE.png"
-    },
-    {
-      "hash": "sha256-SBC6dYNMxvdcQw7zRLQY9ksWxjd9KmnzYjKeOF5SVKA=",
-      "url": "assets\/image\/equipo\/Croatia.png"
-    },
-    {
-      "hash": "sha256-0ywHefmgXBOp6wUsY6+8d1CfBsahtZP39c8NRiltegI=",
-      "url": "assets\/image\/equipo\/DAL.png"
-    },
-    {
-      "hash": "sha256-Iawa+piH9hqgnY1pNhkk6gA+vZknNo1x\/Y8aHMKNemc=",
-      "url": "assets\/image\/equipo\/DEN.png"
-    },
-    {
-      "hash": "sha256-elPeuSjCmA5XpP9CVHi6swynO+JAt6vRPCYoB1lh8hc=",
-      "url": "assets\/image\/equipo\/DET.png"
-    },
-    {
-      "hash": "sha256-1wHKC7xthYFYfRitpX7RAil3lpi6sR\/LY4R9FCInXBY=",
-      "url": "assets\/image\/equipo\/Egypt.png"
-    },
-    {
-      "hash": "sha256-Kd6LH6Mmn\/jIY42MqKjGTszaO3kYjJ+tubnTInLmB4s=",
-      "url": "assets\/image\/equipo\/France.png"
-    },
-    {
-      "hash": "sha256-FsXG9TdXsV7nSNsAWvJoZMqkMxk4FhxyFEXYW0tJRq4=",
-      "url": "assets\/image\/equipo\/Georgia.png"
-    },
-    {
-      "hash": "sha256-y3xog\/y5ZHAAMpoLQkZTD\/8kEjs1B6Q5ME55iIhqik8=",
-      "url": "assets\/image\/equipo\/GSW.png"
-    },
-    {
-      "hash": "sha256-27FE3pBtOlMkF2M1YVhbQ4opPQeDiK2g1um55HdUO9E=",
-      "url": "assets\/image\/equipo\/HOU.png"
-    },
-    {
-      "hash": "sha256-Bnb038uZiSKgUQIhtKa73XW1bAQCdWmnm2CzGwM3DsI=",
-      "url": "assets\/image\/equipo\/IND.png"
-    },
-    {
-      "hash": "sha256-jY0UdfG8RO+\/DeiCFjJxmMMzStIb4cJSDjBi3XGP8jM=",
-      "url": "assets\/image\/equipo\/LAC.png"
-    },
-    {
-      "hash": "sha256-ZPG06rvvUbZu6qOwyFqm5+Uch1+x1pfajyb8skKk6Kc=",
-      "url": "assets\/image\/equipo\/LAL.png"
-    },
-    {
-      "hash": "sha256-ejZiB138+wQ6pb90hpOKKyASzyQGRvCRv5ll5QJnTO4=",
-      "url": "assets\/image\/equipo\/Lithuania.png"
-    },
-    {
-      "hash": "sha256-A5EjUU3h4HZJVQyMicIGoILbg5aCEjeiHUQM7bNYHbo=",
-      "url": "assets\/image\/equipo\/Mali.png"
-    },
-    {
-      "hash": "sha256-9CeAn9POl\/JyEDG7pjIF9YeXU2E\/A1ntF8m7t61zRFA=",
-      "url": "assets\/image\/equipo\/MEM.png"
-    },
-    {
-      "hash": "sha256-yWAnQlVDje\/h4Gag7IVQ\/cyd2aKUF86TWQyUFuaZMRQ=",
-      "url": "assets\/image\/equipo\/MIA.png"
-    },
-    {
-      "hash": "sha256-CYx9BPt1DKIyh07JLuJhKL+xdKgCWVt2wtJ9eMIVyLI=",
-      "url": "assets\/image\/equipo\/MIL.png"
-    },
-    {
-      "hash": "sha256-nNIvaFKAQzkbkwuhMdrbBGN3+vKyn12xG7Ovu1LzurI=",
-      "url": "assets\/image\/equipo\/MIN.png"
-    },
-    {
-      "hash": "sha256-1jDDNL6eTjtD3Ghibk9ZItmIBT96HkaamPbHAwGQWA0=",
-      "url": "assets\/image\/equipo\/NOP.png"
-    },
-    {
-      "hash": "sha256-xdy0vkvSibbqte1Yv5+HzqHSgdUgnRUr23mjLV+Vta8=",
-      "url": "assets\/image\/equipo\/NYK.png"
-    },
-    {
-      "hash": "sha256-3JtBYv+X5XgkbTP9ZOahDe6fXQzIOP+aubahxLynd\/s=",
-      "url": "assets\/image\/equipo\/OKC.png"
-    },
-    {
-      "hash": "sha256-fHoCWDr\/6\/CeUQeL0y9N9NOhxx8OaR+8BZGIteBXDGk=",
-      "url": "assets\/image\/equipo\/ORL.png"
-    },
-    {
-      "hash": "sha256-jzcJAAm\/LU0PRnZZhKJEo+fvxVeiJionMjGWtZhQdu4=",
-      "url": "assets\/image\/equipo\/PHI.png"
-    },
-    {
-      "hash": "sha256-Lkoz5\/ODONkT02yTtN\/jgGmRkIsdVysHDGTld95PIYs=",
-      "url": "assets\/image\/equipo\/PHX.png"
-    },
-    {
-      "hash": "sha256-htJMFrCFQOPjrEpWdbjJLQJ8nqo7NewUeqiK1j3PPbk=",
-      "url": "assets\/image\/equipo\/Poland.png"
-    },
-    {
-      "hash": "sha256-m0vXZHOv39V6Fpdh8wu0sAK+EW+Mkssfx2i9zRgQjDs=",
-      "url": "assets\/image\/equipo\/POR.png"
-    },
-    {
-      "hash": "sha256-u0KsnuNC4aeBL0nwzxLncvxia6kAHMfchhkY\/G00+Ws=",
-      "url": "assets\/image\/equipo\/Russia.png"
-    },
-    {
-      "hash": "sha256-V1tOh+ofDtI0rSNhxzBx6uU3AQxEmFTtVBGWiVzlHaQ=",
-      "url": "assets\/image\/equipo\/SAC.png"
-    },
-    {
-      "hash": "sha256-EceWuL8FuwG9mcMmVNYGl1fC6SCZnibOoIG+EzZnHRc=",
-      "url": "assets\/image\/equipo\/SAS.png"
-    },
-    {
-      "hash": "sha256-\/6M+QYdUhHDmYyWbwPJ1suUjFIAJ\/tt\/Mgqj\/Vwz9Hc=",
-      "url": "assets\/image\/equipo\/Senegal.png"
-    },
-    {
-      "hash": "sha256-XOEUbkwBInZYv4CrFqa4FenNz5\/Mt2oPGqT\/IcwpuLM=",
-      "url": "assets\/image\/equipo\/Serbia.png"
-    },
-    {
-      "hash": "sha256-lCH+7fWReW6jTZIrW6jAuQFmqp4HRBP\/+k\/N51j5m8A=",
-      "url": "assets\/image\/equipo\/Slovenia.png"
-    },
-    {
-      "hash": "sha256-v\/42W+ZybH97mtSWay3kE+SntKxP96rBpUUBWRXaiFI=",
-      "url": "assets\/image\/equipo\/Spain.png"
-    },
-    {
-      "hash": "sha256-3JAsm2+7af4Cb0mf5kfpRYJ56NVAS4ibwwbeYSVAwBk=",
-      "url": "assets\/image\/equipo\/Sweden.png"
-    },
-    {
-      "hash": "sha256-q8eoPco4bjwumOMdmrqe1xPgXHPwuEQsKJCBlFqaB30=",
-      "url": "assets\/image\/equipo\/Switzerland.png"
-    },
-    {
-      "hash": "sha256-8\/ioTaJQNB+c5duSpsZdFlvS6DcvLDSJpJwSacChPEo=",
-      "url": "assets\/image\/equipo\/TOR.png"
-    },
-    {
-      "hash": "sha256-9\/Fs2qkZjcmphze9+lYMprVrn7cmHAsd17+2RxkyHLI=",
-      "url": "assets\/image\/equipo\/Turkey.png"
-    },
-    {
-      "hash": "sha256-QjMFOxw6\/kSjoKHoR+O8ct0Kst5uPoN7KMLcMibgDYc=",
-      "url": "assets\/image\/equipo\/Ukraine.png"
-    },
-    {
-      "hash": "sha256-JDYAq+az6osv8V85ZqFrj6X5Aad27qTJrckjq8RJF2o=",
-      "url": "assets\/image\/equipo\/USA.png"
-    },
-    {
-      "hash": "sha256-qGhOdmvdhU4qVXT+cVsmW2eUEmR71s0oNXtrp7p82EI=",
-      "url": "assets\/image\/equipo\/UTA.png"
-    },
-    {
-      "hash": "sha256-kLEwc4iZy+I1TCH859fBabFHpWjoyzaQ0FQkbM3kQuA=",
-      "url": "assets\/image\/equipo\/WAS.png"
-    },
-    {
-      "hash": "sha256-gsRczwxQbXiv69kDI912Qoxdo8lNdDcifilJfN6pAuc=",
-      "url": "assets\/image\/jugador.png"
+      "url": "assets\/imagenes\/documentacion.png"
     },
     {
       "hash": "sha256-+TUPU\/kFD6ucWvQ6lBT+DRyg9UCAkc0B13uasXXXqTc=",
-      "url": "assets\/image\/mundo.png"
+      "url": "assets\/imagenes\/mundo.png"
     },
     {
       "hash": "sha256-TFfS03NARblURrhYo2O6epen+3E9qGe4Iq9ig16jz8c=",
-      "url": "assets\/image\/nba.png"
+      "url": "assets\/imagenes\/nba.png"
     },
     {
       "hash": "sha256-qD5Mgu7QUGbrvR95Gc30iXjYl6kpxDAlPIjBMwKv95M=",
-      "url": "assets\/image\/nbaFondo.jpg"
+      "url": "assets\/imagenes\/nbaFondo.jpg"
     },
     {
       "hash": "sha256-utwW\/C6VYz3fp7ebwxBJk9f\/LgZIVRT+S+giW8rmUqs=",
-      "url": "assets\/image\/news.png"
+      "url": "assets\/imagenes\/news.png"
     },
     {
       "hash": "sha256-ZCW+KGzr1sleXvEQt2SmvAWclBqZEFde+EDgkmXxN0k=",
-      "url": "assets\/image\/ordenarFlechas.png"
+      "url": "assets\/imagenes\/ordenarFlechas.png"
+    },
+    {
+      "hash": "sha256-S4xshYR1NYnsA85o1uGCQkPaLXJvEw1BbyDD\/AxWUDM=",
+      "url": "assets\/imagenes\/paisesEquipos\/Argentina.png"
+    },
+    {
+      "hash": "sha256-vq6Ja81lJUf3eeckvf6rNN\/k2gXSyGEcgWhUgy7h0c4=",
+      "url": "assets\/imagenes\/paisesEquipos\/ATL.png"
+    },
+    {
+      "hash": "sha256-b7NlTnnxGTjh2aM27kh+2IbY\/APXVDyuXwOOEVEJ6Pc=",
+      "url": "assets\/imagenes\/paisesEquipos\/Australia.png"
+    },
+    {
+      "hash": "sha256-Ng6J+4pBUwAS2sAlr3ueR3N6NgdBatuzmfI4bufFljA=",
+      "url": "assets\/imagenes\/paisesEquipos\/Austria.png"
+    },
+    {
+      "hash": "sha256-viVKmPHgqXOwUHm75BfFqDKElk6uwn\/rqonX3OVJiUo=",
+      "url": "assets\/imagenes\/paisesEquipos\/Bahamas.png"
+    },
+    {
+      "hash": "sha256-R0V9U\/JnX1UAcODXuFiyI4SXDmDskMCxWkO\/HxsmMe8=",
+      "url": "assets\/imagenes\/paisesEquipos\/BKN.png"
+    },
+    {
+      "hash": "sha256-nG9SkzpFn4\/rdg7Ayg0PczFR077sOk4SeGMttQCyQSQ=",
+      "url": "assets\/imagenes\/paisesEquipos\/BOS.png"
+    },
+    {
+      "hash": "sha256-Cweg1PBMSFprzr3J3OUBghQXsJtHT2RUvfNKp9itYWY=",
+      "url": "assets\/imagenes\/paisesEquipos\/BosniaandHerzegovina.png"
+    },
+    {
+      "hash": "sha256-1s2AEZ9t2V++028w3Q16tOQxC+ly1BTMQYXA2OL6lPQ=",
+      "url": "assets\/imagenes\/paisesEquipos\/Brazil.png"
+    },
+    {
+      "hash": "sha256-P5LDLtBxOG+qU4JDKwJJ0cmcQWTT\/+pZ\/+9HSP34T1k=",
+      "url": "assets\/imagenes\/paisesEquipos\/Cameroon.png"
+    },
+    {
+      "hash": "sha256-yPpt+CY9iIclTCfRLlmaiXen8T0k6hQXvOsTY8oD118=",
+      "url": "assets\/imagenes\/paisesEquipos\/Canada.png"
+    },
+    {
+      "hash": "sha256-qKhLI4oPT3jZ5Y1OaJ23eSlPkrvMlbYiuzOpkrND1ME=",
+      "url": "assets\/imagenes\/paisesEquipos\/CHA.png"
+    },
+    {
+      "hash": "sha256-WJxmZsBaBTVy2Jxf09MNIporDrW04IZOoQuzoMlwlbo=",
+      "url": "assets\/imagenes\/paisesEquipos\/CHI.png"
+    },
+    {
+      "hash": "sha256-FFJpHQ4xMlQqNIcWeUdJlnx7UTA\/EVLI9ERb0exkVgo=",
+      "url": "assets\/imagenes\/paisesEquipos\/China.png"
+    },
+    {
+      "hash": "sha256-a00qi9haxQwEjjHA\/roEW2TQmHTNXIDEpyzu+sghXoQ=",
+      "url": "assets\/imagenes\/paisesEquipos\/CLE.png"
+    },
+    {
+      "hash": "sha256-SBC6dYNMxvdcQw7zRLQY9ksWxjd9KmnzYjKeOF5SVKA=",
+      "url": "assets\/imagenes\/paisesEquipos\/Croatia.png"
+    },
+    {
+      "hash": "sha256-xffZ\/xNNWcerGuNrm2RpQAlOiCOgWqJo6us61SLnpqw=",
+      "url": "assets\/imagenes\/paisesEquipos\/CzechRepublic.png"
+    },
+    {
+      "hash": "sha256-0ywHefmgXBOp6wUsY6+8d1CfBsahtZP39c8NRiltegI=",
+      "url": "assets\/imagenes\/paisesEquipos\/DAL.png"
+    },
+    {
+      "hash": "sha256-8j9RlHlfHYoRFOBf7TbtzM6qDIbAEyKDmQfGL8fIHW8=",
+      "url": "assets\/imagenes\/paisesEquipos\/DemocraticRepublicoftheCongo.png"
+    },
+    {
+      "hash": "sha256-Iawa+piH9hqgnY1pNhkk6gA+vZknNo1x\/Y8aHMKNemc=",
+      "url": "assets\/imagenes\/paisesEquipos\/DEN.png"
+    },
+    {
+      "hash": "sha256-elPeuSjCmA5XpP9CVHi6swynO+JAt6vRPCYoB1lh8hc=",
+      "url": "assets\/imagenes\/paisesEquipos\/DET.png"
+    },
+    {
+      "hash": "sha256-Z78HcCbuA7n9sbQZeB72u\/jbaGUExsrV0O7Pu1t1ib0=",
+      "url": "assets\/imagenes\/paisesEquipos\/DominicanRepublic.png"
+    },
+    {
+      "hash": "sha256-1wHKC7xthYFYfRitpX7RAil3lpi6sR\/LY4R9FCInXBY=",
+      "url": "assets\/imagenes\/paisesEquipos\/Egypt.png"
+    },
+    {
+      "hash": "sha256-Kd6LH6Mmn\/jIY42MqKjGTszaO3kYjJ+tubnTInLmB4s=",
+      "url": "assets\/imagenes\/paisesEquipos\/France.png"
+    },
+    {
+      "hash": "sha256-FsXG9TdXsV7nSNsAWvJoZMqkMxk4FhxyFEXYW0tJRq4=",
+      "url": "assets\/imagenes\/paisesEquipos\/Georgia.png"
+    },
+    {
+      "hash": "sha256-TyIZzaxcNsRqirbjDT2Y53477oTht0gDNNZtl0JvWrY=",
+      "url": "assets\/imagenes\/paisesEquipos\/Germany.png"
+    },
+    {
+      "hash": "sha256-o2CTgB9qANrqvZSYFBJBCnXMSgfq3VPaJ7vCupvbcus=",
+      "url": "assets\/imagenes\/paisesEquipos\/Greece.png"
+    },
+    {
+      "hash": "sha256-y3xog\/y5ZHAAMpoLQkZTD\/8kEjs1B6Q5ME55iIhqik8=",
+      "url": "assets\/imagenes\/paisesEquipos\/GSW.png"
+    },
+    {
+      "hash": "sha256-zHpmX6OLk\/jbytjgL0tjyPV397\/nvrpVlotrDcq7FZI=",
+      "url": "assets\/imagenes\/paisesEquipos\/Haiti.png"
+    },
+    {
+      "hash": "sha256-27FE3pBtOlMkF2M1YVhbQ4opPQeDiK2g1um55HdUO9E=",
+      "url": "assets\/imagenes\/paisesEquipos\/HOU.png"
+    },
+    {
+      "hash": "sha256-Bnb038uZiSKgUQIhtKa73XW1bAQCdWmnm2CzGwM3DsI=",
+      "url": "assets\/imagenes\/paisesEquipos\/IND.png"
+    },
+    {
+      "hash": "sha256-0pGlmCjHe4R1+Tvmnb2Vdq70+niGaj9pPcu2pmBBi+o=",
+      "url": "assets\/imagenes\/paisesEquipos\/Italy.png"
+    },
+    {
+      "hash": "sha256-jY0UdfG8RO+\/DeiCFjJxmMMzStIb4cJSDjBi3XGP8jM=",
+      "url": "assets\/imagenes\/paisesEquipos\/LAC.png"
+    },
+    {
+      "hash": "sha256-ZPG06rvvUbZu6qOwyFqm5+Uch1+x1pfajyb8skKk6Kc=",
+      "url": "assets\/imagenes\/paisesEquipos\/LAL.png"
+    },
+    {
+      "hash": "sha256-IeNvboD0IQNnxWZL2ngykPrDjQFotNkXM3CaGyuQb+4=",
+      "url": "assets\/imagenes\/paisesEquipos\/Latvia.png"
+    },
+    {
+      "hash": "sha256-ejZiB138+wQ6pb90hpOKKyASzyQGRvCRv5ll5QJnTO4=",
+      "url": "assets\/imagenes\/paisesEquipos\/Lithuania.png"
+    },
+    {
+      "hash": "sha256-A5EjUU3h4HZJVQyMicIGoILbg5aCEjeiHUQM7bNYHbo=",
+      "url": "assets\/imagenes\/paisesEquipos\/Mali.png"
+    },
+    {
+      "hash": "sha256-9CeAn9POl\/JyEDG7pjIF9YeXU2E\/A1ntF8m7t61zRFA=",
+      "url": "assets\/imagenes\/paisesEquipos\/MEM.png"
+    },
+    {
+      "hash": "sha256-yWAnQlVDje\/h4Gag7IVQ\/cyd2aKUF86TWQyUFuaZMRQ=",
+      "url": "assets\/imagenes\/paisesEquipos\/MIA.png"
+    },
+    {
+      "hash": "sha256-CYx9BPt1DKIyh07JLuJhKL+xdKgCWVt2wtJ9eMIVyLI=",
+      "url": "assets\/imagenes\/paisesEquipos\/MIL.png"
+    },
+    {
+      "hash": "sha256-nNIvaFKAQzkbkwuhMdrbBGN3+vKyn12xG7Ovu1LzurI=",
+      "url": "assets\/imagenes\/paisesEquipos\/MIN.png"
+    },
+    {
+      "hash": "sha256-8qtKq4q6Ne6F2K0\/3L+\/eqjGDFHMmL4Pk123Uy1lNag=",
+      "url": "assets\/imagenes\/paisesEquipos\/NewZealand.png"
+    },
+    {
+      "hash": "sha256-1jDDNL6eTjtD3Ghibk9ZItmIBT96HkaamPbHAwGQWA0=",
+      "url": "assets\/imagenes\/paisesEquipos\/NOP.png"
+    },
+    {
+      "hash": "sha256-xdy0vkvSibbqte1Yv5+HzqHSgdUgnRUr23mjLV+Vta8=",
+      "url": "assets\/imagenes\/paisesEquipos\/NYK.png"
+    },
+    {
+      "hash": "sha256-3JtBYv+X5XgkbTP9ZOahDe6fXQzIOP+aubahxLynd\/s=",
+      "url": "assets\/imagenes\/paisesEquipos\/OKC.png"
+    },
+    {
+      "hash": "sha256-fHoCWDr\/6\/CeUQeL0y9N9NOhxx8OaR+8BZGIteBXDGk=",
+      "url": "assets\/imagenes\/paisesEquipos\/ORL.png"
+    },
+    {
+      "hash": "sha256-jzcJAAm\/LU0PRnZZhKJEo+fvxVeiJionMjGWtZhQdu4=",
+      "url": "assets\/imagenes\/paisesEquipos\/PHI.png"
+    },
+    {
+      "hash": "sha256-htJMFrCFQOPjrEpWdbjJLQJ8nqo7NewUeqiK1j3PPbk=",
+      "url": "assets\/imagenes\/paisesEquipos\/Poland.png"
+    },
+    {
+      "hash": "sha256-m0vXZHOv39V6Fpdh8wu0sAK+EW+Mkssfx2i9zRgQjDs=",
+      "url": "assets\/imagenes\/paisesEquipos\/POR.png"
+    },
+    {
+      "hash": "sha256-qpZm\/1Ey7mczb1HTzL4DwYF5dM8LIMpeeE9HK81jR78=",
+      "url": "assets\/imagenes\/paisesEquipos\/PuertoRico.png"
+    },
+    {
+      "hash": "sha256-u0KsnuNC4aeBL0nwzxLncvxia6kAHMfchhkY\/G00+Ws=",
+      "url": "assets\/imagenes\/paisesEquipos\/Russia.png"
+    },
+    {
+      "hash": "sha256-V1tOh+ofDtI0rSNhxzBx6uU3AQxEmFTtVBGWiVzlHaQ=",
+      "url": "assets\/imagenes\/paisesEquipos\/SAC.png"
+    },
+    {
+      "hash": "sha256-EceWuL8FuwG9mcMmVNYGl1fC6SCZnibOoIG+EzZnHRc=",
+      "url": "assets\/imagenes\/paisesEquipos\/SAS.png"
+    },
+    {
+      "hash": "sha256-\/6M+QYdUhHDmYyWbwPJ1suUjFIAJ\/tt\/Mgqj\/Vwz9Hc=",
+      "url": "assets\/imagenes\/paisesEquipos\/Senegal.png"
+    },
+    {
+      "hash": "sha256-XOEUbkwBInZYv4CrFqa4FenNz5\/Mt2oPGqT\/IcwpuLM=",
+      "url": "assets\/imagenes\/paisesEquipos\/Serbia.png"
+    },
+    {
+      "hash": "sha256-lCH+7fWReW6jTZIrW6jAuQFmqp4HRBP\/+k\/N51j5m8A=",
+      "url": "assets\/imagenes\/paisesEquipos\/Slovenia.png"
+    },
+    {
+      "hash": "sha256-GxUZMNmTcYTLgsfxCj8n88xpvbZOMADj1iNW+mMwPu4=",
+      "url": "assets\/imagenes\/paisesEquipos\/SouthSudan.png"
+    },
+    {
+      "hash": "sha256-v\/42W+ZybH97mtSWay3kE+SntKxP96rBpUUBWRXaiFI=",
+      "url": "assets\/imagenes\/paisesEquipos\/Spain.png"
+    },
+    {
+      "hash": "sha256-3JAsm2+7af4Cb0mf5kfpRYJ56NVAS4ibwwbeYSVAwBk=",
+      "url": "assets\/imagenes\/paisesEquipos\/Sweden.png"
+    },
+    {
+      "hash": "sha256-q8eoPco4bjwumOMdmrqe1xPgXHPwuEQsKJCBlFqaB30=",
+      "url": "assets\/imagenes\/paisesEquipos\/Switzerland.png"
+    },
+    {
+      "hash": "sha256-8\/ioTaJQNB+c5duSpsZdFlvS6DcvLDSJpJwSacChPEo=",
+      "url": "assets\/imagenes\/paisesEquipos\/TOR.png"
+    },
+    {
+      "hash": "sha256-9\/Fs2qkZjcmphze9+lYMprVrn7cmHAsd17+2RxkyHLI=",
+      "url": "assets\/imagenes\/paisesEquipos\/Turkey.png"
+    },
+    {
+      "hash": "sha256-QjMFOxw6\/kSjoKHoR+O8ct0Kst5uPoN7KMLcMibgDYc=",
+      "url": "assets\/imagenes\/paisesEquipos\/Ukraine.png"
+    },
+    {
+      "hash": "sha256-UmHEABfM5zjM5JQrlIfLclLcHPzfAs3\/W7ch\/MdscfM=",
+      "url": "assets\/imagenes\/paisesEquipos\/UnitedKingdom.png"
+    },
+    {
+      "hash": "sha256-JDYAq+az6osv8V85ZqFrj6X5Aad27qTJrckjq8RJF2o=",
+      "url": "assets\/imagenes\/paisesEquipos\/USA.png"
+    },
+    {
+      "hash": "sha256-qGhOdmvdhU4qVXT+cVsmW2eUEmR71s0oNXtrp7p82EI=",
+      "url": "assets\/imagenes\/paisesEquipos\/UTA.png"
+    },
+    {
+      "hash": "sha256-kLEwc4iZy+I1TCH859fBabFHpWjoyzaQ0FQkbM3kQuA=",
+      "url": "assets\/imagenes\/paisesEquipos\/WAS.png"
     },
     {
       "hash": "sha256-ncn9PHdWgwEtPNZRekPr+LTVTpNgQyi+5rCsVS2rxL0=",
-      "url": "assets\/image\/pelota.jpg"
+      "url": "assets\/imagenes\/pelota.jpg"
+    },
+    {
+      "hash": "sha256-Lkoz5\/ODONkT02yTtN\/jgGmRkIsdVysHDGTld95PIYs=",
+      "url": "assets\/imagenes\/PHX.png"
     },
     {
       "hash": "sha256-Q04vQjb0Qs96xDB4Mr8hyWrMOU8YFz+O2kn95he4iTc=",
-      "url": "assets\/image\/pizarra-basket.jpg"
+      "url": "assets\/imagenes\/pizarra-basket.jpg"
     },
     {
       "hash": "sha256-INgy05lU99sVZBVbNzwZoDFrO3QYXHfbQnCfxVEBvHM=",
-      "url": "assets\/image\/question.png"
+      "url": "assets\/imagenes\/question.png"
     },
     {
       "hash": "sha256-Y10z5nP1CxEfEPLgtVOeZ+19ZYgdlb3wHUsottHZ6GU=",
-      "url": "assets\/image\/video.png"
+      "url": "assets\/imagenes\/video.png"
     },
     {
-      "hash": "sha256-odqim3y90i\/wBN6m1JVCsiSKsjjSfmwqQ\/TjMxDJC70=",
+      "hash": "sha256-STqzwex79nSW5Ju364NbuIGTsq3wpG7ShfokF7LuCaY=",
       "url": "css\/app.css"
     },
     {
@@ -301,7 +349,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-yq38vVcRuFjabY2WM928ZmlU9Ef2g0wl+CpQCIPD4LI=",
+      "hash": "sha256-dLev+Sls+jLOlnjhdDKMlUuaGf5SYA1w3QkB8NdBk28=",
       "url": "index.html"
     },
     {
@@ -309,8 +357,12 @@
       "url": "js\/custom.js"
     },
     {
-      "hash": "sha256-t8f1\/ItFXgQfPS\/L\/n1dQKZVcxqAWCkrlFUQDfoZSOE=",
+      "hash": "sha256-WSHm730g0brin05KdWe9FOTR\/lOSUejKir8tpBBAjio=",
       "url": "manifest.json"
+    },
+    {
+      "hash": "sha256-paIeuWnSzjeLGITWkk4p3rcejUsZWCJGPeOK9UhWXtg=",
+      "url": "sample-data\/weather.json"
     },
     {
       "hash": "sha256-lOCs45frNf+D7me6lKLgUhRCdt4VwHCp9H6Ct+YWzfs=",
@@ -337,11 +389,11 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-zo05IxqMGwISUP0gz7uivX89rtxE7CCvu9o9puEN1HE=",
+      "hash": "sha256-Jf1YgKJVq\/epGWJ4i5yUReBaVXtVI5TJTj6QZwxNmDY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-ttbPmxdYWC7ela7jRLatfmuY2MJrtHfTQGPLjKspfJI=",
+      "hash": "sha256-v1v9\/79yoQKab9R1+WZczFHWhdTHXudcro2Rm4Wj3\/c=",
       "url": "_framework\/BlazorBootstrap.dll"
     },
     {
@@ -349,7 +401,7 @@
       "url": "_framework\/CsvHelper.dll"
     },
     {
-      "hash": "sha256-6+kW2+K8k2QuscyJmCqh+geBAaVpzrE\/2Ry\/PKNBqC4=",
+      "hash": "sha256-7yQZeg9ptEN1bXYrfclqxxvXB1MXhEzosbGC1vKp3RI=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -357,7 +409,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
-      "hash": "sha256-1lEKISSzKK57RvXSqsP\/5bViF7WPXoYtlUvwS+yXwYo=",
+      "hash": "sha256-AyGoopRQnhsdPqJX7VxqIcAuMyaCyC16nakfOkPhpq8=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -413,8 +465,8 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-V728UmKKu1pXem1i7auVlKFqHl\/ju7hQkptBVOx\/F0A=",
-      "url": "_framework\/NBA-Database.dll"
+      "hash": "sha256-D6FAM0kmzEVceibEDr7uhO\/4mfALXt8tCOAh7GHBV4c=",
+      "url": "_framework\/NBADatabase.dll"
     },
     {
       "hash": "sha256-IsZJ91\/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=",
@@ -589,23 +641,23 @@
       "url": "_framework\/System.Xml.XDocument.dll"
     },
     {
-      "hash": "sha256-6gQTtugVSUwmVpIDJzneJRoSCx6ApIJS1b8BQR\/3d8g=",
-      "url": "_framework\/dotnet.7.0.5.oj5kf2kghq.js"
+      "hash": "sha256-rW6LK1JVFTuikvafkVihERhnwVNFfv0+fbeeRABq5XU=",
+      "url": "_framework\/dotnet.7.0.5.87a5mes8pe.js"
     },
     {
-      "hash": "sha256-eB5rMsSX1DqYGARI1ET7v0J10KO4zE6fFb8C2V7kjWc=",
+      "hash": "sha256-sCtOi2lIfiwNqZ5cmD31G8uoyArnZgDRhEbv1Un8dW8=",
       "url": "_framework\/dotnet.wasm"
     },
     {
-      "hash": "sha256-SMuLhZ3E+29H4iw3A\/xqMVbckCies67coYBMazouWtI=",
+      "hash": "sha256-p1b4sM1YFPjqbrHcPu6cj9qMLQAYsQqcj3qU4McUhl4=",
       "url": "_content\/Blazor.Bootstrap\/Blazor.Bootstrap.bundle.scp.css"
     },
     {
-      "hash": "sha256-K7keTWjaapXokNmYD6fZf3r2pB00MiytLkCvcK\/hBEE=",
+      "hash": "sha256-QCBUM+dyxUUqsOt2uKAMRfyYyKauhLXrE1hPDPvRru4=",
       "url": "_content\/Blazor.Bootstrap\/blazor.bootstrap.css"
     },
     {
-      "hash": "sha256-nNFGzIyCapAqonn+\/9e8WTmH2Od1vQVLqx5hsa3NGf8=",
+      "hash": "sha256-27UFc2rX0S6q40tHcnqvb0K0a0Lhhro5qa+HNZG8Gm4=",
       "url": "_content\/Blazor.Bootstrap\/blazor.bootstrap.js"
     },
     {
@@ -613,5 +665,5 @@
       "url": "_content\/Blazor.Bootstrap\/icon\/128X128.png"
     }
   ],
-  "version": "TTUTQyxJ"
+  "version": "RznB+Yr9"
 };
