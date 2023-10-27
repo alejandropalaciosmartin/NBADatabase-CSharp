@@ -24,3 +24,6 @@ In this practice, we were tasked with developing a web application using Blazor.
 
 ## Deliverables
 The repository contains the complete source code and necessary files for local execution, along with a link to the publicly deployed version. The names of the students who worked on the project are also provided.
+
+Feel free to provide feedback, suggestions, or contributions to enhance the code or address any issues. Your input is always welcome to improve this implementation.
+
